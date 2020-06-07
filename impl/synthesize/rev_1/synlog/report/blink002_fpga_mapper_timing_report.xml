@@ -16,8 +16,14 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 </row>
 <row>
 <data>SHIFT_RESISTER|clock</data>
-<data>133.1 MHz</data>
-<data>113.1 MHz</data>
-<data>-1.326</data>
+<data>133.4 MHz</data>
+<data>96.9 MHz</data>
+<data>-1.414</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>273.3 MHz</data>
+<data>6.340</data>
 </row>
 </report_table>

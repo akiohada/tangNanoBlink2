@@ -1,5 +1,17 @@
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "000" on instance segmentCounter[2:0].
+@N: FX493 |Applying initial value "0" on instance serialDataIn.
+@N: FX493 |Applying initial value "1000000" on instance serialInDummy[6:0].
+@N: FX493 |Applying initial value "0" on instance serialClockIn.
+@N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit2[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit3[7:0].
+@N: FX493 |Applying initial value "0" on instance serialClockLed[0].
+@N: FX493 |Applying initial value "01011011" on instance serialReg[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit0[7:0].
+@N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
+@N: FX493 |Applying initial value "00" on instance digitCounter[1:0].
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 @N: BN225 |Writing default property annotation file /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap.

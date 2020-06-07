@@ -19,13 +19,13 @@ Synopsys HDL compiler and linker, Version comp2019q3p1, Build 210R, Built Jan  7
 
 Modified Files: 1
 FID:  path (prevtimestamp, timestamp)
-5        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-05 13:48:34, 2020-06-05 13:58:57)
+5        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-07 23:16:08, 2020-06-07 23:22:56)
 
 *******************************************************************
 Modules that may have changed as a result of file changes: 1
 MID:  lib.cell.view
 4        work.SHIFT_RESISTER.verilog may have changed because the following files changed:
-                        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-05 13:48:34, 2020-06-05 13:58:57) <-- (module definition)
+                        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-07 23:16:08, 2020-06-07 23:22:56) <-- (module definition)
 
 *******************************************************************
 Unmodified files: 5

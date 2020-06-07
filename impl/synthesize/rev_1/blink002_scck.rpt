@@ -16,7 +16,7 @@ max stack size: 8388608 (bytes)
 
 Implementation : rev_1
 
-# Written on Fri Jun  5 13:59:15 2020
+# Written on Sun Jun  7 23:23:21 2020
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      (none)
@@ -36,15 +36,15 @@ Clock Summary
           Start                    Requested     Requested     Clock        Clock                     Clock
 Level     Clock                    Frequency     Period        Type         Group                     Load 
 -----------------------------------------------------------------------------------------------------------
-0 -       SHIFT_RESISTER|clock     226.2 MHz     4.422         inferred     Autoconstr_clkgroup_0     66   
+0 -       SHIFT_RESISTER|clock     159.1 MHz     6.285         inferred     Autoconstr_clkgroup_0     83   
 ===========================================================================================================
 
 
 Clock Load Summary
 ******************
 
-                         Clock     Source          Clock Pin         Non-clock Pin     Non-clock Pin
-Clock                    Load      Pin             Seq Example       Seq Example       Comb Example 
-----------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     66        clock(port)     digit0[7:0].C     -                 -            
-====================================================================================================
+                         Clock     Source          Clock Pin                    Non-clock Pin     Non-clock Pin      
+Clock                    Load      Pin             Seq Example                  Seq Example       Comb Example       
+---------------------------------------------------------------------------------------------------------------------
+SHIFT_RESISTER|clock     83        clock(port)     digitalOutputPins[3:0].C     -                 un1_clock.I[0](inv)
+=====================================================================================================================

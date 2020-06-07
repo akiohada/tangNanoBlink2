@@ -4,26 +4,29 @@ Resource Usage Report for SHIFT_RESISTER
 Mapping to part: gw1n_1qfn48-6
 Cell usage:
 ALU             17 uses
-DFF             32 uses
-DFFE            17 uses
-DFFRE           16 uses
-DFFS            2 uses
-DFFSE           16 uses
+DFF             2 uses
+DFFE            27 uses
+DFFN            1 use
+DFFNE           13 uses
+DFFNSE          20 uses
+DFFR            16 uses
+DFFSE           6 uses
 GSR             1 use
-MUX2_LUT5       3 uses
-MUX2_LUT6       1 use
-LUT2            14 uses
-LUT3            4 uses
-LUT4            69 uses
+INV             1 use
+MUX2_LUT5       12 uses
+MUX2_LUT6       2 uses
+LUT2            12 uses
+LUT3            30 uses
+LUT4            57 uses
 
-I/O ports: 13
-I/O primitives: 13
+I/O ports: 14
+I/O primitives: 14
 IBUF           1 use
-OBUF           12 uses
+OBUF           13 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   83 of 864 (9%)
+Register bits not including I/Os:   85 of 864 (9%)
 
 @S |Mapping Summary:
-Total  LUTs: 87 (7%)
+Total  LUTs: 99 (8%)
 

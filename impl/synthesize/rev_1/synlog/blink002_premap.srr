@@ -1,4 +1,4 @@
-# Fri Jun  5 13:59:14 2020
+# Sun Jun  7 23:23:21 2020
 
 
 Copyright (C) 1994-2020 Synopsys, Inc.
@@ -40,20 +40,34 @@ Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 232MB peak: 232MB)
 
+@N: FX493 |Applying initial value "000" on instance segmentCounter[2:0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance serialDataIn.
+@N: FX493 |Applying initial value "1000000" on instance serialInDummy[6:0].
+@N: FX493 |Applying initial value "0" on instance serialClockIn.
+@N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit2[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit3[7:0].
+@N: FX493 |Applying initial value "0" on instance serialClockLed[0].
+@N: FX493 |Applying initial value "01011011" on instance serialReg[7:0].
+@N: FX493 |Applying initial value "01011011" on instance digit0[7:0].
+@N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
+@N: FX493 |Applying initial value "00" on instance digitCounter[1:0].
+@W: BN132 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":70:2:70:7|Removing sequential instance serialInDummy[1] because it is equivalent to instance serialDataIn. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
-Starting clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
 
-Finished clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
 
-Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+Starting clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
 
-Finished clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+Finished clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
 
 
@@ -63,7 +77,7 @@ Clock Summary
           Start                    Requested     Requested     Clock        Clock                     Clock
 Level     Clock                    Frequency     Period        Type         Group                     Load 
 -----------------------------------------------------------------------------------------------------------
-0 -       SHIFT_RESISTER|clock     226.2 MHz     4.422         inferred     Autoconstr_clkgroup_0     66   
+0 -       SHIFT_RESISTER|clock     159.1 MHz     6.285         inferred     Autoconstr_clkgroup_0     83   
 ===========================================================================================================
 
 
@@ -71,13 +85,13 @@ Level     Clock                    Frequency     Period        Type         Grou
 Clock Load Summary
 ***********************
 
-                         Clock     Source          Clock Pin         Non-clock Pin     Non-clock Pin
-Clock                    Load      Pin             Seq Example       Seq Example       Comb Example 
-----------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     66        clock(port)     digit0[7:0].C     -                 -            
-====================================================================================================
+                         Clock     Source          Clock Pin                    Non-clock Pin     Non-clock Pin      
+Clock                    Load      Pin             Seq Example                  Seq Example       Comb Example       
+---------------------------------------------------------------------------------------------------------------------
+SHIFT_RESISTER|clock     83        clock(port)     digitalOutputPins[3:0].C     -                 un1_clock.I[0](inv)
+=====================================================================================================================
 
-@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Found inferred clock SHIFT_RESISTER|clock which controls 66 sequential elements including counter2[4:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Found inferred clock SHIFT_RESISTER|clock which controls 83 sequential elements including digitCounter[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 ICG Latch Removal Summary:
 Number of ICG latches removed: 0
@@ -90,15 +104,15 @@ Number of ICG latches not removed:	0
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 66 clock pin(s) of sequential element(s)
+1 non-gated/non-generated clock tree(s) driving 83 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
-=========================== Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
----------------------------------------------------------------------------------------
-@KP:ckid0_0       clock               port                   66         counter2[4:0]  
-=======================================================================================
+============================ Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance 
+----------------------------------------------------------------------------------------
+@KP:ckid0_0       clock               port                   83         clockCounter[16]
+========================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######
@@ -107,19 +121,19 @@ Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample I
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap.
 
-Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+Starting constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 
-Finished constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
-Process took 0h:00m:03s realtime, 0h:00m:03s cputime
-# Fri Jun  5 13:59:18 2020
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sun Jun  7 23:23:23 2020
 
 ###########################################################]
