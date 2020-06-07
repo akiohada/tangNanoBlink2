@@ -1,0 +1,12 @@
+@P:  Worst Slack : -1.326
+@P:  SHIFT_RESISTER|clock - Estimated Frequency : 113.1 MHz
+@P:  SHIFT_RESISTER|clock - Requested Frequency : 133.1 MHz
+@P:  SHIFT_RESISTER|clock - Estimated Period : 8.840
+@P:  SHIFT_RESISTER|clock - Requested Period : 7.514
+@P:  SHIFT_RESISTER|clock - Slack : -1.326
+@P: SHIFT_RESISTER Part : gw1n_1qfn48-6
+@P: SHIFT_RESISTER I/O primitives : 13
+@P: SHIFT_RESISTER I/O Register bits : 0
+@P: SHIFT_RESISTER Register bits (Non I/O) : 83 (9%)
+@P: SHIFT_RESISTER Total Luts : 87 of 800 (7%)
+@P:  CPU Time : 0h:00m:07s

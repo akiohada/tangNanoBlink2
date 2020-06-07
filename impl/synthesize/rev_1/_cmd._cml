@@ -1,0 +1,1 @@
+-link -encrypt -top NoName -osyn /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_comp.srs /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/layer0.srs  -jobname linker  

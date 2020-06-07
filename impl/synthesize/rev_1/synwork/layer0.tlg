@@ -1,0 +1,41 @@
+Selecting top level module SHIFT_RESISTER
+@N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Synthesizing module SHIFT_RESISTER in library work.
+@N: CG179 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":100:14:100:19|Removing redundant assignment.
+@N: CG179 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":101:14:101:19|Removing redundant assignment.
+@N: CG179 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":102:14:102:19|Removing redundant assignment.
+@N: CG179 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":103:14:103:19|Removing redundant assignment.
+Running optimization stage 1 on SHIFT_RESISTER .......
+Running optimization stage 2 on SHIFT_RESISTER .......
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Register bit counter[23] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[5] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[6] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[7] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[8] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[9] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[10] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[11] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[12] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[13] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[14] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[15] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[16] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Register bit counter2[23] is always 0.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Pruning register bits 23 to 5 of counter2[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Pruning register bits 23 to 17 of counter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/layer0.rt.csv
+

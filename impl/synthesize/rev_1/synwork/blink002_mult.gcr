@@ -1,0 +1,8 @@
+i clock
+m 0 0
+u 8 66
+p {p:clock}{t:counter2[4:0].C}
+e ckid0_0 {t:counter2[4:0].C} dffe
+c ckid0_0 {p:clock} port Unsupported/too complex instance on clock path
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

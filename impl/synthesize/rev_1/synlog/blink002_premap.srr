@@ -1,0 +1,125 @@
+# Fri Jun  5 13:59:14 2020
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.09G-Beta2
+Install: /home/vagrant/gowin/SynplifyPro
+OS: Ubuntu 19.04
+Hostname: vagrant
+max virtual memory: unlimited (bytes)
+max user processes: 3744
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+Synopsys Generic Technology Pre-mapping, Version mapgw, Build 1525R, Built Jan 14 2020 02:13:27
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 205MB peak: 205MB)
+
+@A: MF827 |No constraint file specified.
+@L: /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002_scck.rpt 
+See clock summary report "/home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 221MB peak: 221MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 221MB peak: 221MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 221MB peak: 221MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 232MB peak: 232MB)
+
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
+
+
+
+Clock Summary
+******************
+
+          Start                    Requested     Requested     Clock        Clock                     Clock
+Level     Clock                    Frequency     Period        Type         Group                     Load 
+-----------------------------------------------------------------------------------------------------------
+0 -       SHIFT_RESISTER|clock     226.2 MHz     4.422         inferred     Autoconstr_clkgroup_0     66   
+===========================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                         Clock     Source          Clock Pin         Non-clock Pin     Non-clock Pin
+Clock                    Load      Pin             Seq Example       Seq Example       Comb Example 
+----------------------------------------------------------------------------------------------------
+SHIFT_RESISTER|clock     66        clock(port)     digit0[7:0].C     -                 -            
+====================================================================================================
+
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":42:2:42:7|Found inferred clock SHIFT_RESISTER|clock which controls 66 sequential elements including counter2[4:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 66 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       clock               port                   66         counter2[4:0]  
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 314MB peak: 314MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Fri Jun  5 13:59:18 2020
+
+###########################################################]

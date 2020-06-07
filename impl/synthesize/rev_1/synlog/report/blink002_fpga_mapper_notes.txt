@@ -1,0 +1,27 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MT206 |Auto Constrain mode is enabled
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":87:6:87:19|Replicating instance digit05 (in view: work.SHIFT_RESISTER(verilog)) with 32 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[13] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[11] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[8] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[6] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[12] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[14] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[1] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[3] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[5] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[7] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[4] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[0] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[9] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[2] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[10] (in view: work.SHIFT_RESISTER(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[15] (in view: work.SHIFT_RESISTER(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":35:2:35:7|Replicating instance counter[16] (in view: work.SHIFT_RESISTER(verilog)) with 8 loads 1 time to improve timing.
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

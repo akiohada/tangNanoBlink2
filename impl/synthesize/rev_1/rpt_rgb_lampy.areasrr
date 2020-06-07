@@ -1,0 +1,45 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: P-2019.09G-Beta2
+Install: /home/vagrant/gowin/SynplifyPro
+OS: Ubuntu 19.04
+Hostname: vagrant
+max virtual memory: unlimited (bytes)
+max user processes: 3744
+max stack size: 8388608 (bytes)
+
+
+Implementation : rev_1
+
+#### START OF AREA REPORT #####[
+
+Part:			GW1N_1QFN48-6 (GoWin)
+
+-------------------------------------------------------------------------
+########   Utilization report for  Top level view:   rgb_lampy   ########
+=========================================================================
+
+SEQUENTIAL ELEMENTS
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+REGISTERS     46                 100 %                
+======================================================
+Total SEQUENTIAL ELEMENTS in the block rgb_lampy:	46 (31.08 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+LUTS     67                 100 %                
+ALU      27                 100 %                
+=================================================
+Total COMBINATIONAL LOGIC in the block rgb_lampy:	94 (63.51 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

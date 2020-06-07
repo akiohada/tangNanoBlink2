@@ -1,0 +1,32 @@
+//Copyright (C)2014-2020 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: V1.9.3.01Beta
+//Part Number: GW1N-LV1QN48C6/I5
+//Created Time: Tue 03 31 20:08:58 2020
+
+IO_LOC "clock" 35;
+IO_LOC "digitPinOutput[0]" 21;
+IO_PORT "digitPinOutput[0]" PULL_MODE=NONE;
+IO_LOC "digitPinOutput[1]" 22;
+IO_PORT "digitPinOutput[1]" PULL_MODE=NONE;
+IO_LOC "digitPinOutput[2]" 23;
+IO_PORT "digitPinOutput[2]" PULL_MODE=NONE;
+IO_LOC "digitPinOutput[3]" 24;
+IO_PORT "digitPinOutput[3]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[0]" 38;
+IO_PORT "segmentPinsOutput[0]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[1]" 39;
+IO_PORT "segmentPinsOutput[1]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[2]" 40;
+IO_PORT "segmentPinsOutput[2]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[3]" 41;
+IO_PORT "segmentPinsOutput[3]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[4]" 42;
+IO_PORT "segmentPinsOutput[4]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[5]" 43;
+IO_PORT "segmentPinsOutput[5]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[6]" 44;
+IO_PORT "segmentPinsOutput[6]" PULL_MODE=NONE;
+IO_LOC "segmentPinsOutput[7]" 45;
+IO_PORT "segmentPinsOutput[7]" PULL_MODE=NONE;
