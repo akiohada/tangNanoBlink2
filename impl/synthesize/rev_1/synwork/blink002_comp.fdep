@@ -5,11 +5,11 @@
 #CUR:"/home/vagrant/gowin/SynplifyPro/lib/vlog/umr_capim.v":1578623018
 #CUR:"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_objects.v":1578623018
 #CUR:"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh":1578623018
-#CUR:"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1591539776
+#CUR:"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1592104452
 0			"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 #Dependency Lists(Users Of)
 0 -1
 #Design Unit to File Association
-module work SHIFT_RESISTER 0
+module work FourDigitLedController 0

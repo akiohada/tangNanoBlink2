@@ -1,6 +1,7 @@
-@W: CG921 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":54:7:54:23|serialClockLedOut is already declared in this scope.
-@W: CL265 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Removing unused bit 1 of serialClockLed[1:0]. Either assign all bits or reduce the width of the signal.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Pruning register bit 2 of digitCounter[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Pruning register bit 3 of segmentCounter[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":76:24:76:40|Specified digits overflow the number's size
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":56:11:56:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:4:57:5|Referenced variable serialClockCounter is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":68:11:68:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:7:69:18|Referenced variable serialDataIn is not in sensitivity list.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 

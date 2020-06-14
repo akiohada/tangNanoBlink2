@@ -3,7 +3,7 @@
 #OS: Linux 
 #Hostname: vagrant
 
-# Sun Jun  7 23:23:18 2020
+# Sun Jun 14 12:14:30 2020
 
 #Implementation: rev_1
 
@@ -58,26 +58,25 @@ Synopsys Verilog Compiler, Version comp2019q3p1, Build 210R, Built Jan  7 2020 0
 @I::"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_objects.v" (library snps_haps)
 @I::"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh" (library snps_haps)
 @I::"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v" (library work)
-@W: CG921 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":54:7:54:23|serialClockLedOut is already declared in this scope.
+@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":76:24:76:40|Specified digits overflow the number's size
 Verilog syntax check successful!
 File /home/vagrant/workspace/verilogLeson/blink002/src/blink.v changed - recompiling
-Selecting top level module SHIFT_RESISTER
-@N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Synthesizing module SHIFT_RESISTER in library work.
-Running optimization stage 1 on SHIFT_RESISTER .......
-@W: CL265 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Removing unused bit 1 of serialClockLed[1:0]. Either assign all bits or reduce the width of the signal.
-Running optimization stage 2 on SHIFT_RESISTER .......
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Register bit segmentCounter[3] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[17] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[18] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[19] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[20] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[21] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[22] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[23] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Register bit digitCounter[2] is always 0.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Pruning register bit 2 of digitCounter[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Pruning register bit 3 of segmentCounter[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Selecting top level module FourDigitLedController
+@N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Synthesizing module FourDigitLedController in library work.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":56:11:56:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:4:57:5|Referenced variable serialClockCounter is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":68:11:68:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:7:69:18|Referenced variable serialDataIn is not in sensitivity list.
+Running optimization stage 1 on FourDigitLedController .......
+Running optimization stage 2 on FourDigitLedController .......
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[23] is always 0.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
@@ -89,7 +88,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun  7 23:23:19 2020
+# Sun Jun 14 12:14:30 2020
 
 ###########################################################]
 ###########################################################[
@@ -113,15 +112,15 @@ Implementation : rev_1
 Synopsys Synopsys Netlist Linker, Version comp2019q3p1, Build 210R, Built Jan  7 2020 09:30:25
 
 @N|Running in 64-bit mode
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun  7 23:23:19 2020
+# Sun Jun 14 12:14:30 2020
 
 ###########################################################]
 
@@ -136,7 +135,7 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun  7 23:23:19 2020
+# Sun Jun 14 12:14:30 2020
 
 ###########################################################]
 ###########################################################[
@@ -161,18 +160,18 @@ Synopsys Synopsys Netlist Linker, Version comp2019q3p1, Build 210R, Built Jan  7
 
 @N|Running in 64-bit mode
 File /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_comp.srs changed - recompiling
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun  7 23:23:20 2020
+# Sun Jun 14 12:14:32 2020
 
 ###########################################################]
-# Sun Jun  7 23:23:21 2020
+# Sun Jun 14 12:14:32 2020
 
 
 Copyright (C) 1994-2020 Synopsys, Inc.
@@ -214,20 +213,14 @@ Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 232MB peak: 232MB)
 
-@N: FX493 |Applying initial value "000" on instance segmentCounter[2:0].
+@N: FX493 |Applying initial value "0001111111" on instance serialReg[9:0].
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
-@N: FX493 |Applying initial value "0" on instance serialDataIn.
-@N: FX493 |Applying initial value "1000000" on instance serialInDummy[6:0].
-@N: FX493 |Applying initial value "0" on instance serialClockIn.
+@N: FX493 |Applying initial value "00100001" on instance digit0[7:0].
 @N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit2[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit3[7:0].
-@N: FX493 |Applying initial value "0" on instance serialClockLed[0].
-@N: FX493 |Applying initial value "01011011" on instance serialReg[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit0[7:0].
+@N: FX493 |Applying initial value "01110011" on instance digit2[7:0].
+@N: FX493 |Applying initial value "01100101" on instance digit3[7:0].
+@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 @N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
-@N: FX493 |Applying initial value "00" on instance digitCounter[1:0].
-@W: BN132 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":70:2:70:7|Removing sequential instance serialInDummy[1] because it is equivalent to instance serialDataIn. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
@@ -248,24 +241,29 @@ Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0
 Clock Summary
 ******************
 
-          Start                    Requested     Requested     Clock        Clock                     Clock
-Level     Clock                    Frequency     Period        Type         Group                     Load 
------------------------------------------------------------------------------------------------------------
-0 -       SHIFT_RESISTER|clock     159.1 MHz     6.285         inferred     Autoconstr_clkgroup_0     83   
-===========================================================================================================
+          Start                                    Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                    Frequency     Period        Type         Group                     Load 
+---------------------------------------------------------------------------------------------------------------------------
+0 -       FourDigitLedController|serialClockIn     205.7 MHz     4.862         inferred     Autoconstr_clkgroup_1     46   
+                                                                                                                           
+0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
+===========================================================================================================================
 
 
 
 Clock Load Summary
 ***********************
 
-                         Clock     Source          Clock Pin                    Non-clock Pin     Non-clock Pin      
-Clock                    Load      Pin             Seq Example                  Seq Example       Comb Example       
----------------------------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     83        clock(port)     digitalOutputPins[3:0].C     -                 un1_clock.I[0](inv)
-=====================================================================================================================
+                                         Clock     Source                  Clock Pin                    Non-clock Pin     Non-clock Pin               
+Clock                                    Load      Pin                     Seq Example                  Seq Example       Comb Example                
+------------------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|serialClockIn     46        serialClockIn(port)     serialReg[0].C               -                 serialClockLedOutB.I[0](inv)
+                                                                                                                                                      
+FourDigitLedController|clock             29        clock(port)             digitalOutputPins[3:0].C     -                 -                           
+======================================================================================================================================================
 
-@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Found inferred clock SHIFT_RESISTER|clock which controls 83 sequential elements including digitCounter[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Found inferred clock FourDigitLedController|clock which controls 29 sequential elements including clockCounter[16]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Found inferred clock FourDigitLedController|serialClockIn which controls 46 sequential elements including serialClockCounter[3]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 ICG Latch Removal Summary:
 Number of ICG latches removed: 0
@@ -278,15 +276,16 @@ Number of ICG latches not removed:	0
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 83 clock pin(s) of sequential element(s)
+2 non-gated/non-generated clock tree(s) driving 75 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
-============================ Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance 
-----------------------------------------------------------------------------------------
-@KP:ckid0_0       clock               port                   83         clockCounter[16]
-========================================================================================
+============================== Non-Gated/Non-Generated Clocks ===============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance      
+---------------------------------------------------------------------------------------------
+@KP:ckid0_0       clock               port                   29         clockCounter[16]     
+@KP:ckid0_1       serialClockIn       port                   46         serialClockCounter[3]
+=============================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######
@@ -308,10 +307,10 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Sun Jun  7 23:23:23 2020
+# Sun Jun 14 12:14:35 2020
 
 ###########################################################]
-# Sun Jun  7 23:23:23 2020
+# Sun Jun 14 12:14:35 2020
 
 
 Copyright (C) 1994-2020 Synopsys, Inc.
@@ -388,28 +387,26 @@ Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:0
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:01s		    -2.80ns		 108 /        83
-   2		0h:00m:01s		    -2.80ns		 108 /        83
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Replicating instance segmentCounter[2] (in view: work.SHIFT_RESISTER(verilog)) with 6 loads 1 time to improve timing.
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Replicating instance segmentCounter[1] (in view: work.SHIFT_RESISTER(verilog)) with 8 loads 1 time to improve timing.
+   1		0h:00m:01s		    -2.61ns		 100 /        75
+   2		0h:00m:01s		    -2.61ns		 100 /        75
+   3		0h:00m:01s		    -2.61ns		 100 /        75
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[0] (in view: work.FourDigitLedController(verilog)) with 9 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[1] (in view: work.FourDigitLedController(verilog)) with 8 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[2] (in view: work.FourDigitLedController(verilog)) with 8 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[3] (in view: work.FourDigitLedController(verilog)) with 7 loads 1 time to improve timing.
 Timing driven replication report
-Added 2 Registers via timing driven replication
-Added 2 LUTs via timing driven replication
+Added 4 Registers via timing driven replication
+Added 4 LUTs via timing driven replication
 
-   3		0h:00m:01s		    -2.29ns		 138 /        85
-   4		0h:00m:01s		    -2.74ns		 138 /        85
-   5		0h:00m:01s		    -2.49ns		 138 /        85
-   6		0h:00m:01s		    -2.49ns		 138 /        85
-   7		0h:00m:01s		    -2.49ns		 138 /        85
+   4		0h:00m:01s		    -2.36ns		 117 /        79
 
 
-   8		0h:00m:01s		    -2.29ns		 130 /        85
-   9		0h:00m:01s		    -2.55ns		 130 /        85
-  10		0h:00m:01s		    -2.55ns		 130 /        85
-  11		0h:00m:02s		    -2.49ns		 130 /        85
-  12		0h:00m:02s		    -2.49ns		 130 /        85
+   5		0h:00m:01s		    -2.36ns		 105 /        79
+   6		0h:00m:01s		    -2.36ns		 105 /        79
+   7		0h:00m:01s		    -3.20ns		 106 /        79
+   8		0h:00m:01s		    -3.20ns		 106 /        79
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 312MB peak: 312MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 312MB peak: 312MB)
 
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 
@@ -434,16 +431,17 @@ Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:04s; CPU Tim
 
 Start final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 312MB peak: 312MB)
 
-@W: MT420 |Found inferred clock SHIFT_RESISTER|clock with period 7.49ns. Please declare a user-defined clock on port clock.
+@W: MT420 |Found inferred clock FourDigitLedController|clock with period 6.53ns. Please declare a user-defined clock on port clock.
+@W: MT420 |Found inferred clock FourDigitLedController|serialClockIn with period 3.42ns. Please declare a user-defined clock on port serialClockIn.
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Sun Jun  7 23:23:29 2020
+# Timing report written on Sun Jun 14 12:14:41 2020
 #
 
 
-Top view:               SHIFT_RESISTER
-Requested Frequency:    133.4 MHz
+Top view:               FourDigitLedController
+Requested Frequency:    153.2 MHz
 Wire load mode:         top
 Paths requested:        5
 Constraint File(s):    
@@ -457,14 +455,15 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -1.414
+Worst slack in design: -2.317
 
-                         Requested     Estimated     Requested     Estimated                Clock        Clock                
-Starting Clock           Frequency     Frequency     Period        Period        Slack      Type         Group                
-------------------------------------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     133.4 MHz     96.9 MHz      7.494         10.323        -1.414     inferred     Autoconstr_clkgroup_0
-System                   100.0 MHz     273.3 MHz     10.000        3.660         6.340      system       system_clkgroup      
-==============================================================================================================================
+                                         Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                           Frequency     Frequency     Period        Period        Slack      Type         Group                
+----------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|clock             153.2 MHz     130.2 MHz     6.529         7.681         -1.152     inferred     Autoconstr_clkgroup_0
+FourDigitLedController|serialClockIn     292.0 MHz     124.1 MHz     3.425         8.058         -2.317     inferred     Autoconstr_clkgroup_1
+System                                   100.0 MHz     129.4 MHz     10.000        7.729         2.271      system       system_clkgroup      
+==============================================================================================================================================
 
 
 
@@ -473,14 +472,16 @@ System                   100.0 MHz     273.3 MHz     10.000        3.660        
 Clock Relationships
 *******************
 
-Clocks                                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall    |    fall  to  rise  
--------------------------------------------------------------------------------------------------------------------------------------
-Starting              Ending                |  constraint  slack   |  constraint  slack  |  constraint  slack   |  constraint  slack 
--------------------------------------------------------------------------------------------------------------------------------------
-System                SHIFT_RESISTER|clock  |  7.494       6.340   |  No paths    -      |  No paths    -       |  No paths    -     
-SHIFT_RESISTER|clock  System                |  7.494       6.106   |  No paths    -      |  No paths    -       |  No paths    -     
-SHIFT_RESISTER|clock  SHIFT_RESISTER|clock  |  7.494       -1.323  |  7.494       2.056  |  3.747       -1.414  |  3.747       -0.044
-=====================================================================================================================================
+Clocks                                                                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall    |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                              Ending                                |  constraint  slack   |  constraint  slack  |  constraint  slack   |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                FourDigitLedController|serialClockIn  |  3.425       2.271   |  No paths    -      |  No paths    -       |  No paths    -    
+FourDigitLedController|clock          FourDigitLedController|clock          |  6.529       -1.152  |  No paths    -      |  No paths    -       |  No paths    -    
+FourDigitLedController|serialClockIn  System                                |  3.425       2.037   |  No paths    -      |  No paths    -       |  No paths    -    
+FourDigitLedController|serialClockIn  FourDigitLedController|clock          |  No paths    -       |  No paths    -      |  No paths    -       |  Diff grp    -    
+FourDigitLedController|serialClockIn  FourDigitLedController|serialClockIn  |  3.425       -0.216  |  No paths    -      |  1.712       -2.317  |  No paths    -    
+====================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -494,7 +495,7 @@ No IO constraint found
 
 
 ====================================
-Detailed Report for Clock: SHIFT_RESISTER|clock
+Detailed Report for Clock: FourDigitLedController|clock
 ====================================
 
 
@@ -502,41 +503,41 @@ Detailed Report for Clock: SHIFT_RESISTER|clock
 Starting Points with Worst Slack
 ********************************
 
-                           Starting                                                             Arrival           
-Instance                   Reference                Type     Pin     Net                        Time        Slack 
-                           Clock                                                                                  
-------------------------------------------------------------------------------------------------------------------
-segmentCounter_fast[1]     SHIFT_RESISTER|clock     DFFE     Q       segmentCounter_fast[1]     0.367       -1.414
-clockCounter[14]           SHIFT_RESISTER|clock     DFFR     Q       clockCounter[14]           0.367       -1.323
-clockCounter[11]           SHIFT_RESISTER|clock     DFFR     Q       clockCounter[11]           0.367       -1.309
-clockCounter[8]            SHIFT_RESISTER|clock     DFFR     Q       clockCounter[8]            0.367       -1.194
-clockCounter[12]           SHIFT_RESISTER|clock     DFFR     Q       clockCounter[12]           0.367       -1.032
-clockCounter[4]            SHIFT_RESISTER|clock     DFFR     Q       clockCounter[4]            0.367       -0.876
-clockCounter[3]            SHIFT_RESISTER|clock     DFFR     Q       clockCounter[3]            0.367       -0.809
-segmentCounter[1]          SHIFT_RESISTER|clock     DFFE     Q       serialReg34_axb1           0.367       -0.716
-segmentCounter[0]          SHIFT_RESISTER|clock     DFFE     Q       serialReg34_axb0           0.367       -0.649
-clockCounter[6]            SHIFT_RESISTER|clock     DFFR     Q       clockCounter[6]            0.367       -0.599
-==================================================================================================================
+                     Starting                                                               Arrival           
+Instance             Reference                        Type     Pin     Net                  Time        Slack 
+                     Clock                                                                                    
+--------------------------------------------------------------------------------------------------------------
+clockCounter[10]     FourDigitLedController|clock     DFFR     Q       clockCounter[10]     0.367       -1.152
+clockCounter[9]      FourDigitLedController|clock     DFFR     Q       clockCounter[9]      0.367       -1.024
+clockCounter[1]      FourDigitLedController|clock     DFFR     Q       clockCounter[1]      0.367       -0.991
+clockCounter[11]     FourDigitLedController|clock     DFFR     Q       clockCounter[11]     0.367       -0.936
+clockCounter[0]      FourDigitLedController|clock     DFFR     Q       clockCounter[0]      0.367       -0.923
+clockCounter[2]      FourDigitLedController|clock     DFFR     Q       clockCounter[2]      0.367       -0.714
+clockCounter[14]     FourDigitLedController|clock     DFFR     Q       clockCounter[14]     0.367       -0.618
+clockCounter[12]     FourDigitLedController|clock     DFFR     Q       clockCounter[12]     0.367       -0.517
+clockCounter[4]      FourDigitLedController|clock     DFFR     Q       clockCounter[4]      0.367       -0.363
+clockCounter[3]      FourDigitLedController|clock     DFFR     Q       clockCounter[3]      0.367       -0.296
+==============================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-              Starting                                                        Required           
-Instance      Reference                Type       Pin     Net                 Time         Slack 
-              Clock                                                                              
--------------------------------------------------------------------------------------------------
-digit0[0]     SHIFT_RESISTER|clock     DFFNSE     CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[1]     SHIFT_RESISTER|clock     DFFNSE     CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[2]     SHIFT_RESISTER|clock     DFFNE      CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[3]     SHIFT_RESISTER|clock     DFFNSE     CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[4]     SHIFT_RESISTER|clock     DFFNSE     CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[5]     SHIFT_RESISTER|clock     DFFNE      CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[6]     SHIFT_RESISTER|clock     DFFNSE     CE      digit0_0_sqmuxa     3.614        -1.414
-digit0[7]     SHIFT_RESISTER|clock     DFFNE      CE      digit0_0_sqmuxa     3.614        -1.414
-digit1[0]     SHIFT_RESISTER|clock     DFFNSE     CE      digit1_1_sqmuxa     3.614        -1.414
-digit1[1]     SHIFT_RESISTER|clock     DFFNSE     CE      digit1_1_sqmuxa     3.614        -1.414
-=================================================================================================
+                         Starting                                                   Required           
+Instance                 Reference                        Type     Pin     Net      Time         Slack 
+                         Clock                                                                         
+-------------------------------------------------------------------------------------------------------
+digitalOutputPins[0]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+digitalOutputPins[1]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+digitalOutputPins[2]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+digitalOutputPins[3]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[0]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[1]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[2]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[3]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[4]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+segmentOutputPins[5]     FourDigitLedController|clock     DFFE     CE      G_24     6.396        -1.152
+=======================================================================================================
 
 
 
@@ -545,167 +546,415 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      3.747
+      Requested Period:                      6.529
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.614
+    = Required time:                         6.396
 
-    - Propagation time:                      5.029
+    - Propagation time:                      7.548
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.414
+    = Slack (non-critical) :                 -1.152
 
-    Number of logic level(s):                2
-    Starting point:                          segmentCounter_fast[1] / Q
-    Ending point:                            digit2[0] / CE
-    The start point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
-    The end   point is clocked by            SHIFT_RESISTER|clock [falling] on pin CLK
+    Number of logic level(s):                3
+    Starting point:                          clockCounter[10] / Q
+    Ending point:                            digitalOutputPins[0] / CE
+    The start point is clocked by            FourDigitLedController|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|clock [rising] on pin CLK
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-segmentCounter_fast[1]     DFFE       Q        Out     0.367     0.367       -         
-segmentCounter_fast[1]     Net        -        -       1.021     -           5         
-G_0_1                      LUT3       I2       In      -         1.388       -         
-G_0_1                      LUT3       F        Out     0.822     2.210       -         
-G_0_1                      Net        -        -       0.766     -           1         
-G_0                        LUT4       I0       In      -         2.976       -         
-G_0                        LUT4       F        Out     1.032     4.008       -         
-digit2_1_sqmuxa            Net        -        -       1.021     -           8         
-digit2[0]                  DFFNSE     CE       In      -         5.029       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 5.162 is 2.354(45.6%) logic and 2.808(54.4%) route.
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+clockCounter[10]         DFFR     Q        Out     0.367     0.367       -         
+clockCounter[10]         Net      -        -       1.082     -           13        
+G_24_N_3L3               LUT4     I1       In      -         1.449       -         
+G_24_N_3L3               LUT4     F        Out     1.099     2.548       -         
+G_24_N_3L3               Net      -        -       1.021     -           2         
+G_24_N_4L6               LUT4     I0       In      -         3.569       -         
+G_24_N_4L6               LUT4     F        Out     1.032     4.601       -         
+G_24_N_4L6               Net      -        -       0.766     -           1         
+G_24                     LUT4     I1       In      -         5.367       -         
+G_24                     LUT4     F        Out     1.099     6.466       -         
+G_24                     Net      -        -       1.082     -           12        
+digitalOutputPins[0]     DFFE     CE       In      -         7.548       -         
+===================================================================================
+Total path delay (propagation time + setup) of 7.681 is 3.730(48.6%) logic and 3.951(51.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 2: 
-      Requested Period:                      3.747
+      Requested Period:                      6.529
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.614
+    = Required time:                         6.396
 
-    - Propagation time:                      5.029
+    - Propagation time:                      7.548
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.414
+    = Slack (non-critical) :                 -1.152
 
-    Number of logic level(s):                2
-    Starting point:                          segmentCounter_fast[1] / Q
-    Ending point:                            digit3[0] / CE
-    The start point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
-    The end   point is clocked by            SHIFT_RESISTER|clock [falling] on pin CLK
+    Number of logic level(s):                3
+    Starting point:                          clockCounter[10] / Q
+    Ending point:                            segmentOutputPins[0] / CE
+    The start point is clocked by            FourDigitLedController|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|clock [rising] on pin CLK
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-segmentCounter_fast[1]     DFFE       Q        Out     0.367     0.367       -         
-segmentCounter_fast[1]     Net        -        -       1.021     -           5         
-G_8_1                      LUT3       I2       In      -         1.388       -         
-G_8_1                      LUT3       F        Out     0.822     2.210       -         
-G_8_1                      Net        -        -       0.766     -           1         
-G_8                        LUT4       I0       In      -         2.976       -         
-G_8                        LUT4       F        Out     1.032     4.008       -         
-digit3_1_sqmuxa            Net        -        -       1.021     -           8         
-digit3[0]                  DFFNSE     CE       In      -         5.029       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 5.162 is 2.354(45.6%) logic and 2.808(54.4%) route.
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+clockCounter[10]         DFFR     Q        Out     0.367     0.367       -         
+clockCounter[10]         Net      -        -       1.082     -           13        
+G_24_N_3L3               LUT4     I1       In      -         1.449       -         
+G_24_N_3L3               LUT4     F        Out     1.099     2.548       -         
+G_24_N_3L3               Net      -        -       1.021     -           2         
+G_24_N_4L6               LUT4     I0       In      -         3.569       -         
+G_24_N_4L6               LUT4     F        Out     1.032     4.601       -         
+G_24_N_4L6               Net      -        -       0.766     -           1         
+G_24                     LUT4     I1       In      -         5.367       -         
+G_24                     LUT4     F        Out     1.099     6.466       -         
+G_24                     Net      -        -       1.082     -           12        
+segmentOutputPins[0]     DFFE     CE       In      -         7.548       -         
+===================================================================================
+Total path delay (propagation time + setup) of 7.681 is 3.730(48.6%) logic and 3.951(51.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 3: 
-      Requested Period:                      3.747
+      Requested Period:                      6.529
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.614
+    = Required time:                         6.396
 
-    - Propagation time:                      5.029
+    - Propagation time:                      7.548
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.414
+    = Slack (non-critical) :                 -1.152
 
-    Number of logic level(s):                2
-    Starting point:                          segmentCounter_fast[1] / Q
-    Ending point:                            digit1[0] / CE
-    The start point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
-    The end   point is clocked by            SHIFT_RESISTER|clock [falling] on pin CLK
+    Number of logic level(s):                3
+    Starting point:                          clockCounter[10] / Q
+    Ending point:                            segmentOutputPins[1] / CE
+    The start point is clocked by            FourDigitLedController|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|clock [rising] on pin CLK
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-segmentCounter_fast[1]     DFFE       Q        Out     0.367     0.367       -         
-segmentCounter_fast[1]     Net        -        -       1.021     -           5         
-G_1_0                      LUT3       I2       In      -         1.388       -         
-G_1_0                      LUT3       F        Out     0.822     2.210       -         
-G_1_0                      Net        -        -       0.766     -           1         
-G                          LUT4       I0       In      -         2.976       -         
-G                          LUT4       F        Out     1.032     4.008       -         
-digit1_1_sqmuxa            Net        -        -       1.021     -           8         
-digit1[0]                  DFFNSE     CE       In      -         5.029       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 5.162 is 2.354(45.6%) logic and 2.808(54.4%) route.
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+clockCounter[10]         DFFR     Q        Out     0.367     0.367       -         
+clockCounter[10]         Net      -        -       1.082     -           13        
+G_24_N_3L3               LUT4     I1       In      -         1.449       -         
+G_24_N_3L3               LUT4     F        Out     1.099     2.548       -         
+G_24_N_3L3               Net      -        -       1.021     -           2         
+G_24_N_4L6               LUT4     I0       In      -         3.569       -         
+G_24_N_4L6               LUT4     F        Out     1.032     4.601       -         
+G_24_N_4L6               Net      -        -       0.766     -           1         
+G_24                     LUT4     I1       In      -         5.367       -         
+G_24                     LUT4     F        Out     1.099     6.466       -         
+G_24                     Net      -        -       1.082     -           12        
+segmentOutputPins[1]     DFFE     CE       In      -         7.548       -         
+===================================================================================
+Total path delay (propagation time + setup) of 7.681 is 3.730(48.6%) logic and 3.951(51.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 4: 
-      Requested Period:                      3.747
+      Requested Period:                      6.529
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.614
+    = Required time:                         6.396
 
-    - Propagation time:                      5.029
+    - Propagation time:                      7.548
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.414
+    = Slack (non-critical) :                 -1.152
 
-    Number of logic level(s):                2
-    Starting point:                          segmentCounter_fast[1] / Q
-    Ending point:                            digit0[0] / CE
-    The start point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
-    The end   point is clocked by            SHIFT_RESISTER|clock [falling] on pin CLK
+    Number of logic level(s):                3
+    Starting point:                          clockCounter[10] / Q
+    Ending point:                            segmentOutputPins[2] / CE
+    The start point is clocked by            FourDigitLedController|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|clock [rising] on pin CLK
 
-Instance / Net                        Pin      Pin               Arrival     No. of    
-Name                       Type       Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------------
-segmentCounter_fast[1]     DFFE       Q        Out     0.367     0.367       -         
-segmentCounter_fast[1]     Net        -        -       1.021     -           5         
-G_9_1                      LUT3       I2       In      -         1.388       -         
-G_9_1                      LUT3       F        Out     0.822     2.210       -         
-G_9_1                      Net        -        -       0.766     -           1         
-G_9                        LUT4       I0       In      -         2.976       -         
-G_9                        LUT4       F        Out     1.032     4.008       -         
-digit0_0_sqmuxa            Net        -        -       1.021     -           8         
-digit0[0]                  DFFNSE     CE       In      -         5.029       -         
-=======================================================================================
-Total path delay (propagation time + setup) of 5.162 is 2.354(45.6%) logic and 2.808(54.4%) route.
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+clockCounter[10]         DFFR     Q        Out     0.367     0.367       -         
+clockCounter[10]         Net      -        -       1.082     -           13        
+G_24_N_3L3               LUT4     I1       In      -         1.449       -         
+G_24_N_3L3               LUT4     F        Out     1.099     2.548       -         
+G_24_N_3L3               Net      -        -       1.021     -           2         
+G_24_N_4L6               LUT4     I0       In      -         3.569       -         
+G_24_N_4L6               LUT4     F        Out     1.032     4.601       -         
+G_24_N_4L6               Net      -        -       0.766     -           1         
+G_24                     LUT4     I1       In      -         5.367       -         
+G_24                     LUT4     F        Out     1.099     6.466       -         
+G_24                     Net      -        -       1.082     -           12        
+segmentOutputPins[2]     DFFE     CE       In      -         7.548       -         
+===================================================================================
+Total path delay (propagation time + setup) of 7.681 is 3.730(48.6%) logic and 3.951(51.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
 Path information for path number 5: 
-      Requested Period:                      3.747
+      Requested Period:                      6.529
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         3.614
+    = Required time:                         6.396
 
-    - Propagation time:                      5.029
+    - Propagation time:                      7.548
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.414
+    = Slack (non-critical) :                 -1.152
 
-    Number of logic level(s):                2
-    Starting point:                          segmentCounter_fast[1] / Q
-    Ending point:                            digit2[7] / CE
-    The start point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
-    The end   point is clocked by            SHIFT_RESISTER|clock [falling] on pin CLK
+    Number of logic level(s):                3
+    Starting point:                          clockCounter[10] / Q
+    Ending point:                            segmentOutputPins[3] / CE
+    The start point is clocked by            FourDigitLedController|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|clock [rising] on pin CLK
 
-Instance / Net                       Pin      Pin               Arrival     No. of    
-Name                       Type      Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------
-segmentCounter_fast[1]     DFFE      Q        Out     0.367     0.367       -         
-segmentCounter_fast[1]     Net       -        -       1.021     -           5         
-G_0_1                      LUT3      I2       In      -         1.388       -         
-G_0_1                      LUT3      F        Out     0.822     2.210       -         
-G_0_1                      Net       -        -       0.766     -           1         
-G_0                        LUT4      I0       In      -         2.976       -         
-G_0                        LUT4      F        Out     1.032     4.008       -         
-digit2_1_sqmuxa            Net       -        -       1.021     -           8         
-digit2[7]                  DFFNE     CE       In      -         5.029       -         
-======================================================================================
-Total path delay (propagation time + setup) of 5.162 is 2.354(45.6%) logic and 2.808(54.4%) route.
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                     Type     Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+clockCounter[10]         DFFR     Q        Out     0.367     0.367       -         
+clockCounter[10]         Net      -        -       1.082     -           13        
+G_24_N_3L3               LUT4     I1       In      -         1.449       -         
+G_24_N_3L3               LUT4     F        Out     1.099     2.548       -         
+G_24_N_3L3               Net      -        -       1.021     -           2         
+G_24_N_4L6               LUT4     I0       In      -         3.569       -         
+G_24_N_4L6               LUT4     F        Out     1.032     4.601       -         
+G_24_N_4L6               Net      -        -       0.766     -           1         
+G_24                     LUT4     I1       In      -         5.367       -         
+G_24                     LUT4     F        Out     1.099     6.466       -         
+G_24                     Net      -        -       1.082     -           12        
+segmentOutputPins[3]     DFFE     CE       In      -         7.548       -         
+===================================================================================
+Total path delay (propagation time + setup) of 7.681 is 3.730(48.6%) logic and 3.951(51.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: FourDigitLedController|serialClockIn
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                                                                  Arrival           
+Instance                       Reference                                Type      Pin     Net                            Time        Slack 
+                               Clock                                                                                                       
+-------------------------------------------------------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     FourDigitLedController|serialClockIn     DFFRE     Q       serialClockCounter_fast[3]     0.367       -2.317
+serialClockCounter_fast[2]     FourDigitLedController|serialClockIn     DFFRE     Q       serialClockCounter_fast[2]     0.367       -2.250
+serialReg[8]                   FourDigitLedController|serialClockIn     DFF       Q       serialReg[8]                   0.367       -2.040
+serialReg[9]                   FourDigitLedController|serialClockIn     DFF       Q       serialReg[9]                   0.367       -1.844
+serialClockCounter_fast[1]     FourDigitLedController|serialClockIn     DFFRE     Q       serialClockCounter_fast[1]     0.367       -1.479
+serialClockCounter_fast[0]     FourDigitLedController|serialClockIn     DFFR      Q       serialClockCounter_fast[0]     0.367       -1.332
+serialClockCounter[1]          FourDigitLedController|serialClockIn     DFFRE     Q       serialClockCounter[1]          0.367       -0.216
+serialClockCounter[0]          FourDigitLedController|serialClockIn     DFFR      Q       CO0                            0.367       -0.149
+serialClockCounter[2]          FourDigitLedController|serialClockIn     DFFRE     Q       serialClockCounter[2]          0.367       0.061 
+serialReg[0]                   FourDigitLedController|serialClockIn     DFFS      Q       serialReg[0]                   0.367       0.191 
+===========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+              Starting                                                                        Required           
+Instance      Reference                                Type       Pin     Net                 Time         Slack 
+              Clock                                                                                              
+-----------------------------------------------------------------------------------------------------------------
+digit0[0]     FourDigitLedController|serialClockIn     DFFNSE     CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[1]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[2]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[3]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[4]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[5]     FourDigitLedController|serialClockIn     DFFNSE     CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[6]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit0[7]     FourDigitLedController|serialClockIn     DFFNE      CE      digit0_0_sqmuxa     1.579        -2.317
+digit1[0]     FourDigitLedController|serialClockIn     DFFNSE     CE      digit1_1_sqmuxa     1.579        -2.317
+digit1[1]     FourDigitLedController|serialClockIn     DFFNSE     CE      digit1_1_sqmuxa     1.579        -2.317
+=================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1.712
+    - Setup time:                            0.133
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.579
+
+    - Propagation time:                      3.896
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.317
+
+    Number of logic level(s):                3
+    Starting point:                          serialClockCounter_fast[3] / Q
+    Ending point:                            digit1[0] / CE
+    The start point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                           Type          Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     DFFRE         Q        Out     0.367     0.367       -         
+serialClockCounter_fast[3]     Net           -        -       1.082     -           17        
+g0_0_0_0                       LUT4          I1       In      -         1.449       -         
+g0_0_0_0                       LUT4          F        Out     1.099     2.548       -         
+g0_0_0_0                       Net           -        -       0.000     -           1         
+g0_0_0                         MUX2_LUT5     I0       In      -         2.548       -         
+g0_0_0                         MUX2_LUT5     O        Out     0.150     2.698       -         
+g0_0_0                         Net           -        -       0.000     -           1         
+g0_0                           MUX2_LUT6     I0       In      -         2.698       -         
+g0_0                           MUX2_LUT6     O        Out     0.177     2.875       -         
+digit1_1_sqmuxa                Net           -        -       1.021     -           8         
+digit1[0]                      DFFNSE        CE       In      -         3.896       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 4.029 is 1.926(47.8%) logic and 2.103(52.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      1.712
+    - Setup time:                            0.133
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.579
+
+    - Propagation time:                      3.896
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.317
+
+    Number of logic level(s):                3
+    Starting point:                          serialClockCounter_fast[3] / Q
+    Ending point:                            digit2[0] / CE
+    The start point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                           Type          Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     DFFRE         Q        Out     0.367     0.367       -         
+serialClockCounter_fast[3]     Net           -        -       1.082     -           17        
+g0_3_0_1                       LUT4          I1       In      -         1.449       -         
+g0_3_0_1                       LUT4          F        Out     1.099     2.548       -         
+g0_3_0_1                       Net           -        -       0.000     -           1         
+g0_3_0                         MUX2_LUT5     I1       In      -         2.548       -         
+g0_3_0                         MUX2_LUT5     O        Out     0.150     2.698       -         
+g0_3_0                         Net           -        -       0.000     -           1         
+g0_3                           MUX2_LUT6     I0       In      -         2.698       -         
+g0_3                           MUX2_LUT6     O        Out     0.177     2.875       -         
+digit2_1_sqmuxa                Net           -        -       1.021     -           8         
+digit2[0]                      DFFNSE        CE       In      -         3.896       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 4.029 is 1.926(47.8%) logic and 2.103(52.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      1.712
+    - Setup time:                            0.133
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.579
+
+    - Propagation time:                      3.896
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.317
+
+    Number of logic level(s):                3
+    Starting point:                          serialClockCounter_fast[3] / Q
+    Ending point:                            digit2[0] / CE
+    The start point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                           Type          Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     DFFRE         Q        Out     0.367     0.367       -         
+serialClockCounter_fast[3]     Net           -        -       1.082     -           17        
+g0_3_0_0                       LUT4          I1       In      -         1.449       -         
+g0_3_0_0                       LUT4          F        Out     1.099     2.548       -         
+g0_3_0_0                       Net           -        -       0.000     -           1         
+g0_3_0                         MUX2_LUT5     I0       In      -         2.548       -         
+g0_3_0                         MUX2_LUT5     O        Out     0.150     2.698       -         
+g0_3_0                         Net           -        -       0.000     -           1         
+g0_3                           MUX2_LUT6     I0       In      -         2.698       -         
+g0_3                           MUX2_LUT6     O        Out     0.177     2.875       -         
+digit2_1_sqmuxa                Net           -        -       1.021     -           8         
+digit2[0]                      DFFNSE        CE       In      -         3.896       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 4.029 is 1.926(47.8%) logic and 2.103(52.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      1.712
+    - Setup time:                            0.133
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.579
+
+    - Propagation time:                      3.896
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.317
+
+    Number of logic level(s):                3
+    Starting point:                          serialClockCounter_fast[3] / Q
+    Ending point:                            digit2[0] / CE
+    The start point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                           Type          Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     DFFRE         Q        Out     0.367     0.367       -         
+serialClockCounter_fast[3]     Net           -        -       1.082     -           17        
+g0_3_1_1                       LUT4          I1       In      -         1.449       -         
+g0_3_1_1                       LUT4          F        Out     1.099     2.548       -         
+g0_3_1_1                       Net           -        -       0.000     -           1         
+g0_3_1                         MUX2_LUT5     I1       In      -         2.548       -         
+g0_3_1                         MUX2_LUT5     O        Out     0.150     2.698       -         
+g0_3_1                         Net           -        -       0.000     -           1         
+g0_3                           MUX2_LUT6     I1       In      -         2.698       -         
+g0_3                           MUX2_LUT6     O        Out     0.177     2.875       -         
+digit2_1_sqmuxa                Net           -        -       1.021     -           8         
+digit2[0]                      DFFNSE        CE       In      -         3.896       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 4.029 is 1.926(47.8%) logic and 2.103(52.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      1.712
+    - Setup time:                            0.133
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.579
+
+    - Propagation time:                      3.896
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.317
+
+    Number of logic level(s):                3
+    Starting point:                          serialClockCounter_fast[3] / Q
+    Ending point:                            digit2[0] / CE
+    The start point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [falling] on pin CLK
+
+Instance / Net                               Pin      Pin               Arrival     No. of    
+Name                           Type          Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+serialClockCounter_fast[3]     DFFRE         Q        Out     0.367     0.367       -         
+serialClockCounter_fast[3]     Net           -        -       1.082     -           17        
+g0_3_1_0                       LUT4          I1       In      -         1.449       -         
+g0_3_1_0                       LUT4          F        Out     1.099     2.548       -         
+g0_3_1_0                       Net           -        -       0.000     -           1         
+g0_3_1                         MUX2_LUT5     I0       In      -         2.548       -         
+g0_3_1                         MUX2_LUT5     O        Out     0.150     2.698       -         
+g0_3_1                         Net           -        -       0.000     -           1         
+g0_3                           MUX2_LUT6     I1       In      -         2.698       -         
+g0_3                           MUX2_LUT6     O        Out     0.177     2.875       -         
+digit2_1_sqmuxa                Net           -        -       1.021     -           8         
+digit2[0]                      DFFNSE        CE       In      -         3.896       -         
+==============================================================================================
+Total path delay (propagation time + setup) of 4.029 is 1.926(47.8%) logic and 2.103(52.2%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -720,23 +969,29 @@ Detailed Report for Clock: System
 Starting Points with Worst Slack
 ********************************
 
-             Starting                                               Arrival          
-Instance     Reference     Type     Pin     Net                     Time        Slack
-             Clock                                                                   
--------------------------------------------------------------------------------------
-SUM_0[0]     System        INV      O       segmentCounter_4[0]     0.000       6.340
-=====================================================================================
+                                   Starting                                       Arrival          
+Instance                           Reference     Type     Pin     Net             Time        Slack
+                                   Clock                                                           
+---------------------------------------------------------------------------------------------------
+serialClockCounter_r_0[0]          System        INV      O       N_14_0          0.000       2.271
+serialClockCounter_r_0[1]          System        INV      O       N_16_0          0.000       2.271
+serialClockCounter_r_fast_0[0]     System        INV      O       N_14_fast_0     0.000       2.271
+serialClockCounter_r_fast_0[1]     System        INV      O       N_16_fast_0     0.000       2.271
+===================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                      Starting                                               Required          
-Instance              Reference     Type     Pin     Net                     Time         Slack
-                      Clock                                                                    
------------------------------------------------------------------------------------------------
-segmentCounter[0]     System        DFFE     D       segmentCounter_4[0]     7.361        6.340
-===============================================================================================
+                               Starting                                        Required          
+Instance                       Reference     Type      Pin     Net             Time         Slack
+                               Clock                                                             
+-------------------------------------------------------------------------------------------------
+serialClockCounter[0]          System        DFFR      D       N_14_0          3.292        2.271
+serialClockCounter[1]          System        DFFRE     D       N_16_0          3.292        2.271
+serialClockCounter_fast[0]     System        DFFR      D       N_14_fast_0     3.292        2.271
+serialClockCounter_fast[1]     System        DFFRE     D       N_16_fast_0     3.292        2.271
+=================================================================================================
 
 
 
@@ -745,29 +1000,29 @@ Worst Path Information
 
 
 Path information for path number 1: 
-      Requested Period:                      7.494
+      Requested Period:                      3.425
     - Setup time:                            0.133
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         7.361
+    = Required time:                         3.292
 
     - Propagation time:                      1.021
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 6.340
+    = Slack (non-critical) :                 2.271
 
     Number of logic level(s):                0
-    Starting point:                          SUM_0[0] / O
-    Ending point:                            segmentCounter[0] / D
+    Starting point:                          serialClockCounter_r_0[0] / O
+    Ending point:                            serialClockCounter[0] / D
     The start point is clocked by            System [rising]
-    The end   point is clocked by            SHIFT_RESISTER|clock [rising] on pin CLK
+    The end   point is clocked by            FourDigitLedController|serialClockIn [rising] on pin CLK
 
-Instance / Net                   Pin      Pin               Arrival     No. of    
-Name                    Type     Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------
-SUM_0[0]                INV      O        Out     0.000     0.000       -         
-segmentCounter_4[0]     Net      -        -       1.021     -           1         
-segmentCounter[0]       DFFE     D        In      -         1.021       -         
-==================================================================================
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                          Type     Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+serialClockCounter_r_0[0]     INV      O        Out     0.000     0.000       -         
+N_14_0                        Net      -        -       1.021     -           1         
+serialClockCounter[0]         DFFR     D        In      -         1.021       -         
+========================================================================================
 Total path delay (propagation time + setup) of 1.154 is 0.133(11.5%) logic and 1.021(88.5%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
@@ -783,44 +1038,45 @@ Finished final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0
 Finished timing report (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 312MB peak: 312MB)
 
 ---------------------------------------
-Resource Usage Report for SHIFT_RESISTER 
+Resource Usage Report for FourDigitLedController 
 
 Mapping to part: gw1n_1qfn48-6
 Cell usage:
 ALU             17 uses
-DFF             2 uses
-DFFE            27 uses
-DFFN            1 use
-DFFNE           13 uses
-DFFNSE          20 uses
-DFFR            16 uses
-DFFSE           6 uses
+DFF             3 uses
+DFFE            12 uses
+DFFNE           16 uses
+DFFNSE          16 uses
+DFFR            19 uses
+DFFRE           6 uses
+DFFS            7 uses
 GSR             1 use
-INV             1 use
-MUX2_LUT5       12 uses
-MUX2_LUT6       2 uses
-LUT2            12 uses
-LUT3            30 uses
-LUT4            57 uses
+INV             6 uses
+MUX2_LUT5       10 uses
+MUX2_LUT6       5 uses
+LUT2            10 uses
+LUT3            9 uses
+LUT4            56 uses
 
-I/O ports: 14
-I/O primitives: 14
-IBUF           1 use
-OBUF           13 uses
+I/O ports: 18
+I/O primitives: 18
+IBUF           3 uses
+OBUF           15 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   85 of 864 (9%)
+Register bits not including I/Os:   79 of 864 (9%)
 Total load per clock:
-   SHIFT_RESISTER|clock: 85
+   FourDigitLedController|clock: 29
+   FourDigitLedController|serialClockIn: 51
 
 @S |Mapping Summary:
-Total  LUTs: 99 (8%)
+Total  LUTs: 75 (6%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 312MB peak: 312MB)
+At Mapper Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 312MB peak: 312MB)
 
-Process took 0h:00m:05s realtime, 0h:00m:05s cputime
-# Sun Jun  7 23:23:29 2020
+Process took 0h:00m:06s realtime, 0h:00m:05s cputime
+# Sun Jun 14 12:14:41 2020
 
 ###########################################################]

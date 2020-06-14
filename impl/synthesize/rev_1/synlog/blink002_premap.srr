@@ -1,4 +1,4 @@
-# Sun Jun  7 23:23:21 2020
+# Sun Jun 14 12:14:32 2020
 
 
 Copyright (C) 1994-2020 Synopsys, Inc.
@@ -40,20 +40,14 @@ Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00
 
 Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 232MB peak: 232MB)
 
-@N: FX493 |Applying initial value "000" on instance segmentCounter[2:0].
+@N: FX493 |Applying initial value "0001111111" on instance serialReg[9:0].
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
-@N: FX493 |Applying initial value "0" on instance serialDataIn.
-@N: FX493 |Applying initial value "1000000" on instance serialInDummy[6:0].
-@N: FX493 |Applying initial value "0" on instance serialClockIn.
+@N: FX493 |Applying initial value "00100001" on instance digit0[7:0].
 @N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit2[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit3[7:0].
-@N: FX493 |Applying initial value "0" on instance serialClockLed[0].
-@N: FX493 |Applying initial value "01011011" on instance serialReg[7:0].
-@N: FX493 |Applying initial value "01011011" on instance digit0[7:0].
+@N: FX493 |Applying initial value "01110011" on instance digit2[7:0].
+@N: FX493 |Applying initial value "01100101" on instance digit3[7:0].
+@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 @N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
-@N: FX493 |Applying initial value "00" on instance digitCounter[1:0].
-@W: BN132 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":70:2:70:7|Removing sequential instance serialInDummy[1] because it is equivalent to instance serialDataIn. To keep the instance, apply constraint syn_preserve=1 on the instance.
 
 Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
@@ -74,24 +68,29 @@ Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0
 Clock Summary
 ******************
 
-          Start                    Requested     Requested     Clock        Clock                     Clock
-Level     Clock                    Frequency     Period        Type         Group                     Load 
------------------------------------------------------------------------------------------------------------
-0 -       SHIFT_RESISTER|clock     159.1 MHz     6.285         inferred     Autoconstr_clkgroup_0     83   
-===========================================================================================================
+          Start                                    Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                    Frequency     Period        Type         Group                     Load 
+---------------------------------------------------------------------------------------------------------------------------
+0 -       FourDigitLedController|serialClockIn     205.7 MHz     4.862         inferred     Autoconstr_clkgroup_1     46   
+                                                                                                                           
+0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
+===========================================================================================================================
 
 
 
 Clock Load Summary
 ***********************
 
-                         Clock     Source          Clock Pin                    Non-clock Pin     Non-clock Pin      
-Clock                    Load      Pin             Seq Example                  Seq Example       Comb Example       
----------------------------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     83        clock(port)     digitalOutputPins[3:0].C     -                 un1_clock.I[0](inv)
-=====================================================================================================================
+                                         Clock     Source                  Clock Pin                    Non-clock Pin     Non-clock Pin               
+Clock                                    Load      Pin                     Seq Example                  Seq Example       Comb Example                
+------------------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|serialClockIn     46        serialClockIn(port)     serialReg[0].C               -                 serialClockLedOutB.I[0](inv)
+                                                                                                                                                      
+FourDigitLedController|clock             29        clock(port)             digitalOutputPins[3:0].C     -                 -                           
+======================================================================================================================================================
 
-@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Found inferred clock SHIFT_RESISTER|clock which controls 83 sequential elements including digitCounter[1]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Found inferred clock FourDigitLedController|clock which controls 29 sequential elements including clockCounter[16]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Found inferred clock FourDigitLedController|serialClockIn which controls 46 sequential elements including serialClockCounter[3]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
 
 ICG Latch Removal Summary:
 Number of ICG latches removed: 0
@@ -104,15 +103,16 @@ Number of ICG latches not removed:	0
 
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
-1 non-gated/non-generated clock tree(s) driving 83 clock pin(s) of sequential element(s)
+2 non-gated/non-generated clock tree(s) driving 75 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
-============================ Non-Gated/Non-Generated Clocks ============================
-Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance 
-----------------------------------------------------------------------------------------
-@KP:ckid0_0       clock               port                   83         clockCounter[16]
-========================================================================================
+============================== Non-Gated/Non-Generated Clocks ===============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance      
+---------------------------------------------------------------------------------------------
+@KP:ckid0_0       clock               port                   29         clockCounter[16]     
+@KP:ckid0_1       serialClockIn       port                   46         serialClockCounter[3]
+=============================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######
@@ -134,6 +134,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Sun Jun  7 23:23:23 2020
+# Sun Jun 14 12:14:35 2020
 
 ###########################################################]

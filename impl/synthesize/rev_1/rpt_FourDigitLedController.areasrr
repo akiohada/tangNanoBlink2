@@ -20,26 +20,27 @@ Implementation : rev_1
 
 Part:			GW1N_1QFN48-6 (GoWin)
 
-------------------------------------------------------------------------------
-########   Utilization report for  Top level view:   SHIFT_RESISTER   ########
-==============================================================================
+--------------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   FourDigitLedController   ########
+======================================================================================
 
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     101                100 %                
+REGISTERS     79                 100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block SHIFT_RESISTER:	101 (42.26 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block FourDigitLedController:	79 (37.09 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-LUTS          91                 100 %                
-MUX2_LUT5     11                 100 %                
+LUTS          75                 100 %                
+MUX2_LUT5     10                 100 %                
+MUX2_LUT6     5                  100 %                
 ALU           17                 100 %                
 ======================================================
-Total COMBINATIONAL LOGIC in the block SHIFT_RESISTER:	119 (49.79 % Utilization)
+Total COMBINATIONAL LOGIC in the block FourDigitLedController:	107 (50.23 % Utilization)
 
 
 ##### END OF AREA REPORT #####]

@@ -16,7 +16,7 @@ max stack size: 8388608 (bytes)
 
 Implementation : rev_1
 
-# Written on Sun Jun  7 23:23:21 2020
+# Written on Sun Jun 14 12:14:32 2020
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      (none)
@@ -33,18 +33,22 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-          Start                    Requested     Requested     Clock        Clock                     Clock
-Level     Clock                    Frequency     Period        Type         Group                     Load 
------------------------------------------------------------------------------------------------------------
-0 -       SHIFT_RESISTER|clock     159.1 MHz     6.285         inferred     Autoconstr_clkgroup_0     83   
-===========================================================================================================
+          Start                                    Requested     Requested     Clock        Clock                     Clock
+Level     Clock                                    Frequency     Period        Type         Group                     Load 
+---------------------------------------------------------------------------------------------------------------------------
+0 -       FourDigitLedController|serialClockIn     205.7 MHz     4.862         inferred     Autoconstr_clkgroup_1     46   
+                                                                                                                           
+0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
+===========================================================================================================================
 
 
 Clock Load Summary
 ******************
 
-                         Clock     Source          Clock Pin                    Non-clock Pin     Non-clock Pin      
-Clock                    Load      Pin             Seq Example                  Seq Example       Comb Example       
----------------------------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     83        clock(port)     digitalOutputPins[3:0].C     -                 un1_clock.I[0](inv)
-=====================================================================================================================
+                                         Clock     Source                  Clock Pin                    Non-clock Pin     Non-clock Pin               
+Clock                                    Load      Pin                     Seq Example                  Seq Example       Comb Example                
+------------------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|serialClockIn     46        serialClockIn(port)     serialReg[0].C               -                 serialClockLedOutB.I[0](inv)
+                                                                                                                                                      
+FourDigitLedController|clock             29        clock(port)             digitalOutputPins[3:0].C     -                 -                           
+======================================================================================================================================================

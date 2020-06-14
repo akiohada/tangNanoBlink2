@@ -1,9 +1,9 @@
 /home/vagrant/gowin/SynplifyPro/bin/c_hdl  -osyn  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_comp.srs  -hdllog  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/blink002_compiler.srr  -encrypt  -mp  1  -verification_mode 0  -verilog  -prodtype  synplify_pro  -primux -fixsmult -sdff_counter -nram -divnmod -nostructver -gowin -infer_seqShift  -D_MULTIPLE_FILE_COMPILATION_UNIT_   -I /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/  -I /home/vagrant/gowin/SynplifyPro/lib   -sysv  -devicelib  /home/vagrant/gowin/SynplifyPro/lib/generic/gw1n.v  -encrypt  -pro  -dmgen  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -D_MULTIPLE_FILE_COMPILATION_UNIT_  -lib work /home/vagrant/workspace/verilogLeson/blink002/src/blink.v  -jobname  "compiler" 
 relcom:../../../../../../../gowin/SynplifyPro/bin/c_hdl -osyn ../synwork/blink002_comp.srs -hdllog ../synlog/blink002_compiler.srr -encrypt -mp 1 -verification_mode 0 -verilog -prodtype synplify_pro -primux -fixsmult -sdff_counter -nram -divnmod -nostructver -gowin -infer_seqShift -D_MULTIPLE_FILE_COMPILATION_UNIT_ -I ../../ -I ../../../../../../../gowin/SynplifyPro/lib -sysv -devicelib ../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v -encrypt -pro -dmgen ../dm -ui -fid2 -ram -sharing on -ll 2000 -autosm -D_MULTIPLE_FILE_COMPILATION_UNIT_ -lib work ../../../../src/blink.v -jobname "compiler"
 rc:0 success:1 runtime:2
-file:../synwork/blink002_comp.srs|io:o|time:1591539799|size:4437|exec:0|csum:
-file:../synlog/blink002_compiler.srr|io:o|time:1591539799|size:7167|exec:0|csum:
+file:../synwork/blink002_comp.srs|io:o|time:1592104472|size:3864|exec:0|csum:
+file:../synlog/blink002_compiler.srr|io:o|time:1592104472|size:7041|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v|io:i|time:1578623015|size:160771|exec:0|csum:95293E6D0CF5BE44BF9D70942739B183
-file:../../../../src/blink.v|io:i|time:1591539776|size:9560|exec:0|csum:24F9821909771DAE8934CE65B075B9B7
+file:../../../../src/blink.v|io:i|time:1592104452|size:7380|exec:0|csum:E0691DCE3B2A7D6A6FFA95196F89B9BA
 file:../../../../../../../gowin/SynplifyPro/linux_a_64/c_hdl|io:i|time:1578623033|size:8916744|exec:1|csum:1EFE64CA0F40C91DEA45001DBC0EDAA9
 file:../../../../../../../gowin/SynplifyPro/bin/c_hdl|io:i|time:1578623009|size:367|exec:1|csum:E52A0D56112AD6C22F02B648B6F508CE

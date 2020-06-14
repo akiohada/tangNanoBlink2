@@ -1,15 +1,14 @@
-module SHIFT_RESISTER (
-  // DECLARATION: クロック
-  input clock,
-    // Loc 35 | Pull UP
+module FourDigitLedController(
+  // DECLARATION: 入力
+  input clock, // Loc 35 | Pull UP
+  input serialClockIn, // Loc 19 | Pull NONE ※信号はプルダウン
+  input serialDataIn, // Loc 20 | Pull NONE ※信号はプルダウン
 
-  // DECLARATION: シリアル信号入力
-  // input serialClockIn,
-  // input serialDataIn,
-  output serialClockLedOut,
-
-  // DECLARATION: 7セグ4桁LED表示用
-  output reg [3:0] digitalOutputPins,
+  // DECLARATION: 出力
+  output serialClockLedOutR, // Loc 18 | Pull NONE
+  output serialClockLedOutB, // Loc 17 | Pull NONE
+  output serialClockLedOutG, // Loc 16 | Pull NONE
+  output reg [3:0] digitalOutputPins,// これはレジスタなの？？
     // 0: Loc 21 | Pull NONE
     // 1: Loc 22 | Pull NONE
     // 2: Loc 23 | Pull NONE
@@ -46,205 +45,128 @@ module SHIFT_RESISTER (
 );
 
   // DECLARATION: 各種カウンター
-  reg [23:0] clockCounter = 0;
-  // reg [23:0] clockCounter2 = 0;
-  reg [3:0] segmentCounter = 0;
-  reg [2:0] digitCounter = 0;
-  reg [1:0] serialClockLed = 0;
-  wire serialClockLedOut = serialClockLed;
-  integer i = 0;
-  integer j = 0;
-
-  // カウントUP
-  always @(posedge clock) begin
-    if (clockCounter < 24'd100_001) // 24_000_000 = 1sec なので 1/240 sec
-      clockCounter <= clockCounter + 1;
+  reg [23:0] clockCounter = 24'd0; // 7セグLED制御用
+  reg [3:0] serialClockCounter = 4'd0; // シリアル入力制御用
+  
+  // シリアル入力のLEDモニター
+  reg [2:0] serialClockLed = 3'b111;
+  assign serialClockLedOutR = serialClockLed[0]; // シリアルデータ入力8回目ごとに光る
+  assign serialClockLedOutB = serialClockLed[1]; // シリアルクロック入力信号で光る
+  assign serialClockLedOutG = serialClockLed[2]; // シリアルデータ入力ごとに光る
+  always @(serialClockIn) begin
+    if(serialClockCounter == 4'd0)
+      serialClockLed[0] <= 0; // 光る
     else
-      clockCounter <= 24'd1;
+      serialClockLed[0] <= 1; // 消える
   end
-
-  // テストシリアル信号
-  reg serialClockIn = 0;
-  reg serialDataIn = 0;
-  reg [6:0] serialInDummy = 7'b100_0000;
-  always @(posedge clock) begin
-    if (clockCounter == 24'd100) begin
-      serialDataIn <= serialInDummy[0];
-      serialInDummy[6:0] <= {serialInDummy[5:0], serialInDummy[6]};
-    end
-    else if (clockCounter == 24'd1_000)
-      serialClockIn <= 1;
-    else if (clockCounter == 24'd51_000)
-      serialClockIn <= 0;
+  always @(serialClockIn) begin
+    if(serialClockIn == 1)
+      serialClockLed[1] <= 0; // 光る
+    else if(serialClockIn == 0)
+      serialClockLed[1] <= 1; // 消える
+  end
+  always @(serialClockIn) begin
+    if(serialDataIn == 1)
+      serialClockLed[2] <= 0; // 光る
+    else if(serialDataIn == 0)
+      serialClockLed[2] <= 1; // 消える
   end
 
   // DECLARATION: レジスター
-  reg [7:0] serialReg = 8'b0101_1011;
-  reg [7:0] digit0 = 8'b0101_1011;
+  reg [9:0] serialReg = 10'b100_0111_1111; // 入力信号
+  reg [7:0] digit0 = 8'b0010_0001; //各桁
   reg [7:0] digit1 = 8'b0101_1011;
-  reg [7:0] digit2 = 8'b0101_1011;
-  reg [7:0] digit3 = 8'b0101_1011;
-
-  // くるくる回るバージョン
-  // always @(posedge clock) begin
-  //   if (clockCounter == 24'd100_001) begin
-  //     if (clockCounter2 < 24'd20)
-  //       clockCounter2 <= clockCounter2 + 1;
-  //     else
-  //       clockCounter2 <= 24'd1;
-  //   end
-  // end
-  // always @(posedge clock) begin
-  //   if (clockCounter2 == 0) begin
-  //     digit0 <= 8'b0100_0000;
-  //     digit1 <= 8'b0100_0000;
-  //     digit2 <= 8'b0100_0000;
-  //     digit3 <= 8'b0100_0000;
-  //   end
-  //   else if (clockCounter2 == 24'd20) begin
-  //     digit0[7:0] <= {digit0[6:0], digit0[7]};
-  //     digit1[7:0] <= {digit1[6:0], digit1[7]};
-  //     digit2[7:0] <= {digit2[6:0], digit2[7]};
-  //     digit3[7:0] <= {digit3[6:0], digit3[7]};
-  //   end
-  //   else begin
-  //     digit0 <= digit0;
-  //     digit1 <= digit1;
-  //     digit2 <= digit2;
-  //     digit3 <= digit3;
-  //   end
-  // end
-
-  // 固定で1234表示
-  //  always @(posedge clock) begin
-  //    digit0 <= 8'b0010_0001;
-  //    digit1 <= 8'b0101_1011;
-  //    digit2 <= 8'b0111_0011;
-  //    digit3 <= 8'b0110_0101;
-  //  end
-
-  // 1234でローテーション
-  // always @(posedge clock) begin
-  //   if (clockCounter == 24'd100_001) begin
-  //     if (clockCounter2 < 24'd20)
-  //       clockCounter2 <= clockCounter2 + 1;
-  //     else
-  //       clockCounter2 <= 24'd1;
-  //   end
-  // end
-  // always @(posedge clock) begin
-  //   if (clockCounter2 == 0) begin
-  //     digit0 <= 8'b0010_0001;
-  //     digit1 <= 8'b0101_1011;
-  //     digit2 <= 8'b0111_0011;
-  //     digit3 <= 8'b0110_0101;
-  //   end
-  //   else if (clockCounter2 == 24'd20) begin
-  //     digit0 <= digit1;
-  //     digit1 <= digit2;
-  //     digit2 <= digit3;
-  //     digit3 <= digit0;
-  //   end
-  //   else begin
-  //     digit0 <= digit0;
-  //     digit1 <= digit1;
-  //     digit2 <= digit2;
-  //     digit3 <= digit3;
-  //   end
-  // end
+  reg [7:0] digit2 = 8'b0111_0011;
+  reg [7:0] digit3 = 8'b0110_0101;
  
-  // シリアル入力
-  // 立ちあがりでデータを受け取る
+  // カウント処理
   always @(posedge clock) begin
-    if (serialClockIn == 1) begin
-      serialClockLed <= 1;
-      if (segmentCounter == 7) begin
-        serialReg[0] <= serialDataIn;
-        serialReg[1] <= serialReg[0];
-        serialReg[2] <= serialReg[1];
-        serialReg[3] <= serialReg[2];
-        serialReg[4] <= serialReg[3];
-        serialReg[5] <= serialReg[4];
-        serialReg[6] <= serialReg[5];
-        serialReg[7] <= serialReg[6];
-        segmentCounter <= 0;
-      end
-      else if (segmentCounter < 7) begin
-        serialReg[0] <= serialDataIn;
-        serialReg[1] <= serialReg[0];
-        serialReg[2] <= serialReg[1];
-        serialReg[3] <= serialReg[2];
-        serialReg[4] <= serialReg[3];
-        serialReg[5] <= serialReg[4];
-        serialReg[6] <= serialReg[5];
-        serialReg[7] <= serialReg[6];
-        segmentCounter <= segmentCounter + 1;
-      end
-      else
-        segmentCounter <= 0; // 保険のリセット用。
-    end
-    else if (serialClockIn == 0)
-      serialClockLed <= 0;
+    if (clockCounter < 24'd100_000) // 24_000_000 = 1sec なので 1/240 sec周期
+      clockCounter <= clockCounter + 1;
+    else
+      clockCounter <= 24'd0;
   end
 
-  // 1桁ずつセットする
-  always @(negedge clock) begin
-    if (serialClockIn == 0) begin
-      if (segmentCounter == 7) begin
-        if (digitCounter == 0) begin
-          digit0[0] <= serialReg[0];
-          digit0[1] <= serialReg[1];
-          digit0[2] <= serialReg[2];
-          digit0[3] <= serialReg[3];
-          digit0[4] <= serialReg[4];
-          digit0[5] <= serialReg[5];
-          digit0[6] <= serialReg[6];
-          digit0[7] <= serialReg[7];
-          digitCounter <= digitCounter + 1;
-        end
-        else if (digitCounter == 1) begin
-          digit1[0] <= serialReg[0];
-          digit1[1] <= serialReg[1];
-          digit1[2] <= serialReg[2];
-          digit1[3] <= serialReg[3];
-          digit1[4] <= serialReg[4];
-          digit1[5] <= serialReg[5];
-          digit1[6] <= serialReg[6];
-          digit1[7] <= serialReg[7];
-          digitCounter <= digitCounter + 1;
-        end
-        else if (digitCounter == 2) begin
-          digit2[0] <= serialReg[0];
-          digit2[1] <= serialReg[1];
-          digit2[2] <= serialReg[2];
-          digit2[3] <= serialReg[3];
-          digit2[4] <= serialReg[4];
-          digit2[5] <= serialReg[5];
-          digit2[6] <= serialReg[6];
-          digit2[7] <= serialReg[7];
-          digitCounter <= digitCounter + 1;
-        end
-        else if (digitCounter == 3) begin
-          digit3[0] <= serialReg[0];
-          digit3[1] <= serialReg[1];
-          digit3[2] <= serialReg[2];
-          digit3[3] <= serialReg[3];
-          digit3[4] <= serialReg[4];
-          digit3[5] <= serialReg[5];
-          digit3[6] <= serialReg[6];
-          digit3[7] <= serialReg[7];
-          digitCounter <= 0;
-        end
-        else begin
-          digitCounter <= 0; // 保険のリセット用。
-        end
+  // シリアル入力
+  always @(posedge serialClockIn) begin
+    if(serialClockCounter < 4'd9) begin
+      serialClockCounter <= serialClockCounter + 1;
+      serialReg[0] <= serialDataIn;
+      serialReg[1] <= serialReg[0];
+      serialReg[2] <= serialReg[1];
+      serialReg[3] <= serialReg[2];
+      serialReg[4] <= serialReg[3];
+      serialReg[5] <= serialReg[4];
+      serialReg[6] <= serialReg[5];
+      serialReg[7] <= serialReg[6];
+      serialReg[8] <= serialReg[7];
+      serialReg[9] <= serialReg[8];
+    end
+    else begin
+      serialClockCounter <= 0;
+      serialReg[0] <= serialDataIn;
+      serialReg[1] <= serialReg[0];
+      serialReg[2] <= serialReg[1];
+      serialReg[3] <= serialReg[2];
+      serialReg[4] <= serialReg[3];
+      serialReg[5] <= serialReg[4];
+      serialReg[6] <= serialReg[5];
+      serialReg[7] <= serialReg[6];
+      serialReg[8] <= serialReg[7];
+      serialReg[9] <= serialReg[8];
+    end
+  end
+
+  // 桁ごとにセットする
+  always @(negedge serialClockIn) begin
+    if (serialClockCounter == 4'd0) begin
+      if(serialReg[9:8] == 2'b00) begin
+        digit0[7] <= serialReg[7];
+        digit0[6] <= serialReg[6];
+        digit0[5] <= serialReg[5];
+        digit0[4] <= serialReg[4];
+        digit0[3] <= serialReg[3];
+        digit0[2] <= serialReg[2];
+        digit0[1] <= serialReg[1];
+        digit0[0] <= serialReg[0];
+      end
+      else if(serialReg[9:8] == 2'b01) begin
+        digit1[7] <= serialReg[7];
+        digit1[6] <= serialReg[6];
+        digit1[5] <= serialReg[5];
+        digit1[4] <= serialReg[4];
+        digit1[3] <= serialReg[3];
+        digit1[2] <= serialReg[2];
+        digit1[1] <= serialReg[1];
+        digit1[0] <= serialReg[0];
+      end
+      else if(serialReg[9:8] == 2'b10) begin
+        digit2[7] <= serialReg[7];
+        digit2[6] <= serialReg[6];
+        digit2[5] <= serialReg[5];
+        digit2[4] <= serialReg[4];
+        digit2[3] <= serialReg[3];
+        digit2[2] <= serialReg[2];
+        digit2[1] <= serialReg[1];
+        digit2[0] <= serialReg[0];
+      end
+      else if(serialReg[9:8] == 2'b11) begin
+        digit3[7] <= serialReg[7];
+        digit3[6] <= serialReg[6];
+        digit3[5] <= serialReg[5];
+        digit3[4] <= serialReg[4];
+        digit3[3] <= serialReg[3];
+        digit3[2] <= serialReg[2];
+        digit3[1] <= serialReg[1];
+        digit3[0] <= serialReg[0];
       end
     end
   end
 
   // 表示main処理
+  // digitalOutputPinsで選ばれた桁に、レジスタdigit0〜3までの値を順番に出力する
   always @(posedge clock) begin
-    if (clockCounter == 24'd25_001) begin // 約1msごとに桁を切り替える1桁目
+    if (clockCounter == 24'd24_000) begin // 約1msごとに桁を切り替える1桁目
       digitalOutputPins <= 4'b1110;
       segmentOutputPins[0] <= digit0[0];
       segmentOutputPins[1] <= digit0[1];
@@ -254,11 +176,8 @@ module SHIFT_RESISTER (
       segmentOutputPins[5] <= digit0[5];
       segmentOutputPins[6] <= digit0[6];
       segmentOutputPins[7] <= digit0[7];
-      // for (i = 0;i < 8;i = i + 1) begin // 各segに値をセット ここは並列処理できるのでは？
-      //   segmentOutputPins[i] <= digit0[i];
-      // end
     end
-    else if (clockCounter == 24'd50_001) begin // 約1msごとに桁を切り替える2桁目
+    else if (clockCounter == 24'd48_000) begin // 約1msごとに桁を切り替える2桁目
       digitalOutputPins <= 4'b1101;
       segmentOutputPins[0] <= digit1[0];
       segmentOutputPins[1] <= digit1[1];
@@ -268,11 +187,8 @@ module SHIFT_RESISTER (
       segmentOutputPins[5] <= digit1[5];
       segmentOutputPins[6] <= digit1[6];
       segmentOutputPins[7] <= digit1[7];
-      // for (i = 0;i < 8;i = i + 1) begin
-      //   segmentOutputPins[i] <= digit1[i];
-      // end
     end
-    else if (clockCounter == 24'd75_001) begin // 約1msごとに桁を切り替える3桁目
+    else if (clockCounter == 24'd72_000) begin // 約1msごとに桁を切り替える3桁目
       digitalOutputPins <= 4'b1011;
       segmentOutputPins[0] <= digit2[0];
       segmentOutputPins[1] <= digit2[1];
@@ -282,11 +198,8 @@ module SHIFT_RESISTER (
       segmentOutputPins[5] <= digit2[5];
       segmentOutputPins[6] <= digit2[6];
       segmentOutputPins[7] <= digit2[7];
-      // for (i = 0;i < 8;i = i + 1) begin
-      //   segmentOutputPins[i] <= digit2[i];
-      // end
     end
-    else if (clockCounter == 24'd100_001) begin // 約1msごとに桁を切り替える4桁目
+    else if (clockCounter == 24'd96_000) begin // 約1msごとに桁を切り替える4桁目
       digitalOutputPins <= 4'b0111;
       segmentOutputPins[0] <= digit3[0];
       segmentOutputPins[1] <= digit3[1];
@@ -296,9 +209,6 @@ module SHIFT_RESISTER (
       segmentOutputPins[5] <= digit3[5];
       segmentOutputPins[6] <= digit3[6];
       segmentOutputPins[7] <= digit3[7];
-      // for (i = 0;i < 8;i = i + 1) begin
-      //   segmentOutputPins[i] <= digit3[i];
-      // end
     end
   end
 

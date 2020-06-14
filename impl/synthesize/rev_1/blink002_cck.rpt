@@ -16,11 +16,11 @@ max stack size: 8388608 (bytes)
 
 Implementation : rev_1
 
-# Written on Sun Jun  7 23:23:23 2020
+# Written on Sun Jun 14 12:14:34 2020
 
 ##### DESIGN INFO #######################################################
 
-Top View:                "SHIFT_RESISTER"
+Top View:                "FourDigitLedController"
 Constraint File(s):      (none)
 
 
@@ -38,10 +38,12 @@ Found 0 issues in 0 out of 0 constraints
 Clock Relationships
 *******************
 
-Starting                 Ending                   |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-SHIFT_RESISTER|clock     SHIFT_RESISTER|clock     |     6.285            |     6.285            |     3.142            |     3.142                            
-=============================================================================================================================================================
+Starting                                 Ending                                   |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|clock             FourDigitLedController|clock             |     3.741            |     No paths         |     No paths         |     No paths                         
+FourDigitLedController|serialClockIn     FourDigitLedController|clock             |     No paths         |     No paths         |     No paths         |     Diff grp                         
+FourDigitLedController|serialClockIn     FourDigitLedController|serialClockIn     |     4.862            |     No paths         |     2.431            |     No paths                         
+=============================================================================================================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
@@ -61,7 +63,9 @@ p:segmentOutputPins[4]
 p:segmentOutputPins[5]
 p:segmentOutputPins[6]
 p:segmentOutputPins[7]
-p:serialClockLedOut
+p:serialClockLedOutG
+p:serialClockLedOutR
+p:serialDataIn
 
 
 Inapplicable constraints

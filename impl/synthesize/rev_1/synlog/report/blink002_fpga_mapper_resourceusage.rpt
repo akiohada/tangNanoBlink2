@@ -1,32 +1,32 @@
 ---------------------------------------
-Resource Usage Report for SHIFT_RESISTER 
+Resource Usage Report for FourDigitLedController 
 
 Mapping to part: gw1n_1qfn48-6
 Cell usage:
 ALU             17 uses
-DFF             2 uses
-DFFE            27 uses
-DFFN            1 use
-DFFNE           13 uses
-DFFNSE          20 uses
-DFFR            16 uses
-DFFSE           6 uses
+DFF             3 uses
+DFFE            12 uses
+DFFNE           16 uses
+DFFNSE          16 uses
+DFFR            19 uses
+DFFRE           6 uses
+DFFS            7 uses
 GSR             1 use
-INV             1 use
-MUX2_LUT5       12 uses
-MUX2_LUT6       2 uses
-LUT2            12 uses
-LUT3            30 uses
-LUT4            57 uses
+INV             6 uses
+MUX2_LUT5       10 uses
+MUX2_LUT6       5 uses
+LUT2            10 uses
+LUT3            9 uses
+LUT4            56 uses
 
-I/O ports: 14
-I/O primitives: 14
-IBUF           1 use
-OBUF           13 uses
+I/O ports: 18
+I/O primitives: 18
+IBUF           3 uses
+OBUF           15 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   85 of 864 (9%)
+Register bits not including I/Os:   79 of 864 (9%)
 
 @S |Mapping Summary:
-Total  LUTs: 99 (8%)
+Total  LUTs: 75 (6%)
 

@@ -20,14 +20,14 @@ Synopsys Synopsys Netlist Linker, Version comp2019q3p1, Build 210R, Built Jan  7
 
 @N|Running in 64-bit mode
 File /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_comp.srs changed - recompiling
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
-@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Selected library: work cell: SHIFT_RESISTER view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
+@N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
 
 At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 126MB peak: 126MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun  7 23:23:20 2020
+# Sun Jun 14 12:14:32 2020
 
 ###########################################################]

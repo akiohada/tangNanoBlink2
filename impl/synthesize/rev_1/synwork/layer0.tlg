@@ -1,20 +1,19 @@
-Selecting top level module SHIFT_RESISTER
-@N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:20|Synthesizing module SHIFT_RESISTER in library work.
-Running optimization stage 1 on SHIFT_RESISTER .......
-@W: CL265 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Removing unused bit 1 of serialClockLed[1:0]. Either assign all bits or reduce the width of the signal.
-Running optimization stage 2 on SHIFT_RESISTER .......
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Register bit segmentCounter[3] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[17] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[18] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[19] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[20] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[21] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[22] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Register bit clockCounter[23] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Register bit digitCounter[2] is always 0.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":191:2:191:7|Pruning register bit 2 of digitCounter[2:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
-@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":59:2:59:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":158:2:158:7|Pruning register bit 3 of segmentCounter[3:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Selecting top level module FourDigitLedController
+@N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Synthesizing module FourDigitLedController in library work.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":56:11:56:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:4:57:5|Referenced variable serialClockCounter is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":68:11:68:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:7:69:18|Referenced variable serialDataIn is not in sensitivity list.
+Running optimization stage 1 on FourDigitLedController .......
+Running optimization stage 2 on FourDigitLedController .......
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[23] is always 0.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
