@@ -46,6 +46,7 @@ module FourDigitLedController(
 
   // DECLARATION: 各種カウンター
   reg [23:0] clockCounter = 24'd0; // 7セグLED制御用
+  reg [15:0] chatteringCounter = 15'd0; // 7セグLED制御用
   reg [3:0] serialClockCounter = 4'd0; // シリアル入力制御用
   
   // シリアル入力のLEDモニター
@@ -53,19 +54,19 @@ module FourDigitLedController(
   assign serialClockLedOutR = serialClockLed[0]; // シリアルデータ入力8回目ごとに光る
   assign serialClockLedOutB = serialClockLed[1]; // シリアルクロック入力信号で光る
   assign serialClockLedOutG = serialClockLed[2]; // シリアルデータ入力ごとに光る
-  always @(serialClockIn) begin
+  always @(serialFiltered[1]) begin
     if(serialClockCounter == 4'd10)
       serialClockLed[0] <= 0; // 光る
     else
       serialClockLed[0] <= 1; // 消える
   end
-  always @(serialClockIn) begin
-    if(serialClockIn == 1)
+  always @(serialFiltered[1]) begin
+    if(serialFiltered[1] == 1)
       serialClockLed[1] <= 0; // 光る
-    else if(serialClockIn == 0)
+    else if(serialFiltered[1] == 0)
       serialClockLed[1] <= 1; // 消える
   end
-  always @(serialClockIn) begin
+  always @(serialFiltered[1]) begin
     if(serialDataIn == 1)
       serialClockLed[2] <= 0; // 光る
     else if(serialDataIn == 0)
@@ -88,7 +89,18 @@ module FourDigitLedController(
   end
 
   // シリアルカウント処理
-  always @(posedge serialClockIn) begin
+  reg [1:0]serialBuffer;
+  reg [1:0]serialFiltered;
+  always @(posedge clock)
+    chatteringCounter <= chatteringCounter + 1;
+  always @(posedge clock) begin
+    if(chatteringCounter == 0) begin
+        serialBuffer<= {serialClockIn, serialDataIn}; // 1: Clock  2: Data
+        serialFiltered <= serialBuffer;
+    end
+  end
+
+  always @(posedge serialFiltered[1]) begin
     if(serialClockCounter < 4'd10)
       serialClockCounter <= serialClockCounter + 1;
     else if(serialClockCounter == 4'd10)
@@ -96,7 +108,7 @@ module FourDigitLedController(
   end
 
   // シリアル入力
-  always @(posedge serialClockIn) begin
+  always @(posedge serialFiltered[1]) begin
     if(serialClockCounter < 4'd10) begin
       serialReg[0] <= serialDataIn;
       serialReg[1] <= serialReg[0];

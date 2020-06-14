@@ -16,7 +16,7 @@ max stack size: 8388608 (bytes)
 
 Implementation : rev_1
 
-# Written on Sun Jun 14 16:05:27 2020
+# Written on Sun Jun 14 17:38:54 2020
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      (none)
@@ -33,22 +33,20 @@ No issues found in constraint syntax.
 Clock Summary
 *************
 
-          Start                                    Requested     Requested     Clock        Clock                     Clock
-Level     Clock                                    Frequency     Period        Type         Group                     Load 
----------------------------------------------------------------------------------------------------------------------------
-0 -       FourDigitLedController|serialClockIn     225.4 MHz     4.438         inferred     Autoconstr_clkgroup_1     46   
-                                                                                                                           
-0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
-===========================================================================================================================
+          Start                                                        Requested     Requested     Clock                                           Clock                     Clock
+Level     Clock                                                        Frequency     Period        Type                                            Group                     Load 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       FourDigitLedController|clock                                 100.0 MHz     10.000        inferred                                        Autoconstr_clkgroup_0     47   
+1 .         FourDigitLedController|serialFiltered_derived_clock[1]     100.0 MHz     10.000        derived (from FourDigitLedController|clock)     Autoconstr_clkgroup_0     46   
+==================================================================================================================================================================================
 
 
 Clock Load Summary
 ******************
 
-                                         Clock     Source                  Clock Pin                    Non-clock Pin     Non-clock Pin               
-Clock                                    Load      Pin                     Seq Example                  Seq Example       Comb Example                
-------------------------------------------------------------------------------------------------------------------------------------------------------
-FourDigitLedController|serialClockIn     46        serialClockIn(port)     serialReg[0].C               -                 serialClockLedOutB.I[0](inv)
-                                                                                                                                                      
-FourDigitLedController|clock             29        clock(port)             digitalOutputPins[3:0].C     -                 -                           
-======================================================================================================================================================
+                                                           Clock     Source                           Clock Pin             Non-clock Pin     Non-clock Pin
+Clock                                                      Load      Pin                              Seq Example           Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+FourDigitLedController|clock                               47        clock(port)                      serialBuffer[1].C     -                 -            
+FourDigitLedController|serialFiltered_derived_clock[1]     46        serialFiltered[1].Q[0](dffe)     digit0[0].C           -                 -            
+===========================================================================================================================================================

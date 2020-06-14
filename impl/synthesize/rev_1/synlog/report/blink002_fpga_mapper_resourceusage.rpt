@@ -3,18 +3,17 @@ Resource Usage Report for FourDigitLedController
 
 Mapping to part: gw1n_1qfn48-6
 Cell usage:
-ALU             17 uses
-DFF             4 uses
-DFFE            37 uses
-DFFR            24 uses
+ALU             33 uses
+DFF             16 uses
+DFFE            36 uses
+DFFR            17 uses
+DFFRE           1 use
 DFFSE           23 uses
 GSR             1 use
-INV             2 uses
-MUX2_LUT5       11 uses
-MUX2_LUT6       5 uses
-LUT2            3 uses
-LUT3            16 uses
-LUT4            64 uses
+INV             4 uses
+LUT2            7 uses
+LUT3            17 uses
+LUT4            38 uses
 
 I/O ports: 18
 I/O primitives: 18
@@ -22,8 +21,8 @@ IBUF           3 uses
 OBUF           15 uses
 
 I/O Register bits:                  0
-Register bits not including I/Os:   88 of 864 (10%)
+Register bits not including I/Os:   93 of 864 (10%)
 
 @S |Mapping Summary:
-Total  LUTs: 83 (7%)
+Total  LUTs: 62 (5%)
 

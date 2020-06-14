@@ -49,25 +49,27 @@ Synopsys Verilog Compiler, Version comp2019q3p1, Build 210R, Built Jan  7 2020 0
 @I::"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_objects.v" (library snps_haps)
 @I::"/home/vagrant/gowin/SynplifyPro/lib/vlog/scemi_pipes.svh" (library snps_haps)
 @I::"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v" (library work)
-@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":76:24:76:40|Specified digits overflow the number's size
+@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":77:24:77:40|Specified digits overflow the number's size
 Verilog syntax check successful!
 File /home/vagrant/workspace/verilogLeson/blink002/src/blink.v changed - recompiling
 Selecting top level module FourDigitLedController
 @N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Synthesizing module FourDigitLedController in library work.
-@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":56:11:56:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:4:57:5|Referenced variable serialClockCounter is not in sensitivity list.
-@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":68:11:68:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:7:69:18|Referenced variable serialDataIn is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:28:57:28|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":58:4:58:5|Referenced variable serialClockCounter is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:28:69:28|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":70:7:70:18|Referenced variable serialDataIn is not in sensitivity list.
 Running optimization stage 1 on FourDigitLedController .......
+@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":96:2:96:7|Pruning register bit 0 of serialBuffer[1:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":96:2:96:7|Pruning register bit 0 of serialFiltered[1:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
 Running optimization stage 2 on FourDigitLedController .......
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[17] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[18] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[19] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[20] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[21] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[22] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Register bit clockCounter[23] is always 0.
-@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[23] is always 0.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
@@ -79,7 +81,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun 14 16:05:25 2020
+# Sun Jun 14 17:38:52 2020
 
 ###########################################################]
 ###########################################################[
@@ -111,7 +113,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun 14 16:05:25 2020
+# Sun Jun 14 17:38:52 2020
 
 ###########################################################]
 
@@ -126,6 +128,6 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Sun Jun 14 16:05:25 2020
+# Sun Jun 14 17:38:52 2020
 
 ###########################################################]

@@ -1,7 +1,9 @@
-@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":76:24:76:40|Specified digits overflow the number's size
-@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":56:11:56:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:4:57:5|Referenced variable serialClockCounter is not in sensitivity list.
-@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":68:11:68:23|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:7:69:18|Referenced variable serialDataIn is not in sensitivity list.
-@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CG289 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":77:24:77:40|Specified digits overflow the number's size
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":57:28:57:28|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":58:4:58:5|Referenced variable serialClockCounter is not in sensitivity list.
+@W: CG296 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":69:28:69:28|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":70:7:70:18|Referenced variable serialDataIn is not in sensitivity list.
+@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":96:2:96:7|Pruning register bit 0 of serialBuffer[1:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":96:2:96:7|Pruning register bit 0 of serialFiltered[1:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Pruning register bits 23 to 17 of clockCounter[23:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
 

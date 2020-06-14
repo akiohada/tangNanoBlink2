@@ -1,8 +1,8 @@
 /home/vagrant/gowin/SynplifyPro/bin/syn_nfilter  -link  -multisrs  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_comp.srs  -osyn  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_mult.srs  -log  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/blink002_multi_srs_gen.srr 
 relcom:../../../../../../../gowin/SynplifyPro/bin/syn_nfilter -link -multisrs ../synwork/blink002_comp.srs -osyn ../synwork/blink002_mult.srs -log ../synlog/blink002_multi_srs_gen.srr
 rc:0 success:1 runtime:1
-file:../synwork/blink002_comp.srs|io:i|time:1592118325|size:4045|exec:0|csum:12284EA484A0BFE5676F36E0A2E7972A
-file:../synwork/blink002_mult.srs|io:o|time:1592118327|size:3837|exec:0|csum:
-file:../synlog/blink002_multi_srs_gen.srr|io:o|time:1592118327|size:1539|exec:0|csum:
+file:../synwork/blink002_comp.srs|io:i|time:1592124493|size:4732|exec:0|csum:5CA3AAA9C8D62ADC222CFB4A6A8CCD14
+file:../synwork/blink002_mult.srs|io:o|time:1592124494|size:4527|exec:0|csum:
+file:../synlog/blink002_multi_srs_gen.srr|io:o|time:1592124494|size:1539|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/linux_a_64/syn_nfilter|io:i|time:1578623033|size:12284616|exec:1|csum:F3FFA98E2181D331B59CC7849AFDB170
 file:../../../../../../../gowin/SynplifyPro/bin/syn_nfilter|io:i|time:1578623009|size:368|exec:1|csum:004E4455B64BA10AD6A92FB2301610E0

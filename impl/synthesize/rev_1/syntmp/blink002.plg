@@ -1,22 +1,22 @@
-@P:  Worst Slack : -1.073
-@P:  FourDigitLedController|clock - Estimated Frequency : 139.8 MHz
-@P:  FourDigitLedController|clock - Requested Frequency : 164.4 MHz
-@P:  FourDigitLedController|clock - Estimated Period : 7.154
-@P:  FourDigitLedController|clock - Requested Period : 6.081
-@P:  FourDigitLedController|clock - Slack : -1.073
-@P:  FourDigitLedController|serialClockIn - Estimated Frequency : 248.2 MHz
-@P:  FourDigitLedController|serialClockIn - Requested Frequency : 292.0 MHz
-@P:  FourDigitLedController|serialClockIn - Estimated Period : 4.029
-@P:  FourDigitLedController|serialClockIn - Requested Period : 3.425
-@P:  FourDigitLedController|serialClockIn - Slack : -0.604
-@P:  System - Estimated Frequency : NA
+@P:  Worst Slack : 1.332
+@P:  FourDigitLedController|clock - Estimated Frequency : 115.4 MHz
+@P:  FourDigitLedController|clock - Requested Frequency : 100.0 MHz
+@P:  FourDigitLedController|clock - Estimated Period : 8.668
+@P:  FourDigitLedController|clock - Requested Period : 10.000
+@P:  FourDigitLedController|clock - Slack : 1.332
+@P:  FourDigitLedController|serialFiltered_derived_clock[1] - Estimated Frequency : 226.4 MHz
+@P:  FourDigitLedController|serialFiltered_derived_clock[1] - Requested Frequency : 100.0 MHz
+@P:  FourDigitLedController|serialFiltered_derived_clock[1] - Estimated Period : 4.418
+@P:  FourDigitLedController|serialFiltered_derived_clock[1] - Requested Period : 10.000
+@P:  FourDigitLedController|serialFiltered_derived_clock[1] - Slack : 5.582
+@P:  System - Estimated Frequency : 866.6 MHz
 @P:  System - Requested Frequency : 100.0 MHz
-@P:  System - Estimated Period : NA
+@P:  System - Estimated Period : 1.154
 @P:  System - Requested Period : 10.000
-@P:  System - Slack : NA
+@P:  System - Slack : 8.846
 @P: FourDigitLedController Part : gw1n_1qfn48-6
 @P: FourDigitLedController I/O primitives : 18
 @P: FourDigitLedController I/O Register bits : 0
-@P: FourDigitLedController Register bits (Non I/O) : 88 (10%)
-@P: FourDigitLedController Total Luts : 83 of 800 (7%)
+@P: FourDigitLedController Register bits (Non I/O) : 93 (10%)
+@P: FourDigitLedController Total Luts : 62 of 800 (5%)
 @P:  CPU Time : 0h:00m:05s

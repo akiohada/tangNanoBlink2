@@ -1,2 +1,2 @@
-ckid0_0:@|S:serialClockIn@|E:serialClockCounter[3]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
-ckid0_1:@|S:clock@|E:clockCounter[16]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_0:@|S:serialFiltered[1].Q[0]@|E:serialClockCounter[3]@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_2:@|S:clock@|E:chatteringCounter[15]@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2

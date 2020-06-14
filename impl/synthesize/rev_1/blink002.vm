@@ -2,7 +2,7 @@
 // Written by Synplify Pro 
 // Product Version "P-2019.09G-Beta2"
 // Program "Synplify Pro", Mapper "mapgw, Build 1525R"
-// Sun Jun 14 16:05:34 2020
+// Sun Jun 14 17:39:01 2020
 //
 // Source file index table:
 // Object locations will have the form <file>:<line>
@@ -41,43 +41,50 @@ wire serialClockLedOutR ;
 wire serialClockLedOutB ;
 wire serialClockLedOutG ;
 wire [16:0] clockCounter;
+wire [1:1] serialFiltered;
+wire [15:0] chatteringCounter;
 wire [3:0] serialClockCounter;
 wire [9:0] serialReg;
+wire [1:1] serialBuffer;
 wire [7:0] digit0;
 wire [7:0] digit1;
 wire [7:0] digit2;
 wire [7:0] digit3;
-wire [3:1] serialClockCounter_3;
+wire [3:3] serialClockCounter_3;
 wire [3:0] digitalOutputPins_c;
 wire [7:0] segmentOutputPins_c;
 wire [7:0] segmentOutputPins_34;
+wire [15:0] chatteringCounter_1;
+wire [1:1] serialFiltered_i_i;
 wire [7:0] segmentOutputPins_34_iv_0_0;
-wire [11:0] clockCounter_fast;
-wire [3:0] serialClockCounter_fast;
-wire [9:8] serialReg_fast;
-wire [3:1] serialClockCounter_3_fast;
+wire [1:1] serialClockCounter_3_0;
 wire VCC ;
 wire GND ;
+wire serialClockLed7 ;
+wire serialBuffer4 ;
 wire digit0_0_sqmuxa ;
 wire digit1_1_sqmuxa ;
 wire digit2_1_sqmuxa ;
 wire digit3_1_sqmuxa ;
 wire serialClockCounter11 ;
-wire g0_0_0 ;
+wire un1_digitalOutputPins_i_0 ;
+wire N_22_mux ;
 wire clock_c ;
 wire serialClockIn_c ;
 wire serialDataIn_c ;
-wire N_123 ;
-wire N_139 ;
-wire N_87 ;
 wire N_91 ;
+wire N_142 ;
 wire N_95 ;
-wire N_99 ;
 wire N_103 ;
 wire N_107 ;
-wire N_111 ;
-wire N_116 ;
-wire N_131 ;
+wire N_141 ;
+wire N_125 ;
+wire N_80 ;
+wire N_133 ;
+wire N_76 ;
+wire N_118 ;
+wire N_101 ;
+wire N_113 ;
 wire N_14_0 ;
 wire N_16_0 ;
 wire N_18_0 ;
@@ -111,241 +118,281 @@ wire clockCounter_2_cry_12 ;
 wire clockCounter_2_cry_13 ;
 wire clockCounter_2_cry_14 ;
 wire clockCounter_2_cry_15 ;
+wire chatteringCounter_1_cry_0 ;
+wire chatteringCounter_1_cry_1 ;
+wire chatteringCounter_1_cry_2 ;
+wire chatteringCounter_1_cry_3 ;
+wire chatteringCounter_1_cry_4 ;
+wire chatteringCounter_1_cry_5 ;
+wire chatteringCounter_1_cry_6 ;
+wire chatteringCounter_1_cry_7 ;
+wire chatteringCounter_1_cry_8 ;
+wire chatteringCounter_1_cry_9 ;
+wire chatteringCounter_1_cry_10 ;
+wire chatteringCounter_1_cry_11 ;
+wire chatteringCounter_1_cry_12 ;
+wire chatteringCounter_1_cry_13 ;
+wire chatteringCounter_1_cry_14 ;
 wire un1_serialClockCounter_1_axbxc0 ;
 wire un1_serialClockCounter_1_axbxc2 ;
+wire digitalOutputPins11_i_i_a2_1 ;
 wire serialDataIn_c_i ;
-wire serialClockIn_c_iso_i ;
 wire serialClockLed7_i ;
-wire N_80_i ;
-wire N_79_i ;
-wire N_82_4_i ;
-wire N_81_i ;
+wire N_85_4_i ;
+wire N_84_i ;
+wire N_87_i ;
+wire N_86_i ;
+wire N_134_i ;
+wire N_136_i ;
 wire clockCounter9_i ;
+wire digitalOutputPins11_i_i_a2_0_6_0 ;
+wire m17_0 ;
+wire m10_0 ;
 wire digitalOutputPins11_i_i_a2_0_4 ;
 wire digitalOutputPins11_i_i_a2_0_5 ;
-wire clockCounter9lto16_0_o5_0 ;
+wire un1_digitalOutputPins_i_a2_4_2 ;
+wire serialBuffer4_8 ;
+wire serialBuffer4_9 ;
+wire serialBuffer4_10 ;
+wire serialBuffer4_11 ;
 wire digitalOutputPins12_i_i_a2_1_2 ;
-wire clockCounter9lto16_0_a5_2 ;
-wire digitalOutputPins12_i_i_a5_0 ;
+wire un1_digitalOutputPins_i_a2_0 ;
+wire clockCounter9lto16_0_a2_2 ;
+wire digitalOutputPins12_i_i_a2_0 ;
+wire digitalOutputPins10_i_i_a2_0 ;
 wire clockCounter9lto16_0_0 ;
-wire N_10 ;
-wire g0_0_0_1 ;
-wire g0_4_0_a3_6 ;
-wire g0_4_0_a3_7 ;
-wire g0_4_0_a3_8 ;
-wire g0_0_0_a3_0_7 ;
-wire g0_0_0_a3_0_8 ;
-wire g0_0_0_a3_0_11 ;
-wire g0_0_0_a3_6 ;
-wire g0_0_0_a3_7 ;
-wire g0_0_0_a3_9 ;
-wire N_378_fast ;
-wire N_376_fast ;
-wire g0_0_0_a3_0_11_1 ;
-wire N_80_i_1 ;
+wire un1_digitalOutputPins_i_0_1 ;
+wire chatteringCounter_1_s_15_0_COUT ;
 wire clockCounter_2_s_16_0_COUT ;
-wire g0_0_0_o3_0_0 ;
-wire g0_0_0_o3_0_1 ;
-wire g0_2 ;
-wire g0_4 ;
-wire g0_3_0 ;
-wire g0_3_1 ;
-wire g0_1_0 ;
-wire g0_1_1 ;
-wire digit0_0_sqmuxa_0 ;
-wire digit0_0_sqmuxa_1 ;
-wire digit0_0_sqmuxa_1_0 ;
-wire digit0_0_sqmuxa_1_1 ;
-wire digit0_0_sqmuxa_0_0 ;
-wire digit0_0_sqmuxa_0_1 ;
-wire g0_1_1_0 ;
-wire g0_1_1_1 ;
-wire g0_1_0_0 ;
-wire g0_1_0_1 ;
-wire g0_3_1_0 ;
-wire g0_3_1_1 ;
-wire g0_3_0_0 ;
-wire g0_3_0_1 ;
-wire g0_4_0 ;
-wire g0_4_1 ;
-wire g0_2_0 ;
-wire g0_2_1 ;
-wire g0_0_0_o3_0_2 ;
-wire g0_0_0_o3_0_3 ;
-wire g0_0_0_o3_0_4 ;
-wire g0_0_0_o3_0_5 ;
-wire g0_0_0_a3_9_0 ;
-wire g0_0_0_a3_9_1 ;
   GSR GSR_INST (
 	.GSRI(VCC)
+);
+// @5:105
+  INV un1_serialClockCounter_1_axbxc0_cZ (
+	.I(serialClockCounter[0]),
+	.O(un1_serialClockCounter_1_axbxc0)
+);
+  INV \serialFiltered_i_i_cZ[1]  (
+	.I(serialFiltered[1]),
+	.O(serialFiltered_i_i[1])
 );
   INV serialDataIn_c_i_cZ (
 	.I(serialDataIn_c),
 	.O(serialDataIn_c_i)
 );
-  INV serialClockIn_c_iso_i_cZ (
-	.I(serialClockIn_c),
-	.O(serialClockIn_c_iso_i)
+  INV serialClockLed7_i_cZ (
+	.I(serialClockLed7),
+	.O(serialClockLed7_i)
 );
   LUT4 clockCounter9_i_cZ (
-	.I0(N_131),
-	.I1(clockCounter9lto16_0_0),
-	.I2(clockCounter9lto16_0_a5_2),
-	.I3(clockCounter9lto16_0_o5_0),
+	.I0(N_80),
+	.I1(N_125),
+	.I2(clockCounter9lto16_0_0),
+	.I3(clockCounter9lto16_0_a2_2),
 	.F(clockCounter9_i)
 );
-defparam clockCounter9_i_cZ.INIT=16'h0313;
-// @5:158
-  LUT4 N_81_i_cZ (
-	.I0(N_123),
-	.I1(N_139),
-	.I2(clockCounter[7]),
-	.I3(clockCounter[14]),
-	.F(N_81_i)
+defparam clockCounter9_i_cZ.INIT=16'h010F;
+// @5:170
+  LUT4 N_86_i_cZ (
+	.I0(N_133),
+	.I1(clockCounter[10]),
+	.I2(clockCounter[11]),
+	.I3(digitalOutputPins10_i_i_a2_0),
+	.F(N_86_i)
 );
-defparam N_81_i_cZ.INIT=16'h7FFF;
-// @5:158
-  LUT4 N_79_i_cZ (
-	.I0(digitalOutputPins11_i_i_a2_0_4),
-	.I1(digitalOutputPins11_i_i_a2_0_5),
-	.I2(digitalOutputPins12_i_i_a2_1_2),
-	.I3(digitalOutputPins12_i_i_a5_0),
-	.F(N_79_i)
+defparam N_86_i_cZ.INIT=16'h7FFF;
+// @5:170
+  LUT4 N_84_i_cZ (
+	.I0(N_133),
+	.I1(clockCounter[11]),
+	.I2(clockCounter[16]),
+	.I3(digitalOutputPins12_i_i_a2_0),
+	.F(N_84_i)
 );
-defparam N_79_i_cZ.INIT=16'h7FFF;
-// @5:92
-  LUT4 \serialClockCounter_3_cZ[1]  (
-	.I0(serialClockCounter[0]),
-	.I1(serialClockCounter[1]),
-	.I2(serialClockCounter[2]),
-	.I3(serialClockCounter[3]),
-	.F(serialClockCounter_3[1])
+defparam N_84_i_cZ.INIT=16'h7FFF;
+// @5:170
+  LUT4 N_136_i_cZ (
+	.I0(N_142),
+	.I1(clockCounter[11]),
+	.I2(digit3[3]),
+	.I3(m17_0),
+	.F(N_136_i)
 );
-defparam \serialClockCounter_3_cZ[1] .INIT=16'hCA66;
-// @5:93
-  LUT4 un1_serialClockCounter_1_axbxc0_cZ (
-	.I0(serialClockCounter[0]),
-	.I1(serialClockCounter[1]),
-	.I2(serialClockCounter[2]),
-	.I3(serialClockCounter[3]),
-	.F(un1_serialClockCounter_1_axbxc0)
+defparam N_136_i_cZ.INIT=16'hB8FC;
+// @5:170
+  LUT4 N_134_i_cZ (
+	.I0(N_141),
+	.I1(clockCounter[11]),
+	.I2(digit3[4]),
+	.I3(m10_0),
+	.F(N_134_i)
 );
-defparam un1_serialClockCounter_1_axbxc0_cZ.INIT=16'hA955;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[7]  (
-	.I0(N_116),
-	.I1(N_123),
-	.I2(digit0[7]),
-	.I3(segmentOutputPins_34_iv_0_0[7]),
-	.F(segmentOutputPins_34[7])
+defparam N_134_i_cZ.INIT=16'hB8FC;
+// @5:170
+  LUT4 N_87_i_cZ (
+	.I0(N_22_mux),
+	.I1(clockCounter[9]),
+	.I2(digitalOutputPins11_i_i_a2_0_6_0),
+	.I3(digitalOutputPins11_i_i_a2_1),
+	.F(N_87_i)
 );
-defparam \segmentOutputPins_34_iv_0[7] .INIT=16'hFFEA;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[4]  (
-	.I0(N_111),
-	.I1(N_123),
-	.I2(digit0[4]),
-	.I3(segmentOutputPins_34_iv_0_0[4]),
-	.F(segmentOutputPins_34[4])
+defparam N_87_i_cZ.INIT=16'h7FFF;
+// @5:170
+  LUT4 N_85_4_i_cZ (
+	.I0(N_80),
+	.I1(clockCounter[11]),
+	.I2(clockCounter[14]),
+	.I3(clockCounter[15]),
+	.F(N_85_4_i)
 );
-defparam \segmentOutputPins_34_iv_0[4] .INIT=16'hFFEA;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[5]  (
-	.I0(N_107),
-	.I1(N_123),
-	.I2(digit0[5]),
-	.I3(segmentOutputPins_34_iv_0_0[5]),
-	.F(segmentOutputPins_34[5])
+defparam N_85_4_i_cZ.INIT=16'hFFEF;
+// @5:170
+  LUT3 digit1_1_sqmuxa_cZ (
+	.I0(serialClockLed7),
+	.I1(serialReg[8]),
+	.I2(serialReg[9]),
+	.F(digit1_1_sqmuxa)
 );
-defparam \segmentOutputPins_34_iv_0[5] .INIT=16'hFFEA;
-// @5:159
+defparam digit1_1_sqmuxa_cZ.INIT=8'h08;
+// @5:170
+  LUT3 digit3_1_sqmuxa_cZ (
+	.I0(serialClockLed7),
+	.I1(serialReg[8]),
+	.I2(serialReg[9]),
+	.F(digit3_1_sqmuxa)
+);
+defparam digit3_1_sqmuxa_cZ.INIT=8'h80;
+// @5:171
   LUT4 \segmentOutputPins_34_iv_0[6]  (
-	.I0(N_103),
-	.I1(N_123),
-	.I2(digit0[6]),
+	.I0(N_22_mux),
+	.I1(N_113),
+	.I2(digit1[6]),
 	.I3(segmentOutputPins_34_iv_0_0[6]),
 	.F(segmentOutputPins_34[6])
 );
-defparam \segmentOutputPins_34_iv_0[6] .INIT=16'hFFEA;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[1]  (
-	.I0(N_99),
-	.I1(N_123),
-	.I2(digit0[1]),
-	.I3(segmentOutputPins_34_iv_0_0[1]),
-	.F(segmentOutputPins_34[1])
-);
-defparam \segmentOutputPins_34_iv_0[1] .INIT=16'hFFEA;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[2]  (
-	.I0(N_95),
-	.I1(N_123),
-	.I2(digit0[2]),
-	.I3(segmentOutputPins_34_iv_0_0[2]),
-	.F(segmentOutputPins_34[2])
-);
-defparam \segmentOutputPins_34_iv_0[2] .INIT=16'hFFEA;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0[3]  (
-	.I0(N_91),
-	.I1(N_123),
-	.I2(digit0[3]),
-	.I3(segmentOutputPins_34_iv_0_0[3]),
-	.F(segmentOutputPins_34[3])
-);
-defparam \segmentOutputPins_34_iv_0[3] .INIT=16'hFFEA;
-// @5:159
+defparam \segmentOutputPins_34_iv_0[6] .INIT=16'hFFEC;
+// @5:171
   LUT4 \segmentOutputPins_34_iv_0[0]  (
-	.I0(N_87),
-	.I1(N_123),
-	.I2(digit0[0]),
+	.I0(N_22_mux),
+	.I1(N_101),
+	.I2(digit1[0]),
 	.I3(segmentOutputPins_34_iv_0_0[0]),
 	.F(segmentOutputPins_34[0])
 );
-defparam \segmentOutputPins_34_iv_0[0] .INIT=16'hFFEA;
-// @5:158
-  LUT3 N_82_4_i_cZ (
-	.I0(clockCounter[9]),
-	.I1(clockCounter[10]),
-	.I2(clockCounter[14]),
-	.F(N_82_4_i)
+defparam \segmentOutputPins_34_iv_0[0] .INIT=16'hFFEC;
+// @5:171
+  LUT3 digitalOutputPins12_i_i_a2_1 (
+	.I0(digitalOutputPins11_i_i_a2_0_4),
+	.I1(digitalOutputPins11_i_i_a2_0_5),
+	.I2(digitalOutputPins12_i_i_a2_1_2),
+	.F(N_133)
 );
-defparam N_82_4_i_cZ.INIT=8'hFD;
-// @5:84
-  LUT4 clockCounter9lto16_0_a2 (
+defparam digitalOutputPins12_i_i_a2_1.INIT=8'h80;
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0[1]  (
+	.I0(N_22_mux),
+	.I1(N_95),
+	.I2(digit1[1]),
+	.I3(segmentOutputPins_34_iv_0_0[1]),
+	.F(segmentOutputPins_34[1])
+);
+defparam \segmentOutputPins_34_iv_0[1] .INIT=16'hFFEC;
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0[5]  (
+	.I0(N_22_mux),
+	.I1(N_103),
+	.I2(digit1[5]),
+	.I3(segmentOutputPins_34_iv_0_0[5]),
+	.F(segmentOutputPins_34[5])
+);
+defparam \segmentOutputPins_34_iv_0[5] .INIT=16'hFFEC;
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0[7]  (
+	.I0(N_22_mux),
+	.I1(N_107),
+	.I2(digit1[7]),
+	.I3(segmentOutputPins_34_iv_0_0[7]),
+	.F(segmentOutputPins_34[7])
+);
+defparam \segmentOutputPins_34_iv_0[7] .INIT=16'hFFEC;
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0[2]  (
+	.I0(N_22_mux),
+	.I1(N_91),
+	.I2(digit1[2]),
+	.I3(segmentOutputPins_34_iv_0_0[2]),
+	.F(segmentOutputPins_34[2])
+);
+defparam \segmentOutputPins_34_iv_0[2] .INIT=16'hFFEC;
+// @5:72
+  LUT4 serialBuffer4_cZ (
+	.I0(serialBuffer4_8),
+	.I1(serialBuffer4_9),
+	.I2(serialBuffer4_10),
+	.I3(serialBuffer4_11),
+	.F(serialBuffer4)
+);
+defparam serialBuffer4_cZ.INIT=16'h8000;
+// @5:171
+  LUT4 un1_digitalOutputPins_i_a2_0_0 (
+	.I0(clockCounter[9]),
+	.I1(digitalOutputPins11_i_i_a2_0_4),
+	.I2(digitalOutputPins11_i_i_a2_0_5),
+	.I3(digitalOutputPins11_i_i_a2_0_6_0),
+	.F(un1_digitalOutputPins_i_a2_0)
+);
+defparam un1_digitalOutputPins_i_a2_0_0.INIT=16'h8000;
+// @5:85
+  LUT4 clockCounter9lto16_0_a2_0 (
 	.I0(clockCounter[5]),
 	.I1(clockCounter[6]),
 	.I2(clockCounter[7]),
 	.I3(clockCounter[8]),
-	.F(N_131)
+	.F(N_125)
 );
-defparam clockCounter9lto16_0_a2.INIT=16'h001F;
-// @5:92
+defparam clockCounter9lto16_0_a2_0.INIT=16'h001F;
+// @5:171
+  LUT4 un1_digitalOutputPins_i_o3 (
+	.I0(clockCounter[7]),
+	.I1(clockCounter[10]),
+	.I2(clockCounter[14]),
+	.I3(clockCounter[16]),
+	.F(N_76)
+);
+defparam un1_digitalOutputPins_i_o3.INIT=16'h0180;
+// @5:104
   LUT3 serialClockCounter11_c4 (
-	.I0(serialClockCounter[2]),
-	.I1(serialClockCounter_fast[1]),
-	.I2(serialClockCounter_fast[3]),
+	.I0(serialClockCounter[1]),
+	.I1(serialClockCounter[2]),
+	.I2(serialClockCounter[3]),
 	.F(serialClockCounter11)
 );
 defparam serialClockCounter11_c4.INIT=8'h1F;
-  LUT4 serialClockLed7_i_cZ (
-	.I0(serialClockCounter[0]),
-	.I1(serialClockCounter[1]),
-	.I2(serialClockCounter[2]),
-	.I3(serialClockCounter[3]),
-	.F(serialClockLed7_i)
-);
-defparam serialClockLed7_i_cZ.INIT=16'hFBFF;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0_0_cZ[2]  (
-	.I0(clockCounter[11]),
+// @5:171
+  LUT3 un1_digitalOutputPins_i_a2_4 (
+	.I0(clockCounter[7]),
 	.I1(clockCounter[16]),
-	.I2(digit2[2]),
-	.I3(digit3[2]),
-	.F(segmentOutputPins_34_iv_0_0[2])
+	.I2(un1_digitalOutputPins_i_a2_4_2),
+	.F(N_118)
 );
-defparam \segmentOutputPins_34_iv_0_0_cZ[2] .INIT=16'hD580;
-// @5:159
+defparam un1_digitalOutputPins_i_a2_4.INIT=8'h40;
+// @5:170
+  LUT3 digit2_1_sqmuxa_cZ (
+	.I0(serialClockLed7),
+	.I1(serialReg[8]),
+	.I2(serialReg[9]),
+	.F(digit2_1_sqmuxa)
+);
+defparam digit2_1_sqmuxa_cZ.INIT=8'h20;
+// @5:170
+  LUT3 digit0_0_sqmuxa_cZ (
+	.I0(serialClockLed7),
+	.I1(serialReg[8]),
+	.I2(serialReg[9]),
+	.F(digit0_0_sqmuxa)
+);
+defparam digit0_0_sqmuxa_cZ.INIT=8'h02;
+// @5:171
   LUT4 \segmentOutputPins_34_iv_0_0_cZ[1]  (
 	.I0(clockCounter[11]),
 	.I1(clockCounter[16]),
@@ -354,16 +401,7 @@ defparam \segmentOutputPins_34_iv_0_0_cZ[2] .INIT=16'hD580;
 	.F(segmentOutputPins_34_iv_0_0[1])
 );
 defparam \segmentOutputPins_34_iv_0_0_cZ[1] .INIT=16'hD580;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0_0_cZ[4]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[16]),
-	.I2(digit2[4]),
-	.I3(digit3[4]),
-	.F(segmentOutputPins_34_iv_0_0[4])
-);
-defparam \segmentOutputPins_34_iv_0_0_cZ[4] .INIT=16'hD580;
-// @5:159
+// @5:171
   LUT4 \segmentOutputPins_34_iv_0_0_cZ[7]  (
 	.I0(clockCounter[11]),
 	.I1(clockCounter[16]),
@@ -372,34 +410,25 @@ defparam \segmentOutputPins_34_iv_0_0_cZ[4] .INIT=16'hD580;
 	.F(segmentOutputPins_34_iv_0_0[7])
 );
 defparam \segmentOutputPins_34_iv_0_0_cZ[7] .INIT=16'hD580;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0_0_cZ[0]  (
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0_0_cZ[2]  (
 	.I0(clockCounter[11]),
 	.I1(clockCounter[16]),
-	.I2(digit2[0]),
+	.I2(digit2[2]),
+	.I3(digit3[2]),
+	.F(segmentOutputPins_34_iv_0_0[2])
+);
+defparam \segmentOutputPins_34_iv_0_0_cZ[2] .INIT=16'hD580;
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0_0_cZ[0]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[0]),
 	.I3(digit3[0]),
 	.F(segmentOutputPins_34_iv_0_0[0])
 );
-defparam \segmentOutputPins_34_iv_0_0_cZ[0] .INIT=16'hD580;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0_0_cZ[3]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[16]),
-	.I2(digit2[3]),
-	.I3(digit3[3]),
-	.F(segmentOutputPins_34_iv_0_0[3])
-);
-defparam \segmentOutputPins_34_iv_0_0_cZ[3] .INIT=16'hD580;
-// @5:159
-  LUT4 \segmentOutputPins_34_iv_0_0_cZ[6]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[16]),
-	.I2(digit2[6]),
-	.I3(digit3[6]),
-	.F(segmentOutputPins_34_iv_0_0[6])
-);
-defparam \segmentOutputPins_34_iv_0_0_cZ[6] .INIT=16'hD580;
-// @5:159
+defparam \segmentOutputPins_34_iv_0_0_cZ[0] .INIT=16'hB380;
+// @5:171
   LUT4 \segmentOutputPins_34_iv_0_0_cZ[5]  (
 	.I0(clockCounter[11]),
 	.I1(clockCounter[16]),
@@ -408,294 +437,266 @@ defparam \segmentOutputPins_34_iv_0_0_cZ[6] .INIT=16'hD580;
 	.F(segmentOutputPins_34_iv_0_0[5])
 );
 defparam \segmentOutputPins_34_iv_0_0_cZ[5] .INIT=16'hD580;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[0]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[0]),
-	.F(N_87)
+// @5:171
+  LUT4 \segmentOutputPins_34_iv_0_0_cZ[6]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[6]),
+	.I3(digit3[6]),
+	.F(segmentOutputPins_34_iv_0_0[6])
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[0] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[3]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[3]),
+defparam \segmentOutputPins_34_iv_0_0_cZ[6] .INIT=16'hB380;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_0[2]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[2]),
 	.F(N_91)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[3] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[2]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[2]),
+defparam \segmentOutputPins_34_iv_0_a2_0[2] .INIT=8'h80;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_0[1]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[1]),
 	.F(N_95)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[2] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[1]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[1]),
-	.F(N_99)
-);
-defparam \segmentOutputPins_34_iv_0_a5_1[1] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[6]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[6]),
+defparam \segmentOutputPins_34_iv_0_a2_0[1] .INIT=8'h80;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_0[5]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[5]),
 	.F(N_103)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[6] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[5]  (
-	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[5]),
+defparam \segmentOutputPins_34_iv_0_a2_0[5] .INIT=8'h80;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_0[7]  (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[11]),
+	.I2(digit0[7]),
 	.F(N_107)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[5] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[4]  (
+defparam \segmentOutputPins_34_iv_0_a2_0[7] .INIT=8'h80;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_2[6]  (
 	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[4]),
-	.F(N_111)
+	.I1(clockCounter[16]),
+	.I2(digit2[6]),
+	.F(N_113)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[4] .INIT=8'h80;
-// @5:159
-  LUT3 \segmentOutputPins_34_iv_0_a5_1[7]  (
+defparam \segmentOutputPins_34_iv_0_a2_2[6] .INIT=8'h80;
+// @5:171
+  LUT3 \segmentOutputPins_34_iv_0_a2_2[0]  (
 	.I0(clockCounter[11]),
-	.I1(clockCounter[15]),
-	.I2(digit1[7]),
-	.F(N_116)
+	.I1(clockCounter[16]),
+	.I2(digit2[0]),
+	.F(N_101)
 );
-defparam \segmentOutputPins_34_iv_0_a5_1[7] .INIT=8'h80;
-// @5:84
-  LUT4 clockCounter9lto16_0_a5_2_cZ (
-	.I0(clockCounter[12]),
-	.I1(clockCounter[13]),
-	.I2(clockCounter[14]),
-	.I3(clockCounter_fast[11]),
-	.F(clockCounter9lto16_0_a5_2)
-);
-defparam clockCounter9lto16_0_a5_2_cZ.INIT=16'h0001;
-// @5:159
-  LUT4 digitalOutputPins12_i_i_a5_0_cZ (
-	.I0(clockCounter[10]),
-	.I1(clockCounter[11]),
+defparam \segmentOutputPins_34_iv_0_a2_2[0] .INIT=8'h80;
+// @5:171
+  LUT4 digitalOutputPins11_i_i_a2_1_cZ (
+	.I0(clockCounter[7]),
+	.I1(clockCounter[10]),
 	.I2(clockCounter[14]),
 	.I3(clockCounter[16]),
-	.F(digitalOutputPins12_i_i_a5_0)
+	.F(digitalOutputPins11_i_i_a2_1)
 );
-defparam digitalOutputPins12_i_i_a5_0_cZ.INIT=16'h0400;
-// @5:159
-  LUT2 digitalOutputPins10_i_i_a2 (
+defparam digitalOutputPins11_i_i_a2_1_cZ.INIT=16'h0002;
+// @5:58
+  LUT4 serialClockLed7_cZ (
+	.I0(serialClockCounter[0]),
+	.I1(serialClockCounter[1]),
+	.I2(serialClockCounter[2]),
+	.I3(serialClockCounter[3]),
+	.F(serialClockLed7)
+);
+defparam serialClockLed7_cZ.INIT=16'h0400;
+  LUT4 m17_0_cZ (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[15]),
+	.I2(digit0[3]),
+	.I3(digit1[3]),
+	.F(m17_0)
+);
+defparam m17_0_cZ.INIT=16'h135F;
+  LUT4 m10_0_cZ (
+	.I0(clockCounter[10]),
+	.I1(clockCounter[15]),
+	.I2(digit0[4]),
+	.I3(digit1[4]),
+	.F(m10_0)
+);
+defparam m10_0_cZ.INIT=16'h135F;
+// @5:171
+  LUT4 digitalOutputPins11_i_i_a2_0_4_cZ (
+	.I0(clockCounter[0]),
+	.I1(clockCounter[5]),
+	.I2(clockCounter[8]),
+	.I3(clockCounter[12]),
+	.F(digitalOutputPins11_i_i_a2_0_4)
+);
+defparam digitalOutputPins11_i_i_a2_0_4_cZ.INIT=16'h1000;
+// @5:171
+  LUT4 digitalOutputPins11_i_i_a2_0_5_cZ (
+	.I0(clockCounter[1]),
+	.I1(clockCounter[2]),
+	.I2(clockCounter[3]),
+	.I3(clockCounter[4]),
+	.F(digitalOutputPins11_i_i_a2_0_5)
+);
+defparam digitalOutputPins11_i_i_a2_0_5_cZ.INIT=16'h0001;
+// @5:171
+  LUT4 un1_digitalOutputPins_i_a2_4_2_cZ (
 	.I0(clockCounter[10]),
 	.I1(clockCounter[11]),
-	.F(N_123)
+	.I2(clockCounter[14]),
+	.I3(clockCounter[15]),
+	.F(un1_digitalOutputPins_i_a2_4_2)
 );
-defparam digitalOutputPins10_i_i_a2.INIT=4'h8;
-// @5:84
-  LUT2 clockCounter9lto16_0_o5_0_cZ (
-	.I0(clockCounter[9]),
-	.I1(clockCounter[10]),
-	.F(clockCounter9lto16_0_o5_0)
+defparam un1_digitalOutputPins_i_a2_4_2_cZ.INIT=16'h0020;
+// @5:72
+  LUT4 serialBuffer4_8_cZ (
+	.I0(chatteringCounter[5]),
+	.I1(chatteringCounter[9]),
+	.I2(chatteringCounter[10]),
+	.I3(chatteringCounter[15]),
+	.F(serialBuffer4_8)
 );
-defparam clockCounter9lto16_0_o5_0_cZ.INIT=4'h7;
-// @5:84
-  LUT2 clockCounter9lto16_0_0_cZ (
-	.I0(clockCounter[15]),
-	.I1(clockCounter[16]),
-	.F(clockCounter9lto16_0_0)
+defparam serialBuffer4_8_cZ.INIT=16'h0001;
+// @5:72
+  LUT4 serialBuffer4_9_cZ (
+	.I0(chatteringCounter[0]),
+	.I1(chatteringCounter[6]),
+	.I2(chatteringCounter[12]),
+	.I3(chatteringCounter[13]),
+	.F(serialBuffer4_9)
 );
-defparam clockCounter9lto16_0_0_cZ.INIT=4'h7;
-// @5:159
-  LUT4 g0_0 (
+defparam serialBuffer4_9_cZ.INIT=16'h0001;
+// @5:72
+  LUT4 serialBuffer4_10_cZ (
+	.I0(chatteringCounter[1]),
+	.I1(chatteringCounter[3]),
+	.I2(chatteringCounter[4]),
+	.I3(chatteringCounter[11]),
+	.F(serialBuffer4_10)
+);
+defparam serialBuffer4_10_cZ.INIT=16'h0001;
+// @5:72
+  LUT4 serialBuffer4_11_cZ (
+	.I0(chatteringCounter[2]),
+	.I1(chatteringCounter[7]),
+	.I2(chatteringCounter[8]),
+	.I3(chatteringCounter[14]),
+	.F(serialBuffer4_11)
+);
+defparam serialBuffer4_11_cZ.INIT=16'h0001;
+// @5:171
+  LUT4 digitalOutputPins12_i_i_a2_1_2_cZ (
 	.I0(clockCounter[6]),
 	.I1(clockCounter[9]),
 	.I2(clockCounter[13]),
 	.I3(clockCounter[15]),
 	.F(digitalOutputPins12_i_i_a2_1_2)
 );
-defparam g0_0.INIT=16'h0002;
-// @5:159
-  LUT4 g0_0_0_cZ (
-	.I0(N_10),
-	.I1(g0_0_0_1),
-	.I2(g0_0_0_a3_0_11),
-	.I3(g0_0_0_a3_9),
-	.F(g0_0_0)
-);
-defparam g0_0_0_cZ.INIT=16'hECA0;
-// @5:159
-  LUT3 g0_4_0_a3 (
-	.I0(g0_4_0_a3_6),
-	.I1(g0_4_0_a3_7),
-	.I2(g0_4_0_a3_8),
-	.F(N_139)
-);
-defparam g0_4_0_a3.INIT=8'h80;
-// @5:159
-  LUT4 g0_0_0_o3 (
-	.I0(clockCounter[7]),
-	.I1(clockCounter[10]),
-	.I2(clockCounter[14]),
-	.I3(clockCounter[16]),
-	.F(N_10)
-);
-defparam g0_0_0_o3.INIT=16'h0180;
-// @5:159
-  LUT4 g0_9_0_a3 (
-	.I0(clockCounter[1]),
-	.I1(clockCounter[2]),
-	.I2(clockCounter[3]),
-	.I3(clockCounter[4]),
-	.F(digitalOutputPins11_i_i_a2_0_4)
-);
-defparam g0_9_0_a3.INIT=16'h0001;
-// @5:159
-  LUT4 g0_1_3_a3 (
-	.I0(clockCounter[0]),
-	.I1(clockCounter[5]),
-	.I2(clockCounter[8]),
-	.I3(clockCounter[12]),
-	.F(digitalOutputPins11_i_i_a2_0_5)
-);
-defparam g0_1_3_a3.INIT=16'h1000;
-  LUT4 g0_4_0_a3_6_cZ (
-	.I0(clockCounter[2]),
-	.I1(clockCounter[6]),
-	.I2(clockCounter[8]),
-	.I3(clockCounter[12]),
-	.F(g0_4_0_a3_6)
-);
-defparam g0_4_0_a3_6_cZ.INIT=16'h4000;
-  LUT4 g0_4_0_a3_7_cZ (
-	.I0(clockCounter[0]),
-	.I1(clockCounter[1]),
-	.I2(clockCounter[3]),
-	.I3(clockCounter[4]),
-	.F(g0_4_0_a3_7)
-);
-defparam g0_4_0_a3_7_cZ.INIT=16'h0001;
-  LUT4 g0_4_0_a3_8_cZ (
-	.I0(clockCounter[5]),
-	.I1(clockCounter[9]),
+defparam digitalOutputPins12_i_i_a2_1_2_cZ.INIT=16'h0002;
+// @5:85
+  LUT4 clockCounter9lto16_0_a2_2_cZ (
+	.I0(clockCounter[11]),
+	.I1(clockCounter[12]),
 	.I2(clockCounter[13]),
-	.I3(clockCounter[15]),
-	.F(g0_4_0_a3_8)
+	.I3(clockCounter[14]),
+	.F(clockCounter9lto16_0_a2_2)
 );
-defparam g0_4_0_a3_8_cZ.INIT=16'h0001;
-  LUT4 g0_0_0_a3_0_7_cZ (
-	.I0(clockCounter[6]),
-	.I1(clockCounter_fast[2]),
-	.I2(clockCounter_fast[4]),
-	.I3(clockCounter_fast[11]),
-	.F(g0_0_0_a3_0_7)
-);
-defparam g0_0_0_a3_0_7_cZ.INIT=16'h0200;
-  LUT4 g0_0_0_a3_0_8_cZ (
-	.I0(clockCounter_fast[0]),
-	.I1(clockCounter_fast[1]),
-	.I2(clockCounter_fast[3]),
-	.I3(clockCounter_fast[5]),
-	.F(g0_0_0_a3_0_8)
-);
-defparam g0_0_0_a3_0_8_cZ.INIT=16'h0001;
-  LUT4 g0_0_0_a3_6_cZ (
-	.I0(clockCounter[9]),
-	.I1(clockCounter[13]),
-	.I2(clockCounter_fast[2]),
-	.I3(clockCounter_fast[4]),
-	.F(g0_0_0_a3_6)
-);
-defparam g0_0_0_a3_6_cZ.INIT=16'h0008;
-  LUT4 g0_0_0_a3_7_cZ (
-	.I0(clockCounter_fast[0]),
-	.I1(clockCounter_fast[1]),
-	.I2(clockCounter_fast[3]),
-	.I3(clockCounter_fast[5]),
-	.F(g0_0_0_a3_7)
-);
-defparam g0_0_0_a3_7_cZ.INIT=16'h0001;
-// @5:93
-  LUT4 un1_serialClockCounter_1_axbxc0_fast (
-	.I0(serialClockCounter[1]),
-	.I1(serialClockCounter[2]),
-	.I2(serialClockCounter[3]),
-	.I3(serialClockCounter_fast[0]),
-	.F(N_376_fast)
-);
-defparam un1_serialClockCounter_1_axbxc0_fast.INIT=16'hE01F;
-// @5:92
-  LUT4 \serialClockCounter_3_fast_cZ[1]  (
-	.I0(serialClockCounter[0]),
-	.I1(serialClockCounter[2]),
-	.I2(serialClockCounter[3]),
-	.I3(serialClockCounter_fast[1]),
-	.F(serialClockCounter_3_fast[1])
-);
-defparam \serialClockCounter_3_fast_cZ[1] .INIT=16'hE52A;
-  LUT4 g0_0_0_a3_0_11_1_cZ (
-	.I0(clockCounter[8]),
-	.I1(clockCounter[9]),
-	.I2(clockCounter[12]),
-	.I3(clockCounter[13]),
-	.F(g0_0_0_a3_0_11_1)
-);
-defparam g0_0_0_a3_0_11_1_cZ.INIT=16'h0020;
-  LUT4 g0_0_0_a3_0_11_cZ (
-	.I0(clockCounter[15]),
-	.I1(g0_0_0_a3_0_7),
-	.I2(g0_0_0_a3_0_8),
-	.I3(g0_0_0_a3_0_11_1),
-	.F(g0_0_0_a3_0_11)
-);
-defparam g0_0_0_a3_0_11_cZ.INIT=16'h4000;
-// @5:158
-  LUT3 N_80_i_1_cZ (
+defparam clockCounter9lto16_0_a2_2_cZ.INIT=16'h0001;
+// @5:171
+  LUT3 digitalOutputPins12_i_i_a2_0_0 (
 	.I0(clockCounter[7]),
 	.I1(clockCounter[10]),
 	.I2(clockCounter[14]),
-	.F(N_80_i_1)
+	.F(digitalOutputPins12_i_i_a2_0)
 );
-defparam N_80_i_1_cZ.INIT=8'h40;
-// @5:158
-  LUT4 N_80_i_cZ (
-	.I0(N_80_i_1),
-	.I1(clockCounter[11]),
-	.I2(clockCounter[15]),
-	.I3(clockCounter[16]),
-	.F(N_80_i)
+defparam digitalOutputPins12_i_i_a2_0_0.INIT=8'h01;
+// @5:171
+  LUT3 digitalOutputPins10_i_i_a2_0_0 (
+	.I0(clockCounter[7]),
+	.I1(clockCounter[14]),
+	.I2(clockCounter[16]),
+	.F(digitalOutputPins10_i_i_a2_0)
 );
-defparam N_80_i_cZ.INIT=16'hFDFF;
-// @5:92
-  LUT3 \serialClockCounter_3_fast_cZ[3]  (
+defparam digitalOutputPins10_i_i_a2_0_0.INIT=8'h08;
+  LUT2 m3 (
+	.I0(clockCounter[11]),
+	.I1(clockCounter[15]),
+	.F(N_22_mux)
+);
+defparam m3.INIT=4'h8;
+  LUT2 m17_e (
+	.I0(clockCounter[16]),
+	.I1(digit2[3]),
+	.F(N_142)
+);
+defparam m17_e.INIT=4'h8;
+  LUT2 m10_e (
+	.I0(clockCounter[16]),
+	.I1(digit2[4]),
+	.F(N_141)
+);
+defparam m10_e.INIT=4'h8;
+// @5:171
+  LUT2 digitalOutputPins13_i_i_o2 (
+	.I0(clockCounter[9]),
+	.I1(clockCounter[10]),
+	.F(N_80)
+);
+defparam digitalOutputPins13_i_i_o2.INIT=4'h7;
+// @5:171
+  LUT2 digitalOutputPins11_i_i_a2_0_6_0_cZ (
+	.I0(clockCounter[6]),
+	.I1(clockCounter[13]),
+	.F(digitalOutputPins11_i_i_a2_0_6_0)
+);
+defparam digitalOutputPins11_i_i_a2_0_6_0_cZ.INIT=4'h4;
+// @5:85
+  LUT2 clockCounter9lto16_0_0_cZ (
+	.I0(clockCounter[15]),
+	.I1(clockCounter[16]),
+	.F(clockCounter9lto16_0_0)
+);
+defparam clockCounter9lto16_0_0_cZ.INIT=4'h7;
+// @5:171
+  LUT4 un1_digitalOutputPins_i_0_1_cZ (
+	.I0(N_22_mux),
+	.I1(N_118),
+	.I2(digitalOutputPins11_i_i_a2_1),
+	.I3(un1_digitalOutputPins_i_a2_0),
+	.F(un1_digitalOutputPins_i_0_1)
+);
+defparam un1_digitalOutputPins_i_0_1_cZ.INIT=16'h13FF;
+// @5:171
+  LUT4 un1_digitalOutputPins_i_0_cZ (
+	.I0(N_76),
+	.I1(N_133),
+	.I2(clockCounter[11]),
+	.I3(un1_digitalOutputPins_i_0_1),
+	.F(un1_digitalOutputPins_i_0)
+);
+defparam un1_digitalOutputPins_i_0_cZ.INIT=16'h80FF;
+  LUT2 \serialClockCounter_3_0_cZ[1]  (
 	.I0(serialClockCounter[0]),
-	.I1(serialClockCounter[2]),
-	.I2(serialClockCounter_fast[3]),
-	.F(serialClockCounter_3_fast[3])
+	.I1(serialClockCounter[1]),
+	.F(serialClockCounter_3_0[1])
 );
-defparam \serialClockCounter_3_fast_cZ[3] .INIT=8'hE8;
-// @5:93
-  LUT3 un1_serialClockCounter_1_axbxc2_fast (
-	.I0(serialClockCounter[1]),
-	.I1(serialClockCounter[3]),
-	.I2(serialClockCounter_fast[2]),
-	.F(N_378_fast)
-);
-defparam un1_serialClockCounter_1_axbxc2_fast.INIT=8'hD2;
-// @5:93
+defparam \serialClockCounter_3_0_cZ[1] .INIT=4'h6;
+// @5:105
   LUT3 un1_serialClockCounter_1_axbxc2_cZ (
-	.I0(serialClockCounter[1]),
-	.I1(serialClockCounter[2]),
-	.I2(serialClockCounter[3]),
+	.I0(serialClockCounter[0]),
+	.I1(serialClockCounter[1]),
+	.I2(serialClockCounter[2]),
 	.F(un1_serialClockCounter_1_axbxc2)
 );
-defparam un1_serialClockCounter_1_axbxc2_cZ.INIT=8'hC6;
-// @5:92
+defparam un1_serialClockCounter_1_axbxc2_cZ.INIT=8'h78;
+// @5:104
   LUT3 \serialClockCounter_3_cZ[3]  (
 	.I0(serialClockCounter[0]),
 	.I1(serialClockCounter[2]),
@@ -703,486 +704,204 @@ defparam un1_serialClockCounter_1_axbxc2_cZ.INIT=8'hC6;
 	.F(serialClockCounter_3[3])
 );
 defparam \serialClockCounter_3_cZ[3] .INIT=8'hE8;
-  LUT4 digit0_0_sqmuxa_1_0_cZ (
-	.I0(serialClockCounter_fast[2]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(digit0_0_sqmuxa_1_0)
+// @5:96
+  DFFE \serialBuffer_Z[1]  (
+	.Q(serialBuffer[1]),
+	.D(serialClockIn_c),
+	.CLK(clock_c),
+	.CE(serialBuffer4)
 );
-defparam digit0_0_sqmuxa_1_0_cZ.INIT=16'h0000;
-  LUT4 digit0_0_sqmuxa_1_1_cZ (
-	.I0(serialClockCounter_fast[2]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(digit0_0_sqmuxa_1_1)
+// @5:96
+  DFFE \serialFiltered_Z[1]  (
+	.Q(serialFiltered[1]),
+	.D(serialBuffer[1]),
+	.CLK(clock_c),
+	.CE(serialBuffer4)
 );
-defparam digit0_0_sqmuxa_1_1_cZ.INIT=16'h0000;
-  LUT4 digit0_0_sqmuxa_0_0_cZ (
-	.I0(serialClockCounter_fast[2]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(digit0_0_sqmuxa_0_0)
-);
-defparam digit0_0_sqmuxa_0_0_cZ.INIT=16'h0000;
-  LUT4 digit0_0_sqmuxa_0_1_cZ (
-	.I0(serialClockCounter_fast[2]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(digit0_0_sqmuxa_0_1)
-);
-defparam digit0_0_sqmuxa_0_1_cZ.INIT=16'h0004;
-  LUT4 g0_1_1_0_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(g0_1_1_0)
-);
-defparam g0_1_1_0_cZ.INIT=16'h0000;
-  LUT4 g0_1_1_1_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(g0_1_1_1)
-);
-defparam g0_1_1_1_cZ.INIT=16'h0010;
-  LUT4 g0_1_0_0_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(g0_1_0_0)
-);
-defparam g0_1_0_0_cZ.INIT=16'h0000;
-  LUT4 g0_1_0_1_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg[8]),
-	.I3(serialReg[9]),
-	.F(g0_1_0_1)
-);
-defparam g0_1_0_1_cZ.INIT=16'h0000;
-  LUT4 g0_3_1_0_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_3_1_0)
-);
-defparam g0_3_1_0_cZ.INIT=16'h0000;
-  LUT4 g0_3_1_1_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_3_1_1)
-);
-defparam g0_3_1_1_cZ.INIT=16'h0100;
-  LUT4 g0_3_0_0_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_3_0_0)
-);
-defparam g0_3_0_0_cZ.INIT=16'h0000;
-  LUT4 g0_3_0_1_cZ (
-	.I0(serialClockCounter_fast[0]),
-	.I1(serialClockCounter_fast[2]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_3_0_1)
-);
-defparam g0_3_0_1_cZ.INIT=16'h0000;
-  LUT4 g0_4_0_cZ (
-	.I0(serialClockCounter_fast[1]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_4_0)
-);
-defparam g0_4_0_cZ.INIT=16'h0000;
-  LUT4 g0_4_1_cZ (
-	.I0(serialClockCounter_fast[1]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_4_1)
-);
-defparam g0_4_1_cZ.INIT=16'h0000;
-  LUT4 g0_2_0_cZ (
-	.I0(serialClockCounter_fast[1]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_2_0)
-);
-defparam g0_2_0_cZ.INIT=16'h8000;
-  LUT4 g0_2_1_cZ (
-	.I0(serialClockCounter_fast[1]),
-	.I1(serialClockCounter_fast[3]),
-	.I2(serialReg_fast[8]),
-	.I3(serialReg_fast[9]),
-	.F(g0_2_1)
-);
-defparam g0_2_1_cZ.INIT=16'h0000;
-  LUT4 g0_0_0_o3_0_2_cZ (
-	.I0(clockCounter[10]),
-	.I1(clockCounter[14]),
-	.I2(clockCounter[16]),
-	.I3(clockCounter_fast[11]),
-	.F(g0_0_0_o3_0_2)
-);
-defparam g0_0_0_o3_0_2_cZ.INIT=16'h0000;
-  LUT4 g0_0_0_o3_0_3_cZ (
-	.I0(clockCounter[10]),
-	.I1(clockCounter[14]),
-	.I2(clockCounter[16]),
-	.I3(clockCounter_fast[11]),
-	.F(g0_0_0_o3_0_3)
-);
-defparam g0_0_0_o3_0_3_cZ.INIT=16'h0100;
-  LUT4 g0_0_0_o3_0_4_cZ (
-	.I0(clockCounter[10]),
-	.I1(clockCounter[14]),
-	.I2(clockCounter[16]),
-	.I3(clockCounter_fast[11]),
-	.F(g0_0_0_o3_0_4)
-);
-defparam g0_0_0_o3_0_4_cZ.INIT=16'h0080;
-  LUT4 g0_0_0_o3_0_5_cZ (
-	.I0(clockCounter[10]),
-	.I1(clockCounter[14]),
-	.I2(clockCounter[16]),
-	.I3(clockCounter_fast[11]),
-	.F(g0_0_0_o3_0_5)
-);
-defparam g0_0_0_o3_0_5_cZ.INIT=16'h0000;
-  LUT4 g0_0_0_a3_9_0_cZ (
-	.I0(clockCounter[6]),
-	.I1(clockCounter[8]),
-	.I2(clockCounter[12]),
-	.I3(g0_0_0_a3_7),
-	.F(g0_0_0_a3_9_0)
-);
-defparam g0_0_0_a3_9_0_cZ.INIT=16'h0000;
-  LUT4 g0_0_0_a3_9_1_cZ (
-	.I0(clockCounter[6]),
-	.I1(clockCounter[8]),
-	.I2(clockCounter[12]),
-	.I3(g0_0_0_a3_7),
-	.F(g0_0_0_a3_9_1)
-);
-defparam g0_0_0_a3_9_1_cZ.INIT=16'h4000;
-  MUX2_LUT5 g0_0_0_a3_9_cZ (
-	.I0(g0_0_0_a3_9_0),
-	.I1(g0_0_0_a3_9_1),
-	.S0(g0_0_0_a3_6),
-	.O(g0_0_0_a3_9)
-);
-  MUX2_LUT5 g0_0_0_o3_0_0_cZ (
-	.I0(g0_0_0_o3_0_4),
-	.I1(g0_0_0_o3_0_5),
-	.S0(clockCounter[7]),
-	.O(g0_0_0_o3_0_0)
-);
-  MUX2_LUT5 g0_0_0_o3_0_1_cZ (
-	.I0(g0_0_0_o3_0_2),
-	.I1(g0_0_0_o3_0_3),
-	.S0(clockCounter[7]),
-	.O(g0_0_0_o3_0_1)
-);
-  MUX2_LUT5 g0_2_cZ (
-	.I0(g0_2_0),
-	.I1(g0_2_1),
-	.S0(serialClockCounter[2]),
-	.O(g0_2)
-);
-  MUX2_LUT5 g0_4_cZ (
-	.I0(g0_4_0),
-	.I1(g0_4_1),
-	.S0(serialClockCounter[2]),
-	.O(g0_4)
-);
-  MUX2_LUT5 g0_3_0_cZ (
-	.I0(g0_3_0_0),
-	.I1(g0_3_0_1),
-	.S0(serialClockCounter[3]),
-	.O(g0_3_0)
-);
-  MUX2_LUT5 g0_3_1_cZ (
-	.I0(g0_3_1_0),
-	.I1(g0_3_1_1),
-	.S0(serialClockCounter[3]),
-	.O(g0_3_1)
-);
-  MUX2_LUT5 g0_1_0_cZ (
-	.I0(g0_1_0_0),
-	.I1(g0_1_0_1),
-	.S0(serialClockCounter[3]),
-	.O(g0_1_0)
-);
-  MUX2_LUT5 g0_1_1_cZ (
-	.I0(g0_1_1_0),
-	.I1(g0_1_1_1),
-	.S0(serialClockCounter[3]),
-	.O(g0_1_1)
-);
-  MUX2_LUT5 digit0_0_sqmuxa_0_cZ (
-	.I0(digit0_0_sqmuxa_0_0),
-	.I1(digit0_0_sqmuxa_0_1),
-	.S0(serialClockCounter_fast[1]),
-	.O(digit0_0_sqmuxa_0)
-);
-  MUX2_LUT5 digit0_0_sqmuxa_1_cZ (
-	.I0(digit0_0_sqmuxa_1_0),
-	.I1(digit0_0_sqmuxa_1_1),
-	.S0(serialClockCounter_fast[1]),
-	.O(digit0_0_sqmuxa_1)
-);
-// @5:158
-  MUX2_LUT6 digit0_0_sqmuxa_cZ (
-	.I0(digit0_0_sqmuxa_0),
-	.I1(digit0_0_sqmuxa_1),
-	.S0(serialClockCounter_fast[0]),
-	.O(digit0_0_sqmuxa)
-);
-// @5:158
-  MUX2_LUT6 g0_1 (
-	.I0(g0_1_0),
-	.I1(g0_1_1),
-	.S0(serialClockCounter[1]),
-	.O(digit1_1_sqmuxa)
-);
-// @5:158
-  MUX2_LUT6 g0_3 (
-	.I0(g0_3_0),
-	.I1(g0_3_1),
-	.S0(serialClockCounter[1]),
-	.O(digit2_1_sqmuxa)
-);
-// @5:158
-  MUX2_LUT6 g0 (
-	.I0(g0_2),
-	.I1(g0_4),
-	.S0(serialClockCounter[0]),
-	.O(digit3_1_sqmuxa)
-);
-// @5:159
-  MUX2_LUT6 g0_0_0_o3_0 (
-	.I0(g0_0_0_o3_0_0),
-	.I1(g0_0_0_o3_0_1),
-	.S0(clockCounter[15]),
-	.O(g0_0_0_1)
-);
-// @5:158
+// @5:170
   DFFE \digitalOutputPins_Z[3]  (
 	.Q(digitalOutputPins_c[3]),
-	.D(N_80_i),
+	.D(N_85_4_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \digitalOutputPins_Z[2]  (
 	.Q(digitalOutputPins_c[2]),
-	.D(N_79_i),
+	.D(N_84_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \digitalOutputPins_Z[1]  (
 	.Q(digitalOutputPins_c[1]),
-	.D(N_82_4_i),
+	.D(N_87_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \digitalOutputPins_Z[0]  (
 	.Q(digitalOutputPins_c[0]),
-	.D(N_81_i),
+	.D(N_86_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[7]  (
 	.Q(segmentOutputPins_c[7]),
 	.D(segmentOutputPins_34[7]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[6]  (
 	.Q(segmentOutputPins_c[6]),
 	.D(segmentOutputPins_34[6]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[5]  (
 	.Q(segmentOutputPins_c[5]),
 	.D(segmentOutputPins_34[5]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[4]  (
 	.Q(segmentOutputPins_c[4]),
-	.D(segmentOutputPins_34[4]),
+	.D(N_134_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[3]  (
 	.Q(segmentOutputPins_c[3]),
-	.D(segmentOutputPins_34[3]),
+	.D(N_136_i),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[2]  (
 	.Q(segmentOutputPins_c[2]),
 	.D(segmentOutputPins_34[2]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[1]  (
 	.Q(segmentOutputPins_c[1]),
 	.D(segmentOutputPins_34[1]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-// @5:158
+// @5:170
   DFFE \segmentOutputPins_Z[0]  (
 	.Q(segmentOutputPins_c[0]),
 	.D(segmentOutputPins_34[0]),
 	.CLK(clock_c),
-	.CE(g0_0_0)
+	.CE(un1_digitalOutputPins_i_0)
 );
-  DFF \serialClockCounter_fast_Z[1]  (
-	.Q(serialClockCounter_fast[1]),
-	.D(serialClockCounter_3_fast[1]),
-	.CLK(serialClockIn_c)
+  DFF \chatteringCounter_Z[10]  (
+	.Q(chatteringCounter[10]),
+	.D(chatteringCounter_1[10]),
+	.CLK(clock_c)
 );
-defparam \serialClockCounter_fast_Z[1] .INIT=1'b0;
-  DFFE \serialReg_fast_Z[9]  (
-	.Q(serialReg_fast[9]),
-	.D(serialReg[8]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[10] .INIT=1'b0;
+  DFF \chatteringCounter_Z[9]  (
+	.Q(chatteringCounter[9]),
+	.D(chatteringCounter_1[9]),
+	.CLK(clock_c)
 );
-defparam \serialReg_fast_Z[9] .INIT=1'b0;
-  DFF \serialClockCounter_fast_Z[0]  (
-	.Q(serialClockCounter_fast[0]),
-	.D(N_376_fast),
-	.CLK(serialClockIn_c)
+defparam \chatteringCounter_Z[9] .INIT=1'b0;
+  DFF \chatteringCounter_Z[8]  (
+	.Q(chatteringCounter[8]),
+	.D(chatteringCounter_1[8]),
+	.CLK(clock_c)
 );
-defparam \serialClockCounter_fast_Z[0] .INIT=1'b0;
-  DFFE \serialReg_fast_Z[8]  (
-	.Q(serialReg_fast[8]),
-	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[8] .INIT=1'b0;
+  DFF \chatteringCounter_Z[7]  (
+	.Q(chatteringCounter[7]),
+	.D(chatteringCounter_1[7]),
+	.CLK(clock_c)
 );
-defparam \serialReg_fast_Z[8] .INIT=1'b0;
-  DFF \serialClockCounter_Z[1]  (
-	.Q(serialClockCounter[1]),
-	.D(serialClockCounter_3[1]),
-	.CLK(serialClockIn_c)
+defparam \chatteringCounter_Z[7] .INIT=1'b0;
+  DFF \chatteringCounter_Z[6]  (
+	.Q(chatteringCounter[6]),
+	.D(chatteringCounter_1[6]),
+	.CLK(clock_c)
 );
-defparam \serialClockCounter_Z[1] .INIT=1'b0;
-  DFF \serialClockCounter_Z[0]  (
-	.Q(serialClockCounter[0]),
-	.D(un1_serialClockCounter_1_axbxc0),
-	.CLK(serialClockIn_c)
+defparam \chatteringCounter_Z[6] .INIT=1'b0;
+  DFF \chatteringCounter_Z[5]  (
+	.Q(chatteringCounter[5]),
+	.D(chatteringCounter_1[5]),
+	.CLK(clock_c)
 );
-defparam \serialClockCounter_Z[0] .INIT=1'b0;
-  DFFSE \serialReg_Z[0]  (
-	.Q(serialReg[0]),
-	.D(serialDataIn_c),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[5] .INIT=1'b0;
+  DFF \chatteringCounter_Z[4]  (
+	.Q(chatteringCounter[4]),
+	.D(chatteringCounter_1[4]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[0] .INIT=1'b1;
-  DFFSE \serialReg_Z[1]  (
-	.Q(serialReg[1]),
-	.D(serialReg[0]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[4] .INIT=1'b0;
+  DFF \chatteringCounter_Z[3]  (
+	.Q(chatteringCounter[3]),
+	.D(chatteringCounter_1[3]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[1] .INIT=1'b1;
-  DFFSE \serialReg_Z[2]  (
-	.Q(serialReg[2]),
-	.D(serialReg[1]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[3] .INIT=1'b0;
+  DFF \chatteringCounter_Z[2]  (
+	.Q(chatteringCounter[2]),
+	.D(chatteringCounter_1[2]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[2] .INIT=1'b1;
-  DFFSE \serialReg_Z[3]  (
-	.Q(serialReg[3]),
-	.D(serialReg[2]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[2] .INIT=1'b0;
+  DFF \chatteringCounter_Z[1]  (
+	.Q(chatteringCounter[1]),
+	.D(chatteringCounter_1[1]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[3] .INIT=1'b1;
-  DFFSE \serialReg_Z[4]  (
-	.Q(serialReg[4]),
-	.D(serialReg[3]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[1] .INIT=1'b0;
+  DFF \chatteringCounter_Z[0]  (
+	.Q(chatteringCounter[0]),
+	.D(chatteringCounter_1[0]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[4] .INIT=1'b1;
-  DFFSE \serialReg_Z[5]  (
-	.Q(serialReg[5]),
-	.D(serialReg[4]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[0] .INIT=1'b0;
+  DFF \chatteringCounter_Z[15]  (
+	.Q(chatteringCounter[15]),
+	.D(chatteringCounter_1[15]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[5] .INIT=1'b1;
-  DFFSE \serialReg_Z[6]  (
-	.Q(serialReg[6]),
-	.D(serialReg[5]),
-	.CLK(serialClockIn_c),
-	.SET(GND),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[15] .INIT=1'b0;
+  DFF \chatteringCounter_Z[14]  (
+	.Q(chatteringCounter[14]),
+	.D(chatteringCounter_1[14]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[6] .INIT=1'b1;
-  DFFE \serialReg_Z[7]  (
-	.Q(serialReg[7]),
-	.D(serialReg[6]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[14] .INIT=1'b0;
+  DFF \chatteringCounter_Z[13]  (
+	.Q(chatteringCounter[13]),
+	.D(chatteringCounter_1[13]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[7] .INIT=1'b0;
-  DFFE \serialReg_Z[8]  (
-	.Q(serialReg[8]),
-	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[13] .INIT=1'b0;
+  DFF \chatteringCounter_Z[12]  (
+	.Q(chatteringCounter[12]),
+	.D(chatteringCounter_1[12]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[8] .INIT=1'b0;
-  DFFE \serialReg_Z[9]  (
-	.Q(serialReg[9]),
-	.D(serialReg[8]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter11)
+defparam \chatteringCounter_Z[12] .INIT=1'b0;
+  DFF \chatteringCounter_Z[11]  (
+	.Q(chatteringCounter[11]),
+	.D(chatteringCounter_1[11]),
+	.CLK(clock_c)
 );
-defparam \serialReg_Z[9] .INIT=1'b0;
+defparam \chatteringCounter_Z[11] .INIT=1'b0;
   DFFSE \digit0_Z[0]  (
 	.Q(digit0[0]),
 	.D(serialReg[0]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit0_0_sqmuxa)
 );
@@ -1190,35 +909,35 @@ defparam \digit0_Z[0] .INIT=1'b1;
   DFFE \digit0_Z[1]  (
 	.Q(digit0[1]),
 	.D(serialReg[1]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[1] .INIT=1'b0;
   DFFE \digit0_Z[2]  (
 	.Q(digit0[2]),
 	.D(serialReg[2]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[2] .INIT=1'b0;
   DFFE \digit0_Z[3]  (
 	.Q(digit0[3]),
 	.D(serialReg[3]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[3] .INIT=1'b0;
   DFFE \digit0_Z[4]  (
 	.Q(digit0[4]),
 	.D(serialReg[4]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[4] .INIT=1'b0;
   DFFSE \digit0_Z[5]  (
 	.Q(digit0[5]),
 	.D(serialReg[5]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit0_0_sqmuxa)
 );
@@ -1226,21 +945,21 @@ defparam \digit0_Z[5] .INIT=1'b1;
   DFFE \digit0_Z[6]  (
 	.Q(digit0[6]),
 	.D(serialReg[6]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[6] .INIT=1'b0;
   DFFE \digit0_Z[7]  (
 	.Q(digit0[7]),
 	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit0_0_sqmuxa)
 );
 defparam \digit0_Z[7] .INIT=1'b0;
   DFFSE \digit1_Z[0]  (
 	.Q(digit1[0]),
 	.D(serialReg[0]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit1_1_sqmuxa)
 );
@@ -1248,7 +967,7 @@ defparam \digit1_Z[0] .INIT=1'b1;
   DFFSE \digit1_Z[1]  (
 	.Q(digit1[1]),
 	.D(serialReg[1]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit1_1_sqmuxa)
 );
@@ -1256,14 +975,14 @@ defparam \digit1_Z[1] .INIT=1'b1;
   DFFE \digit1_Z[2]  (
 	.Q(digit1[2]),
 	.D(serialReg[2]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit1_1_sqmuxa)
 );
 defparam \digit1_Z[2] .INIT=1'b0;
   DFFSE \digit1_Z[3]  (
 	.Q(digit1[3]),
 	.D(serialReg[3]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit1_1_sqmuxa)
 );
@@ -1271,7 +990,7 @@ defparam \digit1_Z[3] .INIT=1'b1;
   DFFSE \digit1_Z[4]  (
 	.Q(digit1[4]),
 	.D(serialReg[4]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit1_1_sqmuxa)
 );
@@ -1279,14 +998,14 @@ defparam \digit1_Z[4] .INIT=1'b1;
   DFFE \digit1_Z[5]  (
 	.Q(digit1[5]),
 	.D(serialReg[5]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit1_1_sqmuxa)
 );
 defparam \digit1_Z[5] .INIT=1'b0;
   DFFSE \digit1_Z[6]  (
 	.Q(digit1[6]),
 	.D(serialReg[6]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit1_1_sqmuxa)
 );
@@ -1294,14 +1013,14 @@ defparam \digit1_Z[6] .INIT=1'b1;
   DFFE \digit1_Z[7]  (
 	.Q(digit1[7]),
 	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit1_1_sqmuxa)
 );
 defparam \digit1_Z[7] .INIT=1'b0;
   DFFSE \digit2_Z[0]  (
 	.Q(digit2[0]),
 	.D(serialReg[0]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit2_1_sqmuxa)
 );
@@ -1309,7 +1028,7 @@ defparam \digit2_Z[0] .INIT=1'b1;
   DFFSE \digit2_Z[1]  (
 	.Q(digit2[1]),
 	.D(serialReg[1]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit2_1_sqmuxa)
 );
@@ -1317,21 +1036,21 @@ defparam \digit2_Z[1] .INIT=1'b1;
   DFFE \digit2_Z[2]  (
 	.Q(digit2[2]),
 	.D(serialReg[2]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit2_1_sqmuxa)
 );
 defparam \digit2_Z[2] .INIT=1'b0;
   DFFE \digit2_Z[3]  (
 	.Q(digit2[3]),
 	.D(serialReg[3]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit2_1_sqmuxa)
 );
 defparam \digit2_Z[3] .INIT=1'b0;
   DFFSE \digit2_Z[4]  (
 	.Q(digit2[4]),
 	.D(serialReg[4]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit2_1_sqmuxa)
 );
@@ -1339,7 +1058,7 @@ defparam \digit2_Z[4] .INIT=1'b1;
   DFFSE \digit2_Z[5]  (
 	.Q(digit2[5]),
 	.D(serialReg[5]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit2_1_sqmuxa)
 );
@@ -1347,7 +1066,7 @@ defparam \digit2_Z[5] .INIT=1'b1;
   DFFSE \digit2_Z[6]  (
 	.Q(digit2[6]),
 	.D(serialReg[6]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit2_1_sqmuxa)
 );
@@ -1355,14 +1074,14 @@ defparam \digit2_Z[6] .INIT=1'b1;
   DFFE \digit2_Z[7]  (
 	.Q(digit2[7]),
 	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit2_1_sqmuxa)
 );
 defparam \digit2_Z[7] .INIT=1'b0;
   DFFSE \digit3_Z[0]  (
 	.Q(digit3[0]),
 	.D(serialReg[0]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit3_1_sqmuxa)
 );
@@ -1370,14 +1089,14 @@ defparam \digit3_Z[0] .INIT=1'b1;
   DFFE \digit3_Z[1]  (
 	.Q(digit3[1]),
 	.D(serialReg[1]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit3_1_sqmuxa)
 );
 defparam \digit3_Z[1] .INIT=1'b0;
   DFFSE \digit3_Z[2]  (
 	.Q(digit3[2]),
 	.D(serialReg[2]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit3_1_sqmuxa)
 );
@@ -1385,21 +1104,21 @@ defparam \digit3_Z[2] .INIT=1'b1;
   DFFE \digit3_Z[3]  (
 	.Q(digit3[3]),
 	.D(serialReg[3]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit3_1_sqmuxa)
 );
 defparam \digit3_Z[3] .INIT=1'b0;
   DFFE \digit3_Z[4]  (
 	.Q(digit3[4]),
 	.D(serialReg[4]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit3_1_sqmuxa)
 );
 defparam \digit3_Z[4] .INIT=1'b0;
   DFFSE \digit3_Z[5]  (
 	.Q(digit3[5]),
 	.D(serialReg[5]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit3_1_sqmuxa)
 );
@@ -1407,7 +1126,7 @@ defparam \digit3_Z[5] .INIT=1'b1;
   DFFSE \digit3_Z[6]  (
 	.Q(digit3[6]),
 	.D(serialReg[6]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.SET(GND),
 	.CE(digit3_1_sqmuxa)
 );
@@ -1415,10 +1134,87 @@ defparam \digit3_Z[6] .INIT=1'b1;
   DFFE \digit3_Z[7]  (
 	.Q(digit3[7]),
 	.D(serialReg[7]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(digit3_1_sqmuxa)
 );
 defparam \digit3_Z[7] .INIT=1'b0;
+  DFFSE \serialReg_Z[0]  (
+	.Q(serialReg[0]),
+	.D(serialDataIn_c),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[0] .INIT=1'b1;
+  DFFSE \serialReg_Z[1]  (
+	.Q(serialReg[1]),
+	.D(serialReg[0]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[1] .INIT=1'b1;
+  DFFSE \serialReg_Z[2]  (
+	.Q(serialReg[2]),
+	.D(serialReg[1]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[2] .INIT=1'b1;
+  DFFSE \serialReg_Z[3]  (
+	.Q(serialReg[3]),
+	.D(serialReg[2]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[3] .INIT=1'b1;
+  DFFSE \serialReg_Z[4]  (
+	.Q(serialReg[4]),
+	.D(serialReg[3]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[4] .INIT=1'b1;
+  DFFSE \serialReg_Z[5]  (
+	.Q(serialReg[5]),
+	.D(serialReg[4]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[5] .INIT=1'b1;
+  DFFSE \serialReg_Z[6]  (
+	.Q(serialReg[6]),
+	.D(serialReg[5]),
+	.CLK(serialFiltered[1]),
+	.SET(GND),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[6] .INIT=1'b1;
+  DFFE \serialReg_Z[7]  (
+	.Q(serialReg[7]),
+	.D(serialReg[6]),
+	.CLK(serialFiltered[1]),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[7] .INIT=1'b0;
+  DFFE \serialReg_Z[8]  (
+	.Q(serialReg[8]),
+	.D(serialReg[7]),
+	.CLK(serialFiltered[1]),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[8] .INIT=1'b0;
+  DFFE \serialReg_Z[9]  (
+	.Q(serialReg[9]),
+	.D(serialReg[8]),
+	.CLK(serialFiltered[1]),
+	.CE(serialClockCounter11)
+);
+defparam \serialReg_Z[9] .INIT=1'b0;
   DFFR \clockCounter_Z[0]  (
 	.Q(clockCounter[0]),
 	.D(N_14_0),
@@ -1538,83 +1334,35 @@ defparam \clockCounter_Z[15] .INIT=1'b0;
 	.RESET(clockCounter9_i)
 );
 defparam \clockCounter_Z[16] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[11]  (
-	.Q(clockCounter_fast[11]),
-	.D(N_36_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[11] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[5]  (
-	.Q(clockCounter_fast[5]),
-	.D(N_24_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[5] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[0]  (
-	.Q(clockCounter_fast[0]),
-	.D(N_14_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[0] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[1]  (
-	.Q(clockCounter_fast[1]),
-	.D(N_16_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[1] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[2]  (
-	.Q(clockCounter_fast[2]),
-	.D(N_18_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[2] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[3]  (
-	.Q(clockCounter_fast[3]),
-	.D(N_20_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[3] .INIT=1'b0;
-  DFFR \clockCounter_fast_Z[4]  (
-	.Q(clockCounter_fast[4]),
-	.D(N_22_0),
-	.CLK(clock_c),
-	.RESET(clockCounter9_i)
-);
-defparam \clockCounter_fast_Z[4] .INIT=1'b0;
   DFFE \serialClockCounter_Z[3]  (
 	.Q(serialClockCounter[3]),
 	.D(serialClockCounter_3[3]),
-	.CLK(serialClockIn_c),
+	.CLK(serialFiltered[1]),
 	.CE(serialClockCounter[1])
 );
 defparam \serialClockCounter_Z[3] .INIT=1'b0;
   DFFE \serialClockCounter_Z[2]  (
 	.Q(serialClockCounter[2]),
 	.D(un1_serialClockCounter_1_axbxc2),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter[0])
+	.CLK(serialFiltered[1]),
+	.CE(serialClockCounter11)
 );
 defparam \serialClockCounter_Z[2] .INIT=1'b0;
-  DFFE \serialClockCounter_fast_Z[2]  (
-	.Q(serialClockCounter_fast[2]),
-	.D(N_378_fast),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter[0])
+  DFFE \serialClockCounter_Z[0]  (
+	.Q(serialClockCounter[0]),
+	.D(un1_serialClockCounter_1_axbxc0),
+	.CLK(serialFiltered[1]),
+	.CE(serialClockCounter11)
 );
-defparam \serialClockCounter_fast_Z[2] .INIT=1'b0;
-  DFFE \serialClockCounter_fast_Z[3]  (
-	.Q(serialClockCounter_fast[3]),
-	.D(serialClockCounter_3_fast[3]),
-	.CLK(serialClockIn_c),
-	.CE(serialClockCounter[1])
+defparam \serialClockCounter_Z[0] .INIT=1'b0;
+  DFFRE \serialClockCounter_Z[1]  (
+	.Q(serialClockCounter[1]),
+	.D(serialClockCounter_3_0[1]),
+	.CLK(serialFiltered[1]),
+	.RESET(serialClockLed7),
+	.CE(serialClockCounter11)
 );
-defparam \serialClockCounter_fast_Z[3] .INIT=1'b0;
+defparam \serialClockCounter_Z[1] .INIT=1'b0;
 // @5:3
   IBUF clock_ibuf (
 	.O(clock_c),
@@ -1638,7 +1386,7 @@ defparam \serialClockCounter_fast_Z[3] .INIT=1'b0;
 // @5:9
   OBUF serialClockLedOutB_obuf (
 	.O(serialClockLedOutB),
-	.I(serialClockIn_c_iso_i)
+	.I(serialFiltered_i_i[1])
 );
 // @5:10
   OBUF serialClockLedOutG_obuf (
@@ -1705,7 +1453,7 @@ defparam \serialClockCounter_fast_Z[3] .INIT=1'b0;
 	.O(segmentOutputPins[7]),
 	.I(segmentOutputPins_c[7])
 );
-// @5:85
+// @5:86
   ALU clockCounter_2_s_16_0 (
 	.CIN(clockCounter_2_cry_15),
 	.I0(clockCounter[16]),
@@ -1715,7 +1463,7 @@ defparam \serialClockCounter_fast_Z[3] .INIT=1'b0;
 	.SUM(N_46_0)
 );
 defparam clockCounter_2_s_16_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_15_0 (
 	.CIN(clockCounter_2_cry_14),
 	.I0(clockCounter[15]),
@@ -1725,7 +1473,7 @@ defparam clockCounter_2_s_16_0.ALU_MODE=0;
 	.SUM(N_44_0)
 );
 defparam clockCounter_2_cry_15_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_14_0 (
 	.CIN(clockCounter_2_cry_13),
 	.I0(clockCounter[14]),
@@ -1735,7 +1483,7 @@ defparam clockCounter_2_cry_15_0.ALU_MODE=0;
 	.SUM(N_42_0)
 );
 defparam clockCounter_2_cry_14_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_13_0 (
 	.CIN(clockCounter_2_cry_12),
 	.I0(clockCounter[13]),
@@ -1745,7 +1493,7 @@ defparam clockCounter_2_cry_14_0.ALU_MODE=0;
 	.SUM(N_40_0)
 );
 defparam clockCounter_2_cry_13_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_12_0 (
 	.CIN(clockCounter_2_cry_11),
 	.I0(clockCounter[12]),
@@ -1755,17 +1503,17 @@ defparam clockCounter_2_cry_13_0.ALU_MODE=0;
 	.SUM(N_38_0)
 );
 defparam clockCounter_2_cry_12_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_11_0 (
 	.CIN(clockCounter_2_cry_10),
-	.I0(clockCounter_fast[11]),
+	.I0(clockCounter[11]),
 	.I1(GND),
 	.I3(GND),
 	.COUT(clockCounter_2_cry_11),
 	.SUM(N_36_0)
 );
 defparam clockCounter_2_cry_11_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_10_0 (
 	.CIN(clockCounter_2_cry_9),
 	.I0(clockCounter[10]),
@@ -1775,7 +1523,7 @@ defparam clockCounter_2_cry_11_0.ALU_MODE=0;
 	.SUM(N_34_0)
 );
 defparam clockCounter_2_cry_10_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_9_0 (
 	.CIN(clockCounter_2_cry_8),
 	.I0(clockCounter[9]),
@@ -1785,7 +1533,7 @@ defparam clockCounter_2_cry_10_0.ALU_MODE=0;
 	.SUM(N_32_0)
 );
 defparam clockCounter_2_cry_9_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_8_0 (
 	.CIN(clockCounter_2_cry_7),
 	.I0(clockCounter[8]),
@@ -1795,7 +1543,7 @@ defparam clockCounter_2_cry_9_0.ALU_MODE=0;
 	.SUM(N_30_0)
 );
 defparam clockCounter_2_cry_8_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_7_0 (
 	.CIN(clockCounter_2_cry_6),
 	.I0(clockCounter[7]),
@@ -1805,7 +1553,7 @@ defparam clockCounter_2_cry_8_0.ALU_MODE=0;
 	.SUM(N_28_0)
 );
 defparam clockCounter_2_cry_7_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_6_0 (
 	.CIN(clockCounter_2_cry_5),
 	.I0(clockCounter[6]),
@@ -1815,7 +1563,7 @@ defparam clockCounter_2_cry_7_0.ALU_MODE=0;
 	.SUM(N_26_0)
 );
 defparam clockCounter_2_cry_6_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_5_0 (
 	.CIN(clockCounter_2_cry_4),
 	.I0(clockCounter[5]),
@@ -1825,7 +1573,7 @@ defparam clockCounter_2_cry_6_0.ALU_MODE=0;
 	.SUM(N_24_0)
 );
 defparam clockCounter_2_cry_5_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_4_0 (
 	.CIN(clockCounter_2_cry_3),
 	.I0(clockCounter[4]),
@@ -1835,7 +1583,7 @@ defparam clockCounter_2_cry_5_0.ALU_MODE=0;
 	.SUM(N_22_0)
 );
 defparam clockCounter_2_cry_4_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_3_0 (
 	.CIN(clockCounter_2_cry_2),
 	.I0(clockCounter[3]),
@@ -1845,7 +1593,7 @@ defparam clockCounter_2_cry_4_0.ALU_MODE=0;
 	.SUM(N_20_0)
 );
 defparam clockCounter_2_cry_3_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_2_0 (
 	.CIN(clockCounter_2_cry_1),
 	.I0(clockCounter[2]),
@@ -1855,7 +1603,7 @@ defparam clockCounter_2_cry_3_0.ALU_MODE=0;
 	.SUM(N_18_0)
 );
 defparam clockCounter_2_cry_2_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_1_0 (
 	.CIN(clockCounter_2_cry_0),
 	.I0(clockCounter[1]),
@@ -1865,7 +1613,7 @@ defparam clockCounter_2_cry_2_0.ALU_MODE=0;
 	.SUM(N_16_0)
 );
 defparam clockCounter_2_cry_1_0.ALU_MODE=0;
-// @5:85
+// @5:86
   ALU clockCounter_2_cry_0_0 (
 	.CIN(VCC),
 	.I0(clockCounter[0]),
@@ -1875,6 +1623,166 @@ defparam clockCounter_2_cry_1_0.ALU_MODE=0;
 	.SUM(N_14_0)
 );
 defparam clockCounter_2_cry_0_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_s_15_0 (
+	.CIN(chatteringCounter_1_cry_14),
+	.I0(chatteringCounter[15]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_s_15_0_COUT),
+	.SUM(chatteringCounter_1[15])
+);
+defparam chatteringCounter_1_s_15_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_14_0 (
+	.CIN(chatteringCounter_1_cry_13),
+	.I0(chatteringCounter[14]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_14),
+	.SUM(chatteringCounter_1[14])
+);
+defparam chatteringCounter_1_cry_14_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_13_0 (
+	.CIN(chatteringCounter_1_cry_12),
+	.I0(chatteringCounter[13]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_13),
+	.SUM(chatteringCounter_1[13])
+);
+defparam chatteringCounter_1_cry_13_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_12_0 (
+	.CIN(chatteringCounter_1_cry_11),
+	.I0(chatteringCounter[12]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_12),
+	.SUM(chatteringCounter_1[12])
+);
+defparam chatteringCounter_1_cry_12_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_11_0 (
+	.CIN(chatteringCounter_1_cry_10),
+	.I0(chatteringCounter[11]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_11),
+	.SUM(chatteringCounter_1[11])
+);
+defparam chatteringCounter_1_cry_11_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_10_0 (
+	.CIN(chatteringCounter_1_cry_9),
+	.I0(chatteringCounter[10]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_10),
+	.SUM(chatteringCounter_1[10])
+);
+defparam chatteringCounter_1_cry_10_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_9_0 (
+	.CIN(chatteringCounter_1_cry_8),
+	.I0(chatteringCounter[9]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_9),
+	.SUM(chatteringCounter_1[9])
+);
+defparam chatteringCounter_1_cry_9_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_8_0 (
+	.CIN(chatteringCounter_1_cry_7),
+	.I0(chatteringCounter[8]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_8),
+	.SUM(chatteringCounter_1[8])
+);
+defparam chatteringCounter_1_cry_8_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_7_0 (
+	.CIN(chatteringCounter_1_cry_6),
+	.I0(chatteringCounter[7]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_7),
+	.SUM(chatteringCounter_1[7])
+);
+defparam chatteringCounter_1_cry_7_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_6_0 (
+	.CIN(chatteringCounter_1_cry_5),
+	.I0(chatteringCounter[6]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_6),
+	.SUM(chatteringCounter_1[6])
+);
+defparam chatteringCounter_1_cry_6_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_5_0 (
+	.CIN(chatteringCounter_1_cry_4),
+	.I0(chatteringCounter[5]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_5),
+	.SUM(chatteringCounter_1[5])
+);
+defparam chatteringCounter_1_cry_5_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_4_0 (
+	.CIN(chatteringCounter_1_cry_3),
+	.I0(chatteringCounter[4]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_4),
+	.SUM(chatteringCounter_1[4])
+);
+defparam chatteringCounter_1_cry_4_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_3_0 (
+	.CIN(chatteringCounter_1_cry_2),
+	.I0(chatteringCounter[3]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_3),
+	.SUM(chatteringCounter_1[3])
+);
+defparam chatteringCounter_1_cry_3_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_2_0 (
+	.CIN(chatteringCounter_1_cry_1),
+	.I0(chatteringCounter[2]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_2),
+	.SUM(chatteringCounter_1[2])
+);
+defparam chatteringCounter_1_cry_2_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_1_0 (
+	.CIN(chatteringCounter_1_cry_0),
+	.I0(chatteringCounter[1]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_1),
+	.SUM(chatteringCounter_1[1])
+);
+defparam chatteringCounter_1_cry_1_0.ALU_MODE=0;
+// @5:95
+  ALU chatteringCounter_1_cry_0_0 (
+	.CIN(VCC),
+	.I0(chatteringCounter[0]),
+	.I1(GND),
+	.I3(GND),
+	.COUT(chatteringCounter_1_cry_0),
+	.SUM(chatteringCounter_1[0])
+);
+defparam chatteringCounter_1_cry_0_0.ALU_MODE=0;
   GND GND_cZ (
 	.G(GND)
 );

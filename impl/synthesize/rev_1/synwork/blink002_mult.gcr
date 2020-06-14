@@ -1,14 +1,15 @@
-i serialClockIn
+i serialFiltered_i[1]
 m 0 0
 u 46 46
-p {p:serialClockIn}{t:serialClockCounter[3].C}
+n ckid0_0 {t:serialClockCounter[3].C} Derived clock on input (not legal for GCC)
+p {t:serialFiltered[1].Q[0]}{t:serialFiltered_derived_clock[1].I[0]}{t:serialFiltered_derived_clock[1].OUT[0]}{t:serialClockCounter[3].C}
 e ckid0_0 {t:serialClockCounter[3].C} dffr
-c ckid0_0 {p:serialClockIn} port Unsupported/too complex instance on clock path
+d ckid0_1 {t:serialFiltered[1].Q[0]} dffe Potential generated clock but with a nonconvertable driver or an unknown conversion method
 i clock
 m 0 0
-u 19 29
-p {p:clock}{t:clockCounter[16].C}
-e ckid0_1 {t:clockCounter[16].C} dffr
-c ckid0_1 {p:clock} port Unsupported/too complex instance on clock path
+u 37 47
+p {p:clock}{t:chatteringCounter[15].C}
+e ckid0_2 {t:chatteringCounter[15].C} dffr
+c ckid0_2 {p:clock} port Unsupported/too complex instance on clock path
 l 0 0 0 0 0
 r 0 0 0 0 0 0 0 0
