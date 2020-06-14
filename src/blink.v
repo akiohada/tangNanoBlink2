@@ -1,10 +1,7 @@
 module FourDigitLedController(
-  // DECLARATION: 入力
   input clock, // Loc 35 | Pull UP
   input serialClockIn, // Loc 19 | Pull NONE ※信号はプルダウン
   input serialDataIn, // Loc 20 | Pull NONE ※信号はプルダウン
-
-  // DECLARATION: 出力
   output serialClockLedOutR, // Loc 18 | Pull NONE
   output serialClockLedOutB, // Loc 17 | Pull NONE
   output serialClockLedOutG, // Loc 16 | Pull NONE
@@ -44,11 +41,34 @@ module FourDigitLedController(
   // .     = 8'b1000_0000
 );
 
-  // DECLARATION: 各種カウンター
-  reg [23:0] clockCounter = 24'd0; // 7セグLED制御用
-  reg [15:0] chatteringCounter = 15'd0; // 7セグLED制御用
-  reg [3:0] serialClockCounter = 4'd0; // シリアル入力制御用
-  
+  // クロックカウント
+  reg [23:0] clockCounter = 24'd0;
+  always @(posedge clock) begin
+    if (clockCounter < 24'd100_000) // clock 24Mhzの10万カウント = 1/240 sec周期
+      clockCounter <= clockCounter + 1;
+    else
+      clockCounter <= 24'd0;
+  end
+
+  // シリアルチャタリング対策＆カウント
+  reg [15:0] chatteringCounter = 16'd0; // 655,367カウント 約3m sec
+  reg [3:0] serialClockCounter = 4'd0;
+  reg [1:0] serialBuffer; // 1: Clock  2: Data
+  reg [1:0] serialFiltered; // 1: Clock  2: Data
+  always @(posedge clock) begin
+    chatteringCounter <= chatteringCounter + 1;
+    if(chatteringCounter == 0) begin
+        serialBuffer<= {serialClockIn, serialDataIn};
+        serialFiltered <= serialBuffer;
+    end
+  end
+  always @(negedge serialFiltered[1]) begin
+    if(serialClockCounter < 4'd10)
+      serialClockCounter <= serialClockCounter + 1;
+    else if(serialClockCounter == 4'd10)
+      serialClockCounter <= 0;
+  end
+
   // シリアル入力のLEDモニター
   reg [2:0] serialClockLed = 3'b111;
   assign serialClockLedOutR = serialClockLed[0]; // シリアルデータ入力8回目ごとに光る
@@ -59,58 +79,25 @@ module FourDigitLedController(
       serialClockLed[0] <= 0; // 光る
     else
       serialClockLed[0] <= 1; // 消える
-  end
-  always @(serialFiltered[1]) begin
     if(serialFiltered[1] == 1)
       serialClockLed[1] <= 0; // 光る
     else if(serialFiltered[1] == 0)
       serialClockLed[1] <= 1; // 消える
-  end
-  always @(serialFiltered[1]) begin
-    if(serialDataIn == 1)
+    if(serialBuffer[0] == 1)
       serialClockLed[2] <= 0; // 光る
-    else if(serialDataIn == 0)
+    else if(serialBuffer[0] == 0)
       serialClockLed[2] <= 1; // 消える
   end
 
-  // DECLARATION: レジスター
-  reg [9:0] serialReg = 10'b100_0111_1111; // 入力信号
-  reg [7:0] digit0 = 8'b0010_0001; //各桁
+  // シリアル受信
+  reg [9:0] serialReg = 10'b100_0111_1111;
+  reg [7:0] digit0 = 8'b0010_0001;
   reg [7:0] digit1 = 8'b0101_1011;
   reg [7:0] digit2 = 8'b0111_0011;
   reg [7:0] digit3 = 8'b0110_0101;
- 
-  // カウント処理
-  always @(posedge clock) begin
-    if (clockCounter < 24'd100_000) // 24_000_000 = 1sec なので 1/240 sec周期
-      clockCounter <= clockCounter + 1;
-    else
-      clockCounter <= 24'd0;
-  end
-
-  // シリアルカウント処理
-  reg [1:0]serialBuffer;
-  reg [1:0]serialFiltered;
-  always @(posedge clock)
-    chatteringCounter <= chatteringCounter + 1;
-  always @(posedge clock) begin
-    if(chatteringCounter == 0) begin
-        serialBuffer<= {serialClockIn, serialDataIn}; // 1: Clock  2: Data
-        serialFiltered <= serialBuffer;
-    end
-  end
-
-  always @(posedge serialFiltered[1]) begin
-    if(serialClockCounter < 4'd10)
-      serialClockCounter <= serialClockCounter + 1;
-    else if(serialClockCounter == 4'd10)
-      serialClockCounter <= 0;
-  end
-
-  // シリアル入力
   always @(posedge serialFiltered[1]) begin
     if(serialClockCounter < 4'd10) begin
-      serialReg[0] <= serialDataIn;
+      serialReg[0] <= serialBuffer[0];
       serialReg[1] <= serialReg[0];
       serialReg[2] <= serialReg[1];
       serialReg[3] <= serialReg[2];

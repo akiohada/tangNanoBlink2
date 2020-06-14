@@ -10,17 +10,17 @@
   <Timing Constraints File>: /home/vagrant/workspace/verilogLeson/blink002/src/blink002.sdc
   <GOWIN Version>: V1.9.3.01Beta
   <Part Number>: GW1N-LV1QN48C6/I5
-  <Created Time>:Sun Jun 14 17:39:16 2020
+  <Created Time>:Sun Jun 14 18:11:02 2020
 
 
 2. Placer
 
   Starting Placer:
-    Placement Phase 0 ...   REAL time: 0.063209 secs
-    Placement Phase 1 ...   REAL time: 0.190425 secs
-    Placement Phase 2 ...   REAL time: 0.084453 secs
-    Placement Phase 3 ...   REAL time: 4.44901 secs
-  Total REAL time to Placement completion: 4.7871 secs.
+    Placement Phase 0 ...   REAL time: 0.063078 secs
+    Placement Phase 1 ...   REAL time: 0.193571 secs
+    Placement Phase 2 ...   REAL time: 0.034914 secs
+    Placement Phase 3 ...   REAL time: 4.24792 secs
+  Total REAL time to Placement completion: 4.53948 secs.
 
 
 3. Resource Usage Summary
@@ -28,13 +28,13 @@
   ----------------------------------------------------------
   Resources            | Usage
   ----------------------------------------------------------
-  Logic                | 95/1152  8%
-    --LUT,ALU,ROM16    | 95(62 LUT, 33 ALU, 0 ROM16)
+  Logic                | 94/1152  8%
+    --LUT,ALU,ROM16    | 94(61 LUT, 33 ALU, 0 ROM16)
     --SSRAM(RAM16)     | 0
-  Register             | 93/945  9%
-    --Logic Register   | 79/864  9%
+  Register             | 94/945  9%
+    --Logic Register   | 80/864  9%
     --I/O Register     | 14/81  17%
-  CLS                  | 73/576  12%
+  CLS                  | 71/576  12%
   I/O Port             | 18
   I/O Buf              | 18
     --Input Buf        | 3
@@ -69,10 +69,10 @@
 5. Router
 
   Starting Router:
-    Route Phase 0: 248 unrouted; REAL time: 0.000249 secs
-    Route Phase 1: 145 unrouted; REAL time: 0.074873 secs
-    Route Phase 2: 0  unrouted; REAL time: 0.129531 secs
-  Total REAL time to Router completion: 0.204653 secs.
+    Route Phase 0: 248 unrouted; REAL time: 0.000261 secs
+    Route Phase 1: 144 unrouted; REAL time: 0.071672 secs
+    Route Phase 2: 0  unrouted; REAL time: 0.12474 secs
+  Total REAL time to Router completion: 0.196673 secs.
 
 
 6. Global Clock Usage Summary

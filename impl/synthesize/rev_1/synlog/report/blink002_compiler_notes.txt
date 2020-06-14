@@ -3,13 +3,13 @@
 @N: CG1349 :	| Running Verilog Compiler in System Verilog mode
 @N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
 @N: CG364 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Synthesizing module FourDigitLedController in library work.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[17] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[18] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[19] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[20] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[21] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[22] is always 0.
-@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":84:2:84:7|Register bit clockCounter[23] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[17] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[18] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[19] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[20] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[21] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[22] is always 0.
+@N: CL189 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":46:2:46:7|Register bit clockCounter[23] is always 0.
 @N|Running in 64-bit mode
 @N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level
 @N: NF107 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":1:7:1:28|Selected library: work cell: FourDigitLedController view verilog as top level

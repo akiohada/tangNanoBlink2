@@ -1,14 +1,14 @@
 /home/vagrant/gowin/SynplifyPro/bin/m_generic  -prodtype  synplify_pro   -encrypt  -pro  -rundir  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1   -part GW1N_1  -package QFN48  -grade -6    -maxfan 10000 -RWCheckOnRam 1 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -csa_carry_chain_maxlen 0 -infer_seqShift -enable_gcc_in_premap -preserve_slash_names -summaryfile /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/report/blink002_fpga_mapper.xml -merge_inferred_clocks 0  -implementation  rev_1  -flow mapping  -multisrs  -ovm  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.vm   -autoconstraint  -freq 100.000   /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_prem.srd  -sap  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap  -otap  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.tap  -omap  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.map  -devicelib  /home/vagrant/gowin/SynplifyPro/lib/generic/gw1n.v  -ologparam  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/syntmp/blink002.plg  -osyn  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.srm  -prjdir  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/  -prjname  blink002  -log  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/blink002_fpga_mapper.srr  -sn  2019.09  -jobname  "fpga_mapper" 
 relcom:../../../../../../../gowin/SynplifyPro/bin/m_generic -prodtype synplify_pro -encrypt -pro -rundir ../../rev_1 -part GW1N_1 -package QFN48 -grade -6 -maxfan 10000 -RWCheckOnRam 1 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -csa_carry_chain_maxlen 0 -infer_seqShift -enable_gcc_in_premap -preserve_slash_names -summaryfile ../synlog/report/blink002_fpga_mapper.xml -merge_inferred_clocks 0 -implementation rev_1 -flow mapping -multisrs -ovm ../blink002.vm -autoconstraint -freq 100.000 ../synwork/blink002_prem.srd -sap ../blink002.sap -otap ../blink002.tap -omap ../blink002.map -devicelib ../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v -ologparam blink002.plg -osyn ../blink002.srm -prjdir ../../ -prjname blink002 -log ../synlog/blink002_fpga_mapper.srr -sn 2019.09 -jobname "fpga_mapper"
-rc:1 success:1 runtime:5
-file:../blink002.vm|io:o|time:1592124502|size:40632|exec:0|csum:
-file:../synwork/blink002_prem.srd|io:i|time:1592124496|size:12248|exec:0|csum:3C6573FD560092CE03EC625F961E7228
-file:../blink002.sap|io:o|time:1592124497|size:2048|exec:0|csum:
+rc:1 success:1 runtime:6
+file:../blink002.vm|io:o|time:1592126407|size:40652|exec:0|csum:
+file:../synwork/blink002_prem.srd|io:i|time:1592126402|size:12486|exec:0|csum:9E130EB7DCC9631F5775A421CA99237C
+file:../blink002.sap|io:o|time:1592126403|size:2101|exec:0|csum:
 file:../blink002.tap|io:o|time:0|size:-1|exec:0|csum:
-file:../blink002.map|io:o|time:1592124503|size:27|exec:0|csum:
+file:../blink002.map|io:o|time:1592126408|size:27|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v|io:i|time:1578623015|size:160771|exec:0|csum:95293E6D0CF5BE44BF9D70942739B183
-file:blink002.plg|io:o|time:1592124503|size:1260|exec:0|csum:
-file:../blink002.srm|io:o|time:1592124503|size:21848|exec:0|csum:
-file:../synlog/blink002_fpga_mapper.srr|io:o|time:1592124503|size:27449|exec:0|csum:
+file:blink002.plg|io:o|time:1592126408|size:1260|exec:0|csum:
+file:../blink002.srm|io:o|time:1592126408|size:22089|exec:0|csum:
+file:../synlog/blink002_fpga_mapper.srr|io:o|time:1592126408|size:27698|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/linux_a_64/m_generic|io:i|time:1579050634|size:41651576|exec:1|csum:89B102B7FD193BE755D3E04FBE82D8F3
 file:../../../../../../../gowin/SynplifyPro/bin/m_generic|io:i|time:1578623009|size:347|exec:1|csum:04851DFC0CBB288ED81DA3E420127D0D

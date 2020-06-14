@@ -19,13 +19,13 @@ Synopsys HDL compiler and linker, Version comp2019q3p1, Build 210R, Built Jan  7
 
 Modified Files: 1
 FID:  path (prevtimestamp, timestamp)
-5        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-14 16:04:43, 2020-06-14 17:47:53)
+5        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-14 17:47:53, 2020-06-14 18:19:36)
 
 *******************************************************************
 Modules that may have changed as a result of file changes: 1
 MID:  lib.cell.view
 5        work.FourDigitLedController.verilog may have changed because the following files changed:
-                        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-14 16:04:43, 2020-06-14 17:47:53) <-- (module definition)
+                        /home/vagrant/workspace/verilogLeson/blink002/src/blink.v (2020-06-14 17:47:53, 2020-06-14 18:19:36) <-- (module definition)
 
 *******************************************************************
 Unmodified files: 5
