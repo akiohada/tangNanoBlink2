@@ -13,8 +13,8 @@
 ============================== Non-Gated/Non-Generated Clocks ===============================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance      
 ---------------------------------------------------------------------------------------------
-@KP:ckid0_0       clock               port                   29         clockCounter[16]     
-@KP:ckid0_1       serialClockIn       port                   46         serialClockCounter[3]
+@KP:ckid0_0       serialClockIn       port                   46         serialClockCounter[3]
+@KP:ckid0_1       clock               port                   29         clockCounter[16]     
 =============================================================================================
 
 

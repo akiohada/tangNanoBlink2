@@ -6,7 +6,7 @@
 @N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
 @N: FX493 |Applying initial value "01110011" on instance digit2[7:0].
 @N: FX493 |Applying initial value "01100101" on instance digit3[7:0].
-@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 @N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
+@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 @N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
 @N: BN225 |Writing default property annotation file /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap.

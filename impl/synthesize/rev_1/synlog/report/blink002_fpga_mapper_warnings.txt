@@ -1,2 +1,2 @@
-@W: MT420 |Found inferred clock FourDigitLedController|clock with period 6.53ns. Please declare a user-defined clock on port clock.
+@W: MT420 |Found inferred clock FourDigitLedController|clock with period 6.08ns. Please declare a user-defined clock on port clock.
 @W: MT420 |Found inferred clock FourDigitLedController|serialClockIn with period 3.42ns. Please declare a user-defined clock on port serialClockIn.

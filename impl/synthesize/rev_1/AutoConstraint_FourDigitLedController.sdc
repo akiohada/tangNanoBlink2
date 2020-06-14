@@ -1,6 +1,6 @@
 
 #Begin clock constraint
-define_clock -name {FourDigitLedController|clock} {p:FourDigitLedController|clock} -period 6.529 -clockgroup Autoconstr_clkgroup_0 -rise 0.000 -fall 3.264 -route 0.000 
+define_clock -name {FourDigitLedController|clock} {p:FourDigitLedController|clock} -period 6.081 -clockgroup Autoconstr_clkgroup_0 -rise 0.000 -fall 3.041 -route 0.000 
 #End clock constraint
 
 #Begin clock constraint

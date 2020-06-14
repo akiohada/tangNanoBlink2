@@ -1,14 +1,14 @@
-i clock
-m 0 0
-u 19 29
-p {p:clock}{t:clockCounter[16].C}
-e ckid0_0 {t:clockCounter[16].C} dffr
-c ckid0_0 {p:clock} port Unsupported/too complex instance on clock path
 i serialClockIn
 m 0 0
 u 46 46
 p {p:serialClockIn}{t:serialClockCounter[3].C}
-e ckid0_1 {t:serialClockCounter[3].C} dffr
-c ckid0_1 {p:serialClockIn} port Unsupported/too complex instance on clock path
+e ckid0_0 {t:serialClockCounter[3].C} dffr
+c ckid0_0 {p:serialClockIn} port Unsupported/too complex instance on clock path
+i clock
+m 0 0
+u 19 29
+p {p:clock}{t:clockCounter[16].C}
+e ckid0_1 {t:clockCounter[16].C} dffr
+c ckid0_1 {p:clock} port Unsupported/too complex instance on clock path
 l 0 0 0 0 0
 r 0 0 0 0 0 0 0 0

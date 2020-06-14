@@ -1,4 +1,4 @@
-# Sun Jun 14 12:14:32 2020
+# Sun Jun 14 16:05:27 2020
 
 
 Copyright (C) 1994-2020 Synopsys, Inc.
@@ -46,8 +46,8 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @N: FX493 |Applying initial value "01011011" on instance digit1[7:0].
 @N: FX493 |Applying initial value "01110011" on instance digit2[7:0].
 @N: FX493 |Applying initial value "01100101" on instance digit3[7:0].
-@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 @N: FX493 |Applying initial value "00000000000000000" on instance clockCounter[16:0].
+@N: FX493 |Applying initial value "0000" on instance serialClockCounter[3:0].
 
 Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 314MB peak: 314MB)
 
@@ -71,7 +71,7 @@ Clock Summary
           Start                                    Requested     Requested     Clock        Clock                     Clock
 Level     Clock                                    Frequency     Period        Type         Group                     Load 
 ---------------------------------------------------------------------------------------------------------------------------
-0 -       FourDigitLedController|serialClockIn     205.7 MHz     4.862         inferred     Autoconstr_clkgroup_1     46   
+0 -       FourDigitLedController|serialClockIn     225.4 MHz     4.438         inferred     Autoconstr_clkgroup_1     46   
                                                                                                                            
 0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
 ===========================================================================================================================
@@ -110,8 +110,8 @@ Number of ICG latches not removed:	0
 ============================== Non-Gated/Non-Generated Clocks ===============================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance      
 ---------------------------------------------------------------------------------------------
-@KP:ckid0_0       clock               port                   29         clockCounter[16]     
-@KP:ckid0_1       serialClockIn       port                   46         serialClockCounter[3]
+@KP:ckid0_0       serialClockIn       port                   46         serialClockCounter[3]
+@KP:ckid0_1       clock               port                   29         clockCounter[16]     
 =============================================================================================
 
 
@@ -134,6 +134,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 314MB peak: 314MB)
 
 Process took 0h:00m:02s realtime, 0h:00m:02s cputime
-# Sun Jun 14 12:14:35 2020
+# Sun Jun 14 16:05:29 2020
 
 ###########################################################]

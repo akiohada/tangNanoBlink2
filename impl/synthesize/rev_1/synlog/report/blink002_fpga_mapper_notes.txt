@@ -2,10 +2,19 @@
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 @N: MT206 |Auto Constrain mode is enabled
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[0] (in view: work.FourDigitLedController(verilog)) with 9 loads 1 time to improve timing.
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[1] (in view: work.FourDigitLedController(verilog)) with 8 loads 1 time to improve timing.
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[2] (in view: work.FourDigitLedController(verilog)) with 8 loads 1 time to improve timing.
-@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[3] (in view: work.FourDigitLedController(verilog)) with 7 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[11] (in view: work.FourDigitLedController(verilog)) with 24 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[5] (in view: work.FourDigitLedController(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[0] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[1] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[2] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[3] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":83:2:83:7|Replicating instance clockCounter[4] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[2] (in view: work.FourDigitLedController(verilog)) with 10 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":99:2:99:7|Replicating instance serialReg[8] (in view: work.FourDigitLedController(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[0] (in view: work.FourDigitLedController(verilog)) with 10 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":99:2:99:7|Replicating instance serialReg[9] (in view: work.FourDigitLedController(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[1] (in view: work.FourDigitLedController(verilog)) with 12 loads 1 time to improve timing.
+@N: FX271 :"/home/vagrant/workspace/verilogLeson/blink002/src/blink.v":91:2:91:7|Replicating instance serialClockCounter[3] (in view: work.FourDigitLedController(verilog)) with 13 loads 1 time to improve timing.
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 

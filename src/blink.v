@@ -54,7 +54,7 @@ module FourDigitLedController(
   assign serialClockLedOutB = serialClockLed[1]; // シリアルクロック入力信号で光る
   assign serialClockLedOutG = serialClockLed[2]; // シリアルデータ入力ごとに光る
   always @(serialClockIn) begin
-    if(serialClockCounter == 4'd0)
+    if(serialClockCounter == 4'd10)
       serialClockLed[0] <= 0; // 光る
     else
       serialClockLed[0] <= 1; // 消える
@@ -87,39 +87,29 @@ module FourDigitLedController(
       clockCounter <= 24'd0;
   end
 
-  // シリアル入力
+  // シリアルカウント処理
   always @(posedge serialClockIn) begin
-    if(serialClockCounter < 4'd9) begin
+    if(serialClockCounter < 4'd10)
       serialClockCounter <= serialClockCounter + 1;
-      serialReg[0] <= serialDataIn;
-      serialReg[1] <= serialReg[0];
-      serialReg[2] <= serialReg[1];
-      serialReg[3] <= serialReg[2];
-      serialReg[4] <= serialReg[3];
-      serialReg[5] <= serialReg[4];
-      serialReg[6] <= serialReg[5];
-      serialReg[7] <= serialReg[6];
-      serialReg[8] <= serialReg[7];
-      serialReg[9] <= serialReg[8];
-    end
-    else begin
+    else if(serialClockCounter == 4'd10)
       serialClockCounter <= 0;
-      serialReg[0] <= serialDataIn;
-      serialReg[1] <= serialReg[0];
-      serialReg[2] <= serialReg[1];
-      serialReg[3] <= serialReg[2];
-      serialReg[4] <= serialReg[3];
-      serialReg[5] <= serialReg[4];
-      serialReg[6] <= serialReg[5];
-      serialReg[7] <= serialReg[6];
-      serialReg[8] <= serialReg[7];
-      serialReg[9] <= serialReg[8];
-    end
   end
 
-  // 桁ごとにセットする
-  always @(negedge serialClockIn) begin
-    if (serialClockCounter == 4'd0) begin
+  // シリアル入力
+  always @(posedge serialClockIn) begin
+    if(serialClockCounter < 4'd10) begin
+      serialReg[0] <= serialDataIn;
+      serialReg[1] <= serialReg[0];
+      serialReg[2] <= serialReg[1];
+      serialReg[3] <= serialReg[2];
+      serialReg[4] <= serialReg[3];
+      serialReg[5] <= serialReg[4];
+      serialReg[6] <= serialReg[5];
+      serialReg[7] <= serialReg[6];
+      serialReg[8] <= serialReg[7];
+      serialReg[9] <= serialReg[8];
+    end
+    else if (serialClockCounter == 4'd10) begin
       if(serialReg[9:8] == 2'b00) begin
         digit0[7] <= serialReg[7];
         digit0[6] <= serialReg[6];

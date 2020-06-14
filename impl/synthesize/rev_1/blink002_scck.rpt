@@ -16,7 +16,7 @@ max stack size: 8388608 (bytes)
 
 Implementation : rev_1
 
-# Written on Sun Jun 14 12:14:32 2020
+# Written on Sun Jun 14 16:05:27 2020
 
 ##### FILES SYNTAX CHECKED ##############################################
 Constraint File(s):      (none)
@@ -36,7 +36,7 @@ Clock Summary
           Start                                    Requested     Requested     Clock        Clock                     Clock
 Level     Clock                                    Frequency     Period        Type         Group                     Load 
 ---------------------------------------------------------------------------------------------------------------------------
-0 -       FourDigitLedController|serialClockIn     205.7 MHz     4.862         inferred     Autoconstr_clkgroup_1     46   
+0 -       FourDigitLedController|serialClockIn     225.4 MHz     4.438         inferred     Autoconstr_clkgroup_1     46   
                                                                                                                            
 0 -       FourDigitLedController|clock             267.3 MHz     3.741         inferred     Autoconstr_clkgroup_0     29   
 ===========================================================================================================================

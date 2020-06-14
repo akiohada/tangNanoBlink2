@@ -27,20 +27,20 @@ Part:			GW1N_1QFN48-6 (GoWin)
 SEQUENTIAL ELEMENTS
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     79                 100 %                
+REGISTERS     88                 100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block FourDigitLedController:	79 (37.09 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block FourDigitLedController:	88 (38.77 % Utilization)
 
 
 COMBINATIONAL LOGIC
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-LUTS          75                 100 %                
-MUX2_LUT5     10                 100 %                
+LUTS          83                 100 %                
+MUX2_LUT5     11                 100 %                
 MUX2_LUT6     5                  100 %                
 ALU           17                 100 %                
 ======================================================
-Total COMBINATIONAL LOGIC in the block FourDigitLedController:	107 (50.23 % Utilization)
+Total COMBINATIONAL LOGIC in the block FourDigitLedController:	116 (51.10 % Utilization)
 
 
 ##### END OF AREA REPORT #####]

@@ -1,14 +1,14 @@
 /home/vagrant/gowin/SynplifyPro/bin/m_generic  -prodtype  synplify_pro   -encrypt  -pro  -rundir  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1   -part GW1N_1  -package QFN48  -grade -6    -maxfan 10000 -RWCheckOnRam 1 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -csa_carry_chain_maxlen 0 -infer_seqShift -enable_gcc_in_premap -preserve_slash_names -summaryfile /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/report/blink002_premap.xml -merge_inferred_clocks 0  -implementation  rev_1  -ovm  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.vm  -conchk_prepass  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002_cck.rpt   -autoconstraint  -freq 100.000   /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_mult.srs  -flow prepass  -gcc_prepass  -osrd  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_prem.srd  -qsap  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/blink002.sap  -devicelib  /home/vagrant/gowin/SynplifyPro/lib/generic/gw1n.v  -ologparam  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/syntmp/blink002.plg  -osyn  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synwork/blink002_prem.srd  -prjdir  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/  -prjname  blink002  -log  /home/vagrant/workspace/verilogLeson/blink002/impl/synthesize/rev_1/synlog/blink002_premap.srr  -sn  2019.09  -jobname  "premap" 
 relcom:../../../../../../../gowin/SynplifyPro/bin/m_generic -prodtype synplify_pro -encrypt -pro -rundir ../../rev_1 -part GW1N_1 -package QFN48 -grade -6 -maxfan 10000 -RWCheckOnRam 1 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -csa_carry_chain_maxlen 0 -infer_seqShift -enable_gcc_in_premap -preserve_slash_names -summaryfile ../synlog/report/blink002_premap.xml -merge_inferred_clocks 0 -implementation rev_1 -ovm ../blink002.vm -conchk_prepass ../blink002_cck.rpt -autoconstraint -freq 100.000 ../synwork/blink002_mult.srs -flow prepass -gcc_prepass -osrd ../synwork/blink002_prem.srd -qsap ../blink002.sap -devicelib ../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v -ologparam blink002.plg -osyn ../synwork/blink002_prem.srd -prjdir ../../ -prjname blink002 -log ../synlog/blink002_premap.srr -sn 2019.09 -jobname "premap"
-rc:1 success:1 runtime:3
-file:../blink002.vm|io:o|time:1592103557|size:31090|exec:0|csum:
-file:../blink002_cck.rpt|io:o|time:1592104476|size:3123|exec:0|csum:
-file:../synwork/blink002_mult.srs|io:i|time:1592104473|size:3653|exec:0|csum:1F34372524F94D88D46A43A48AAA11EA
-file:../synwork/blink002_prem.srd|io:o|time:1592104475|size:8820|exec:0|csum:
-file:../blink002.sap|io:o|time:1592104476|size:1718|exec:0|csum:
+rc:1 success:1 runtime:2
+file:../blink002.vm|io:o|time:1592104481|size:37189|exec:0|csum:
+file:../blink002_cck.rpt|io:o|time:1592118329|size:3123|exec:0|csum:
+file:../synwork/blink002_mult.srs|io:i|time:1592118327|size:3837|exec:0|csum:EC0EF925E772C1F476206806C1C8AA3E
+file:../synwork/blink002_prem.srd|io:o|time:1592118329|size:9670|exec:0|csum:
+file:../blink002.sap|io:o|time:1592118329|size:1517|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/lib/generic/gw1n.v|io:i|time:1578623015|size:160771|exec:0|csum:95293E6D0CF5BE44BF9D70942739B183
-file:blink002.plg|io:o|time:1592104473|size:0|exec:0|csum:
-file:../synwork/blink002_prem.srd|io:o|time:1592104475|size:8820|exec:0|csum:
-file:../synlog/blink002_premap.srr|io:o|time:1592104476|size:7942|exec:0|csum:
+file:blink002.plg|io:o|time:1592118327|size:0|exec:0|csum:
+file:../synwork/blink002_prem.srd|io:o|time:1592118329|size:9670|exec:0|csum:
+file:../synlog/blink002_premap.srr|io:o|time:1592118329|size:7942|exec:0|csum:
 file:../../../../../../../gowin/SynplifyPro/linux_a_64/m_generic|io:i|time:1579050634|size:41651576|exec:1|csum:89B102B7FD193BE755D3E04FBE82D8F3
 file:../../../../../../../gowin/SynplifyPro/bin/m_generic|io:i|time:1578623009|size:347|exec:1|csum:04851DFC0CBB288ED81DA3E420127D0D
